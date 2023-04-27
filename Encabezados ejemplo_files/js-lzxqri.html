@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)https://stackblitz.com/edit/js-lzxqri?file=index.html -->
+<html lang="en" class="application theme-dark"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style id="react-tooltip">.__react_component_tooltip{border-radius:3px;display:inline-block;font-size:13px;left:-999em;opacity:0;padding:8px 21px;position:fixed;pointer-events:none;transition:opacity 0.3s ease-out;top:-999em;visibility:hidden;z-index:999}.__react_component_tooltip.allow_hover,.__react_component_tooltip.allow_click{pointer-events:auto}.__react_component_tooltip:before,.__react_component_tooltip:after{content:"";width:0;height:0;position:absolute}.__react_component_tooltip.show{opacity:0.9;margin-top:0px;margin-left:0px;visibility:visible}.__react_component_tooltip.type-dark{color:#fff;background-color:#222}.__react_component_tooltip.type-dark.place-top:after{border-top-color:#222;border-top-style:solid;border-top-width:6px}.__react_component_tooltip.type-dark.place-bottom:after{border-bottom-color:#222;border-bottom-style:solid;border-bottom-width:6px}.__react_component_tooltip.type-dark.place-left:after{border-left-color:#222;border-left-style:solid;border-left-width:6px}.__react_component_tooltip.type-dark.place-right:after{border-right-color:#222;border-right-style:solid;border-right-width:6px}.__react_component_tooltip.type-dark.border{border:1px solid #fff}.__react_component_tooltip.type-dark.border.place-top:before{border-top:8px solid #fff}.__react_component_tooltip.type-dark.border.place-bottom:before{border-bottom:8px solid #fff}.__react_component_tooltip.type-dark.border.place-left:before{border-left:8px solid #fff}.__react_component_tooltip.type-dark.border.place-right:before{border-right:8px solid #fff}.__react_component_tooltip.type-success{color:#fff;background-color:#8DC572}.__react_component_tooltip.type-success.place-top:after{border-top-color:#8DC572;border-top-style:solid;border-top-width:6px}.__react_component_tooltip.type-success.place-bottom:after{border-bottom-color:#8DC572;border-bottom-style:solid;border-bottom-width:6px}.__react_component_tooltip.type-success.place-left:after{border-left-color:#8DC572;border-left-style:solid;border-left-width:6px}.__react_component_tooltip.type-success.place-right:after{border-right-color:#8DC572;border-right-style:solid;border-right-width:6px}.__react_component_tooltip.type-success.border{border:1px solid #fff}.__react_component_tooltip.type-success.border.place-top:before{border-top:8px solid #fff}.__react_component_tooltip.type-success.border.place-bottom:before{border-bottom:8px solid #fff}.__react_component_tooltip.type-success.border.place-left:before{border-left:8px solid #fff}.__react_component_tooltip.type-success.border.place-right:before{border-right:8px solid #fff}.__react_component_tooltip.type-warning{color:#fff;background-color:#F0AD4E}.__react_component_tooltip.type-warning.place-top:after{border-top-color:#F0AD4E;border-top-style:solid;border-top-width:6px}.__react_component_tooltip.type-warning.place-bottom:after{border-bottom-color:#F0AD4E;border-bottom-style:solid;border-bottom-width:6px}.__react_component_tooltip.type-warning.place-left:after{border-left-color:#F0AD4E;border-left-style:solid;border-left-width:6px}.__react_component_tooltip.type-warning.place-right:after{border-right-color:#F0AD4E;border-right-style:solid;border-right-width:6px}.__react_component_tooltip.type-warning.border{border:1px solid #fff}.__react_component_tooltip.type-warning.border.place-top:before{border-top:8px solid #fff}.__react_component_tooltip.type-warning.border.place-bottom:before{border-bottom:8px solid #fff}.__react_component_tooltip.type-warning.border.place-left:before{border-left:8px solid #fff}.__react_component_tooltip.type-warning.border.place-right:before{border-right:8px solid #fff}.__react_component_tooltip.type-error{color:#fff;background-color:#BE6464}.__react_component_tooltip.type-error.place-top:after{border-top-color:#BE6464;border-top-style:solid;border-top-width:6px}.__react_component_tooltip.type-error.place-bottom:after{border-bottom-color:#BE6464;border-bottom-style:solid;border-bottom-width:6px}.__react_component_tooltip.type-error.place-left:after{border-left-color:#BE6464;border-left-style:solid;border-left-width:6px}.__react_component_tooltip.type-error.place-right:after{border-right-color:#BE6464;border-right-style:solid;border-right-width:6px}.__react_component_tooltip.type-error.border{border:1px solid #fff}.__react_component_tooltip.type-error.border.place-top:before{border-top:8px solid #fff}.__react_component_tooltip.type-error.border.place-bottom:before{border-bottom:8px solid #fff}.__react_component_tooltip.type-error.border.place-left:before{border-left:8px solid #fff}.__react_component_tooltip.type-error.border.place-right:before{border-right:8px solid #fff}.__react_component_tooltip.type-info{color:#fff;background-color:#337AB7}.__react_component_tooltip.type-info.place-top:after{border-top-color:#337AB7;border-top-style:solid;border-top-width:6px}.__react_component_tooltip.type-info.place-bottom:after{border-bottom-color:#337AB7;border-bottom-style:solid;border-bottom-width:6px}.__react_component_tooltip.type-info.place-left:after{border-left-color:#337AB7;border-left-style:solid;border-left-width:6px}.__react_component_tooltip.type-info.place-right:after{border-right-color:#337AB7;border-right-style:solid;border-right-width:6px}.__react_component_tooltip.type-info.border{border:1px solid #fff}.__react_component_tooltip.type-info.border.place-top:before{border-top:8px solid #fff}.__react_component_tooltip.type-info.border.place-bottom:before{border-bottom:8px solid #fff}.__react_component_tooltip.type-info.border.place-left:before{border-left:8px solid #fff}.__react_component_tooltip.type-info.border.place-right:before{border-right:8px solid #fff}.__react_component_tooltip.type-light{color:#222;background-color:#fff}.__react_component_tooltip.type-light.place-top:after{border-top-color:#fff;border-top-style:solid;border-top-width:6px}.__react_component_tooltip.type-light.place-bottom:after{border-bottom-color:#fff;border-bottom-style:solid;border-bottom-width:6px}.__react_component_tooltip.type-light.place-left:after{border-left-color:#fff;border-left-style:solid;border-left-width:6px}.__react_component_tooltip.type-light.place-right:after{border-right-color:#fff;border-right-style:solid;border-right-width:6px}.__react_component_tooltip.type-light.border{border:1px solid #222}.__react_component_tooltip.type-light.border.place-top:before{border-top:8px solid #222}.__react_component_tooltip.type-light.border.place-bottom:before{border-bottom:8px solid #222}.__react_component_tooltip.type-light.border.place-left:before{border-left:8px solid #222}.__react_component_tooltip.type-light.border.place-right:before{border-right:8px solid #222}.__react_component_tooltip.place-top{margin-top:-10px}.__react_component_tooltip.place-top:before{border-left:10px solid transparent;border-right:10px solid transparent;bottom:-8px;left:50%;margin-left:-10px}.__react_component_tooltip.place-top:after{border-left:8px solid transparent;border-right:8px solid transparent;bottom:-6px;left:50%;margin-left:-8px}.__react_component_tooltip.place-bottom{margin-top:10px}.__react_component_tooltip.place-bottom:before{border-left:10px solid transparent;border-right:10px solid transparent;top:-8px;left:50%;margin-left:-10px}.__react_component_tooltip.place-bottom:after{border-left:8px solid transparent;border-right:8px solid transparent;top:-6px;left:50%;margin-left:-8px}.__react_component_tooltip.place-left{margin-left:-10px}.__react_component_tooltip.place-left:before{border-top:6px solid transparent;border-bottom:6px solid transparent;right:-8px;top:50%;margin-top:-5px}.__react_component_tooltip.place-left:after{border-top:5px solid transparent;border-bottom:5px solid transparent;right:-6px;top:50%;margin-top:-4px}.__react_component_tooltip.place-right{margin-left:10px}.__react_component_tooltip.place-right:before{border-top:6px solid transparent;border-bottom:6px solid transparent;left:-8px;top:50%;margin-top:-5px}.__react_component_tooltip.place-right:after{border-top:5px solid transparent;border-bottom:5px solid transparent;left:-6px;top:50%;margin-top:-4px}.__react_component_tooltip .multi-line{display:block;padding:2px 0px;text-align:center}</style>
+<title>Js (forked) - StackBlitz</title>
+
+<meta name="description" content="Mi Primer App con HTML
+">
+<meta property="og:type" content="object">
+<meta property="og:site_name" content="StackBlitz">
+<meta property="og:title" content="Js (forked) - StackBlitz">
+<meta property="og:image" content="https://social-img.staticblitz.com/projects/js-lzxqri/668a86908c5ae19d084d00e38f471fc9">
+<meta property="og:description" content="Mi Primer App con HTML">
+<meta property="og:author:username" content="claujavperezMX">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Js (forked) - StackBlitz">
+<meta name="twitter:image" content="https://social-img.staticblitz.com/projects/js-lzxqri/668a86908c5ae19d084d00e38f471fc9">
+<meta name="twitter:site" content="@StackBlitz">
+<meta name="twitter:description" content="Mi Primer App con HTML">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="hsl(220 10% 20%)">
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="5XzmibjcUSk81ApISHtNm252-STEgSiZ0BtxY9l8pnNz2q-RdN-eU2qoCLCjo0ZaWrwoLC889V5bVSxtvLJcgQ">
+<meta name="action-cable-url" content="/cable">
+<link rel="manifest" href="https://stackblitz.com/manifest.json">
+<link rel="icon" type="image/svg+xml" href="https://c.staticblitz.com/assets/favicon_sb-861fe1b85c0dc928750c62de15fed96fc75e57ee366bd937bad17a3938917b3f.svg">
+<link rel="icon" type="image/png" href="https://c.staticblitz.com/assets/favicon_sb-148f9e9aced4a6363b4a8232686c3d8998d3eabaab1a06385fd3f1996baf3a3e.png">
+<link rel="apple-touch-icon" type="image/png" href="https://c.staticblitz.com/assets/icons/icon-512x512-eb09dde1908d3c6968da8cda947cf8a1a1b966c8f54886a7a188e41e5576d829.png">
+
+
+<style>html {color: #ccc; background-color: #202327}</style>
+<link rel="stylesheet" href="./client-42af08872d76a.css">
+<script type="text/javascript" async="" src="./mixpanel-2-latest.min.js"></script><script type="text/javascript" async="" src="./analytics.js"></script><script type="text/javascript" src="./commons.c42222c4cb2f8913500f.js.gz" async="" status="loaded"></script><script type="text/javascript" src="./mixpanel.dynamic.js.gz" async="" status="loaded"></script><script type="text/javascript" src="./google-analytics.dynamic.js.gz" async="" status="loaded"></script><script type="text/javascript" async="" src="./analytics.min.js"></script><script>
+!function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="4.0.0";analytics.load("ta1kDK49qdEDEfd8KYxI37mW0GPkLKn1");}}();
+</script><script type="text/javascript">
+  (function (d, u, h, s) {
+    h = d.getElementsByTagName('head')[0];
+    s = d.createElement('script');
+    s.async = 1;
+    s.src = u + new Date().getTime();
+    h.appendChild(s);
+  })(document, 'https://grow.clearbitjs.com/api/pixel.js?v=');
+</script><script async="" src="./pixel.js"></script>
+
+<script src="./loader.js"></script>
+<script src="./client-da4dffec1942a.js"></script>
+
+  <link rel="alternate" type="application/json+oembed" href="https://stackblitz.com/api/oembed?url=https%3A%2F%2Fstackblitz.com%2Fedit%2Fjs-lzxqri%3Ffile%3Dindex.html" title="Js (forked) - StackBlitz">
+  <link rel="stylesheet" type="text/css" data-name="vs/editor/editor.main" href="./editor.main.css"><link rel="alternate" type="application/xml+oembed" href="https://stackblitz.com/api/oembed.xml?url=https%3A%2F%2Fstackblitz.com%2Fedit%2Fjs-lzxqri%3Ffile%3Dindex.html" title="Js (forked) - StackBlitz">
+
+<meta name="color-scheme" content="dark"><style id="themes">:root {
+--sb-ui-font-family:system-ui, -apple-system, Segoe UI, Roboto, Cantarell, sans-serif;
+--sb-code-font-family:Menlo, Cascadia Code, Consolas, Liberation Mono, monospace;
+--sb-alert-background:hsl(220, 70%, 40%);
+--sb-alert-foreground:hsl(0, 0%, 100%);
+--sb-brand-stackblitz-blue:#1389fd;
+--sb-card-background:hsl(220 12% 20%);
+--sb-card-shadow:hsl(0 0% 0% / 50%);
+--sb-control-active-background:hsl(205 100% 40%);
+--sb-control-active-pressed-background:hsl(205 100% 45%);
+--sb-control-active-thumb:hsl(0 0% 96%);
+--sb-control-border-alt:transparent;
+--sb-control-border-focus:hsl(205 100% 50%);
+--sb-control-border-strong:hsl(220 10% 80%);
+--sb-control-border:hsl(220 10% 45%);
+--sb-dialog-backdrop:hsl(220 40% 5% / 0.7);
+--sb-error-background:hsl(355 100% 20%);
+--sb-error-border:hsl(355 100% 60%);
+--sb-error-foreground:hsl(0 0% 100%);
+--sb-foreground-active:hsl(0 0% 94%);
+--sb-foreground-alt:hsl(0 0% 62%);
+--sb-foreground-disabled:hsl(0 0% 45%);
+--sb-foreground-highlight-high:hsl(165 100% 60%);
+--sb-foreground-highlight-low:hsl(186 52% 48%);
+--sb-foreground-highlight:hsl(191 91% 69%);
+--sb-foreground-inverted:hsl(220 18% 10%);
+--sb-foreground-negative:hsl(355 80% 65%);
+--sb-foreground-warning:hsl(55 65% 60%);
+--sb-foreground:hsl(0 0% 80%);
+--sb-icon-foreground:hsl(0 0% 80%);
+--sb-luminosity-minus1:hsl(0 0% 0% / 0.15);
+--sb-luminosity-minus2:hsl(0 0% 0% / 0.25);
+--sb-luminosity-plus1:hsl(220 60% 95% / 0.06);
+--sb-luminosity-plus2:hsl(220 60% 95% / 0.1);
+--sb-luminosity-plus3:hsl(220 60% 95% / 0.14);
+--sb-menu-active-background:hsl(205 100% 35%);
+--sb-menu-active-foreground:hsl(0 0% 100%);
+--sb-menu-background:hsl(220 15% 24%);
+--sb-menu-border:transparent;
+--sb-menu-shadow:hsl(0 0% 0% / 0.25);
+--sb-page-alt-background:hsl(220 18% 10%);
+--sb-page-background:hsl(220 10% 14%);
+--sb-selection-background:hsl(205 100% 35%);
+--sb-selection-foreground:hsl(0 0% 100%);
+--sb-separator-alt:hsl(220 10% 30% / 0.6);
+--sb-separator-base:hsl(220 10% 30%);
+--sb-separator-strong:hsl(220 10% 35%);
+--sb-sidebar-background:hsl(220 18% 10%);
+--sb-toolbar-background:hsl(220 10% 20%);
+--sb-tooltip-background:hsl(220 15% 24%);
+--sb-tooltip-border:transparent;
+--sb-tooltip-shadow:hsl(0 0% 0% / 0.25);
+--foreground:#cccccc;
+--errorForeground:#f48771;
+--descriptionForeground:#ccccccb3;
+--icon-foreground:#c5c5c5;
+--focusBorder:#4288fdcc;
+--textSeparator-foreground:#ffffff2e;
+--textLink-foreground:#3794ff;
+--textLink-activeForeground:#3794ff;
+--textPreformat-foreground:#d7ba7d;
+--textBlockQuote-background:#7f7f7f1a;
+--textBlockQuote-border:#007acc80;
+--textCodeBlock-background:#0a0a0a66;
+--widget-shadow:#000000;
+--input-background:hsl(220 60% 95% / 0.1);
+--input-foreground:#cccccc;
+--inputOption-activeBorder:#007acc00;
+--inputOption-activeBackground:#4288fd66;
+--input-placeholderForeground:#a6a6a6;
+--inputValidation-infoBackground:#063b49;
+--inputValidation-infoBorder:#007acc;
+--inputValidation-warningBackground:#352a05;
+--inputValidation-warningBorder:#b89500;
+--inputValidation-errorBackground:#5a1d1d;
+--inputValidation-errorBorder:#be1100;
+--dropdown-background:#3c3c3c;
+--dropdown-foreground:#f0f0f0;
+--dropdown-border:#3c3c3c;
+--checkbox-background:#3c3c3c;
+--checkbox-foreground:#f0f0f0;
+--checkbox-border:#3c3c3c;
+--pickerGroup-foreground:#3794ff;
+--pickerGroup-border:#3f3f46;
+--button-foreground:hsl(0 0% 94%);
+--button-background:hsl(220 55% 48%);
+--button-hoverBackground:hsl(220 55% 56%);
+--badge-background:#4d4d4d;
+--badge-foreground:#ffffff;
+--scrollbar-shadow:#000000;
+--scrollbarSlider-background:#79797966;
+--scrollbarSlider-hoverBackground:#646464b3;
+--scrollbarSlider-activeBackground:#bfbfbf66;
+--progressBar-background:#0e70c0;
+--editorError-foreground:#f48771;
+--editorWarning-foreground:#cca700;
+--editorInfo-foreground:#75beff;
+--editorHint-foreground:#eeeeeeb3;
+--editor-background:hsl(220 18% 10%);
+--editor-foreground:hsl(0 0% 80%);
+--editorWidget-background:#252526;
+--editorWidget-foreground:#cccccc;
+--editorWidget-border:#454545;
+--editor-selectionBackground:#264f78;
+--editor-inactiveSelectionBackground:#3a3d41;
+--editor-selectionHighlightBackground:#add6ff26;
+--editor-findMatchBackground:#515c6a;
+--editor-findMatchHighlightBackground:#ea5c0055;
+--editor-findRangeHighlightBackground:#3a3d4166;
+--searchEditor-findMatchBackground:#ea5c0038;
+--editor-hoverHighlightBackground:#264f7840;
+--editorHoverWidget-background:#252526;
+--editorHoverWidget-foreground:#cccccc;
+--editorHoverWidget-border:#454545;
+--editorHoverWidget-statusBarBackground:#2c2c2d;
+--editorLink-activeForeground:#4e94ce;
+--editorLightBulb-foreground:#ffcc00;
+--editorLightBulbAutoFix-foreground:#75beff;
+--diffEditor-insertedTextBackground:#9bb95533;
+--diffEditor-removedTextBackground:#ff000033;
+--list-focusBackground:hsl(205 80% 20%);
+--list-activeSelectionBackground:hsl(205 100% 35%);
+--list-activeSelectionForeground:#ffffff;
+--list-inactiveSelectionBackground:hsl(220 16% 28%);
+--list-hoverBackground:hsl(220 12% 20%);
+--list-dropBackground:#383b3d;
+--list-highlightForeground:#0097fb;
+--list-invalidItemForeground:#b89500;
+--list-errorForeground:#f88070;
+--list-warningForeground:#cca700;
+--listFilterWidget-background:#653723;
+--listFilterWidget-outline:#00000000;
+--listFilterWidget-noMatchesOutline:#be1100;
+--list-filterMatchBackground:#ea5c0055;
+--tree-indentGuidesStroke:#585858;
+--menu-foreground:#cccccc;
+--menu-background:#252526;
+--menu-selectionForeground:#ffffff;
+--menu-selectionBackground:#094771;
+--menu-separatorBackground:#bbbbbb;
+--editor-snippetTabstopHighlightBackground:#7c7c7c4d;
+--editor-snippetFinalTabstopHighlightBorder:#525252;
+--breadcrumb-foreground:#cccccccc;
+--breadcrumb-background:#1e1e1e;
+--breadcrumb-focusForeground:#e0e0e0;
+--breadcrumb-activeSelectionForeground:#e0e0e0;
+--breadcrumbPicker-background:#252526;
+--merge-currentHeaderBackground:#40c8ae80;
+--merge-currentContentBackground:#40c8ae33;
+--merge-incomingHeaderBackground:#40a6ff80;
+--merge-incomingContentBackground:#40a6ff33;
+--merge-commonHeaderBackground:#60606066;
+--merge-commonContentBackground:#60606029;
+--editorOverviewRuler-currentContentForeground:#40c8ae80;
+--editorOverviewRuler-incomingContentForeground:#40a6ff80;
+--editorOverviewRuler-commonContentForeground:#60606066;
+--editorOverviewRuler-findMatchForeground:#d186167e;
+--editorOverviewRuler-selectionHighlightForeground:#a0a0a0cc;
+--minimap-findMatchHighlight:#d18616;
+--minimap-selectionHighlight:#264f78;
+--minimap-errorHighlight:#ff1212b3;
+--minimap-warningHighlight:#cca700;
+--problemsErrorIcon-foreground:#f48771;
+--problemsWarningIcon-foreground:#cca700;
+--problemsInfoIcon-foreground:#75beff;
+--activityBarBadge-background:#007acc;
+--editorIndentGuide-activeBackground:#707070;
+--editorIndentGuide-background:#404040;
+--settings-numberInputBackground:#292929;
+--settings-textInputBackground:#292929;
+--sideBarTitle-foreground:#bbbbbb;
+--statusBarItem-remoteBackground:#16825d;
+--statusBarItem-remoteForeground:#ffffff;
+--activityBar-activeBorder:#ffffff;
+--activityBar-background:hsl(220 10% 20%);
+--activityBar-dropBackground:#ffffff1f;
+--activityBar-foreground:hsl(0 0% 94%);
+--activityBar-inactiveForeground:#ffffff66;
+--activityBarBadge-foreground:#ffffff;
+--debugExceptionWidget-background:#420b0d;
+--debugExceptionWidget-border:#a31515;
+--debugIcon-breakpointCurrentStackframeForeground:#ffcc00;
+--debugIcon-breakpointDisabledForeground:#848484;
+--debugIcon-breakpointForeground:#e51400;
+--debugIcon-breakpointStackframeForeground:#89d185;
+--debugIcon-breakpointUnverifiedForeground:#848484;
+--debugIcon-continueForeground:#75beff;
+--debugIcon-disconnectForeground:#f48771;
+--debugIcon-pauseForeground:#75beff;
+--debugIcon-restartForeground:#89d185;
+--debugIcon-startForeground:#89d185;
+--debugIcon-stepBackForeground:#75beff;
+--debugIcon-stepIntoForeground:#75beff;
+--debugIcon-stepOutForeground:#75beff;
+--debugIcon-stepOverForeground:#75beff;
+--debugIcon-stopForeground:#f48771;
+--debugToolBar-background:#333333;
+--editor-focusedStackFrameHighlightBackground:#7abd7a4d;
+--editor-foldBackground:#264f784d;
+--editor-lineHighlightBorder:#282828;
+--editor-rangeHighlightBackground:#ffffff0b;
+--editor-stackFrameHighlightBackground:#ffff0033;
+--editor-symbolHighlightBackground:#ea5c0055;
+--editor-wordHighlightBackground:#575757b8;
+--editor-wordHighlightStrongBackground:#004972b8;
+--editorActiveLineNumber-foreground:#c6c6c6;
+--editorBracketMatch-background:#0064001a;
+--editorBracketMatch-border:#888888;
+--editorCodeLens-foreground:#999999;
+--editorCursor-foreground:#aeafad;
+--editorGroup-border:#444444;
+--editorGroup-dropBackground:#53595d80;
+--editorGroupHeader-noTabsBackground:#1e1e1e;
+--editorGroupHeader-tabsBackground:#252526;
+--editorGutter-addedBackground:#587c0c;
+--editorGutter-background:#1e1e1e;
+--editorGutter-commentRangeForeground:#c5c5c5;
+--editorGutter-deletedBackground:#94151b;
+--editorGutter-modifiedBackground:#0c7d9d;
+--editorLineNumber-activeForeground:#c6c6c6;
+--editorLineNumber-foreground:#858585;
+--editorMarkerNavigation-background:#2d2d30;
+--editorMarkerNavigationError-background:#f48771;
+--editorMarkerNavigationInfo-background:#75beff;
+--editorMarkerNavigationWarning-background:#cca700;
+--editorOverviewRuler-addedForeground:#587c0c99;
+--editorOverviewRuler-border:#7f7f7f4d;
+--editorOverviewRuler-bracketMatchForeground:#a0a0a0;
+--editorOverviewRuler-deletedForeground:#94151b99;
+--editorOverviewRuler-errorForeground:#ff1212b3;
+--editorOverviewRuler-infoForeground:#75beff;
+--editorOverviewRuler-modifiedForeground:#0c7d9d99;
+--editorOverviewRuler-rangeHighlightForeground:#007acc99;
+--editorOverviewRuler-warningForeground:#cca700;
+--editorOverviewRuler-wordHighlightForeground:#a0a0a0cc;
+--editorOverviewRuler-wordHighlightStrongForeground:#c0a0c0cc;
+--editorPane-background:#1e1e1e;
+--editorRuler-foreground:#5a5a5a;
+--editorSuggestWidget-background:#252526;
+--editorSuggestWidget-border:#454545;
+--editorSuggestWidget-foreground:#d4d4d4;
+--editorSuggestWidget-highlightForeground:#0097fb;
+--editorSuggestWidget-selectedBackground:#062f4a;
+--editorUnnecessaryCode-opacity:#000000aa;
+--editorWhitespace-foreground:#e3e4e229;
+--extensionBadge-remoteBackground:#007acc;
+--extensionBadge-remoteForeground:#ffffff;
+--extensionButton-prominentBackground:#327e36;
+--extensionButton-prominentForeground:#ffffff;
+--extensionButton-prominentHoverBackground:#28632b;
+--gitDecoration-addedResourceForeground:#81b88b;
+--gitDecoration-conflictingResourceForeground:#6c6cc4;
+--gitDecoration-deletedResourceForeground:#c74e39;
+--gitDecoration-ignoredResourceForeground:#8c8c8c;
+--gitDecoration-modifiedResourceForeground:#e2c08d;
+--gitDecoration-submoduleResourceForeground:#8db9e2;
+--gitDecoration-untrackedResourceForeground:#73c991;
+--imagePreview-border:#80808059;
+--menubar-selectionBackground:#ffffff1a;
+--menubar-selectionForeground:#cccccc;
+--minimapGutter-addedBackground:#587c0c;
+--minimapGutter-deletedBackground:#94151b;
+--minimapGutter-modifiedBackground:#0c7d9d;
+--notificationCenterHeader-background:#303031;
+--notificationLink-foreground:#3794ff;
+--notifications-background:#252526;
+--notifications-border:#303031;
+--notifications-foreground:#cccccc;
+--notificationsErrorIcon-foreground:#f48771;
+--notificationsInfoIcon-foreground:#75beff;
+--notificationsWarningIcon-foreground:#cca700;
+--panel-background:#1e1e1e;
+--panel-border:#80808059;
+--panel-dropBackground:#ffffff1f;
+--panelTitle-activeBorder:#e7e7e7;
+--panelTitle-activeForeground:#e7e7e7;
+--panelTitle-inactiveForeground:#e7e7e799;
+--peekView-border:#007acc;
+--peekViewEditor-background:#001f33;
+--peekViewEditor-matchHighlightBackground:#ff8f0099;
+--peekViewEditorGutter-background:#001f33;
+--peekViewResult-background:#252526;
+--peekViewResult-fileForeground:#ffffff;
+--peekViewResult-lineForeground:#bbbbbb;
+--peekViewResult-matchHighlightBackground:#ea5c004d;
+--peekViewResult-selectionBackground:#3399ff33;
+--peekViewResult-selectionForeground:#ffffff;
+--peekViewTitle-background:#1e1e1e;
+--peekViewTitleDescription-foreground:#ccccccb3;
+--peekViewTitleLabel-foreground:#ffffff;
+--quickInput-background:#252526;
+--settings-checkboxBackground:#3c3c3c;
+--settings-checkboxBorder:#3c3c3c;
+--settings-checkboxForeground:#f0f0f0;
+--settings-dropdownBackground:#3c3c3c;
+--settings-dropdownBorder:#3c3c3c;
+--settings-dropdownForeground:#f0f0f0;
+--settings-dropdownListBorder:#454545;
+--settings-headerForeground:#e7e7e7;
+--settings-modifiedItemIndicator:#0c7d9d;
+--settings-numberInputForeground:#cccccc;
+--settings-textInputForeground:#cccccc;
+--sideBar-background:hsl(220 10% 14%);
+--sideBar-dropBackground:#ffffff1f;
+--sideBarSectionHeader-background:hsl(220 12% 20%);
+--statusBar-background:#007acc;
+--statusBar-debuggingBackground:#cc6633;
+--statusBar-debuggingForeground:#ffffff;
+--statusBar-foreground:#ffffff;
+--statusBar-noFolderBackground:#68217a;
+--statusBar-noFolderForeground:#ffffff;
+--statusBarItem-activeBackground:#ffffff2e;
+--statusBarItem-hoverBackground:#ffffff1f;
+--statusBarItem-prominentBackground:#00000080;
+--statusBarItem-prominentForeground:#ffffff;
+--statusBarItem-prominentHoverBackground:#0000004d;
+--symbolIcon-arrayForeground:#cccccc;
+--symbolIcon-booleanForeground:#cccccc;
+--symbolIcon-classForeground:#ee9d28;
+--symbolIcon-colorForeground:#cccccc;
+--symbolIcon-constantForeground:#cccccc;
+--symbolIcon-constructorForeground:#b180d7;
+--symbolIcon-enumeratorForeground:#ee9d28;
+--symbolIcon-enumeratorMemberForeground:#75beff;
+--symbolIcon-eventForeground:#ee9d28;
+--symbolIcon-fieldForeground:#75beff;
+--symbolIcon-fileForeground:#cccccc;
+--symbolIcon-folderForeground:#cccccc;
+--symbolIcon-functionForeground:#b180d7;
+--symbolIcon-interfaceForeground:#75beff;
+--symbolIcon-keyForeground:#cccccc;
+--symbolIcon-keywordForeground:#cccccc;
+--symbolIcon-methodForeground:#b180d7;
+--symbolIcon-moduleForeground:#cccccc;
+--symbolIcon-namespaceForeground:#cccccc;
+--symbolIcon-nullForeground:#cccccc;
+--symbolIcon-numberForeground:#cccccc;
+--symbolIcon-objectForeground:#cccccc;
+--symbolIcon-operatorForeground:#cccccc;
+--symbolIcon-packageForeground:#cccccc;
+--symbolIcon-propertyForeground:#cccccc;
+--symbolIcon-referenceForeground:#cccccc;
+--symbolIcon-snippetForeground:#cccccc;
+--symbolIcon-stringForeground:#cccccc;
+--symbolIcon-structForeground:#cccccc;
+--symbolIcon-textForeground:#cccccc;
+--symbolIcon-typeParameterForeground:#cccccc;
+--symbolIcon-unitForeground:#cccccc;
+--symbolIcon-variableForeground:#75beff;
+--tab-activeBackground:hsl(220 18% 10%);
+--tab-activeForeground:#ffffff;
+--tab-activeModifiedBorder:#3399cc;
+--tab-border:#252526;
+--tab-inactiveBackground:hsl(220 10% 16.5%);
+--tab-inactiveForeground:#ffffff80;
+--tab-inactiveModifiedBorder:#3399cc80;
+--tab-unfocusedActiveBackground:#1e1e1e;
+--tab-unfocusedActiveForeground:#ffffff80;
+--tab-unfocusedActiveModifiedBorder:#3399cc80;
+--tab-unfocusedInactiveForeground:#ffffff40;
+--tab-unfocusedInactiveModifiedBorder:#3399cc40;
+--terminal-ansiBlack:hsl(220 18% 10%);
+--terminal-ansiBlue:#57c7ff;
+--terminal-ansiBrightBlack:#686868;
+--terminal-ansiBrightBlue:#57c7ff;
+--terminal-ansiBrightCyan:#9aedfe;
+--terminal-ansiBrightGreen:#5af78e;
+--terminal-ansiBrightMagenta:#ff6ac1;
+--terminal-ansiBrightRed:#ff5c57;
+--terminal-ansiBrightWhite:#eff0eb;
+--terminal-ansiBrightYellow:#f3f99d;
+--terminal-ansiCyan:#9aedfe;
+--terminal-ansiGreen:#5af78e;
+--terminal-ansiMagenta:#ff6ac1;
+--terminal-ansiRed:#ff5c57;
+--terminal-ansiWhite:#f1f1f0;
+--terminal-ansiYellow:#f3f99d;
+--terminal-background:hsl(220 18% 10%);
+--terminal-border:#80808059;
+--terminal-foreground:#eff0eb;
+--terminal-selectionBackground:rgba(151, 151, 155, 0.2);
+--titleBar-activeBackground:#3c3c3c;
+--titleBar-activeForeground:#cccccc;
+--titleBar-inactiveBackground:#3c3c3c99;
+--titleBar-inactiveForeground:#cccccc99;
+}</style><script async="async" type="text/javascript" src="./editor.main.js"></script><script async="async" type="text/javascript" src="./editor.main.nls.js"></script><style type="text/css" media="screen" class="monaco-colors">.codicon-add:before { content: '\ea60'; }
+.codicon-plus:before { content: '\ea60'; }
+.codicon-gist-new:before { content: '\ea60'; }
+.codicon-repo-create:before { content: '\ea60'; }
+.codicon-lightbulb:before { content: '\ea61'; }
+.codicon-light-bulb:before { content: '\ea61'; }
+.codicon-repo:before { content: '\ea62'; }
+.codicon-repo-delete:before { content: '\ea62'; }
+.codicon-gist-fork:before { content: '\ea63'; }
+.codicon-repo-forked:before { content: '\ea63'; }
+.codicon-git-pull-request:before { content: '\ea64'; }
+.codicon-git-pull-request-abandoned:before { content: '\ea64'; }
+.codicon-record-keys:before { content: '\ea65'; }
+.codicon-keyboard:before { content: '\ea65'; }
+.codicon-tag:before { content: '\ea66'; }
+.codicon-tag-add:before { content: '\ea66'; }
+.codicon-tag-remove:before { content: '\ea66'; }
+.codicon-person:before { content: '\ea67'; }
+.codicon-person-follow:before { content: '\ea67'; }
+.codicon-person-outline:before { content: '\ea67'; }
+.codicon-person-filled:before { content: '\ea67'; }
+.codicon-git-branch:before { content: '\ea68'; }
+.codicon-git-branch-create:before { content: '\ea68'; }
+.codicon-git-branch-delete:before { content: '\ea68'; }
+.codicon-source-control:before { content: '\ea68'; }
+.codicon-mirror:before { content: '\ea69'; }
+.codicon-mirror-public:before { content: '\ea69'; }
+.codicon-star:before { content: '\ea6a'; }
+.codicon-star-add:before { content: '\ea6a'; }
+.codicon-star-delete:before { content: '\ea6a'; }
+.codicon-star-empty:before { content: '\ea6a'; }
+.codicon-comment:before { content: '\ea6b'; }
+.codicon-comment-add:before { content: '\ea6b'; }
+.codicon-alert:before { content: '\ea6c'; }
+.codicon-warning:before { content: '\ea6c'; }
+.codicon-search:before { content: '\ea6d'; }
+.codicon-search-save:before { content: '\ea6d'; }
+.codicon-log-out:before { content: '\ea6e'; }
+.codicon-sign-out:before { content: '\ea6e'; }
+.codicon-log-in:before { content: '\ea6f'; }
+.codicon-sign-in:before { content: '\ea6f'; }
+.codicon-eye:before { content: '\ea70'; }
+.codicon-eye-unwatch:before { content: '\ea70'; }
+.codicon-eye-watch:before { content: '\ea70'; }
+.codicon-circle-filled:before { content: '\ea71'; }
+.codicon-primitive-dot:before { content: '\ea71'; }
+.codicon-close-dirty:before { content: '\ea71'; }
+.codicon-debug-breakpoint:before { content: '\ea71'; }
+.codicon-debug-breakpoint-disabled:before { content: '\ea71'; }
+.codicon-debug-hint:before { content: '\ea71'; }
+.codicon-primitive-square:before { content: '\ea72'; }
+.codicon-edit:before { content: '\ea73'; }
+.codicon-pencil:before { content: '\ea73'; }
+.codicon-info:before { content: '\ea74'; }
+.codicon-issue-opened:before { content: '\ea74'; }
+.codicon-gist-private:before { content: '\ea75'; }
+.codicon-git-fork-private:before { content: '\ea75'; }
+.codicon-lock:before { content: '\ea75'; }
+.codicon-mirror-private:before { content: '\ea75'; }
+.codicon-close:before { content: '\ea76'; }
+.codicon-remove-close:before { content: '\ea76'; }
+.codicon-x:before { content: '\ea76'; }
+.codicon-repo-sync:before { content: '\ea77'; }
+.codicon-sync:before { content: '\ea77'; }
+.codicon-clone:before { content: '\ea78'; }
+.codicon-desktop-download:before { content: '\ea78'; }
+.codicon-beaker:before { content: '\ea79'; }
+.codicon-microscope:before { content: '\ea79'; }
+.codicon-vm:before { content: '\ea7a'; }
+.codicon-device-desktop:before { content: '\ea7a'; }
+.codicon-file:before { content: '\ea7b'; }
+.codicon-file-text:before { content: '\ea7b'; }
+.codicon-more:before { content: '\ea7c'; }
+.codicon-ellipsis:before { content: '\ea7c'; }
+.codicon-kebab-horizontal:before { content: '\ea7c'; }
+.codicon-mail-reply:before { content: '\ea7d'; }
+.codicon-reply:before { content: '\ea7d'; }
+.codicon-organization:before { content: '\ea7e'; }
+.codicon-organization-filled:before { content: '\ea7e'; }
+.codicon-organization-outline:before { content: '\ea7e'; }
+.codicon-new-file:before { content: '\ea7f'; }
+.codicon-file-add:before { content: '\ea7f'; }
+.codicon-new-folder:before { content: '\ea80'; }
+.codicon-file-directory-create:before { content: '\ea80'; }
+.codicon-trash:before { content: '\ea81'; }
+.codicon-trashcan:before { content: '\ea81'; }
+.codicon-history:before { content: '\ea82'; }
+.codicon-clock:before { content: '\ea82'; }
+.codicon-folder:before { content: '\ea83'; }
+.codicon-file-directory:before { content: '\ea83'; }
+.codicon-symbol-folder:before { content: '\ea83'; }
+.codicon-logo-github:before { content: '\ea84'; }
+.codicon-mark-github:before { content: '\ea84'; }
+.codicon-github:before { content: '\ea84'; }
+.codicon-terminal:before { content: '\ea85'; }
+.codicon-console:before { content: '\ea85'; }
+.codicon-repl:before { content: '\ea85'; }
+.codicon-zap:before { content: '\ea86'; }
+.codicon-symbol-event:before { content: '\ea86'; }
+.codicon-error:before { content: '\ea87'; }
+.codicon-stop:before { content: '\ea87'; }
+.codicon-variable:before { content: '\ea88'; }
+.codicon-symbol-variable:before { content: '\ea88'; }
+.codicon-array:before { content: '\ea8a'; }
+.codicon-symbol-array:before { content: '\ea8a'; }
+.codicon-symbol-module:before { content: '\ea8b'; }
+.codicon-symbol-package:before { content: '\ea8b'; }
+.codicon-symbol-namespace:before { content: '\ea8b'; }
+.codicon-symbol-object:before { content: '\ea8b'; }
+.codicon-symbol-method:before { content: '\ea8c'; }
+.codicon-symbol-function:before { content: '\ea8c'; }
+.codicon-symbol-constructor:before { content: '\ea8c'; }
+.codicon-symbol-boolean:before { content: '\ea8f'; }
+.codicon-symbol-null:before { content: '\ea8f'; }
+.codicon-symbol-numeric:before { content: '\ea90'; }
+.codicon-symbol-number:before { content: '\ea90'; }
+.codicon-symbol-structure:before { content: '\ea91'; }
+.codicon-symbol-struct:before { content: '\ea91'; }
+.codicon-symbol-parameter:before { content: '\ea92'; }
+.codicon-symbol-type-parameter:before { content: '\ea92'; }
+.codicon-symbol-key:before { content: '\ea93'; }
+.codicon-symbol-text:before { content: '\ea93'; }
+.codicon-symbol-reference:before { content: '\ea94'; }
+.codicon-go-to-file:before { content: '\ea94'; }
+.codicon-symbol-enum:before { content: '\ea95'; }
+.codicon-symbol-value:before { content: '\ea95'; }
+.codicon-symbol-ruler:before { content: '\ea96'; }
+.codicon-symbol-unit:before { content: '\ea96'; }
+.codicon-activate-breakpoints:before { content: '\ea97'; }
+.codicon-archive:before { content: '\ea98'; }
+.codicon-arrow-both:before { content: '\ea99'; }
+.codicon-arrow-down:before { content: '\ea9a'; }
+.codicon-arrow-left:before { content: '\ea9b'; }
+.codicon-arrow-right:before { content: '\ea9c'; }
+.codicon-arrow-small-down:before { content: '\ea9d'; }
+.codicon-arrow-small-left:before { content: '\ea9e'; }
+.codicon-arrow-small-right:before { content: '\ea9f'; }
+.codicon-arrow-small-up:before { content: '\eaa0'; }
+.codicon-arrow-up:before { content: '\eaa1'; }
+.codicon-bell:before { content: '\eaa2'; }
+.codicon-bold:before { content: '\eaa3'; }
+.codicon-book:before { content: '\eaa4'; }
+.codicon-bookmark:before { content: '\eaa5'; }
+.codicon-debug-breakpoint-conditional-unverified:before { content: '\eaa6'; }
+.codicon-debug-breakpoint-conditional:before { content: '\eaa7'; }
+.codicon-debug-breakpoint-conditional-disabled:before { content: '\eaa7'; }
+.codicon-debug-breakpoint-data-unverified:before { content: '\eaa8'; }
+.codicon-debug-breakpoint-data:before { content: '\eaa9'; }
+.codicon-debug-breakpoint-data-disabled:before { content: '\eaa9'; }
+.codicon-debug-breakpoint-log-unverified:before { content: '\eaaa'; }
+.codicon-debug-breakpoint-log:before { content: '\eaab'; }
+.codicon-debug-breakpoint-log-disabled:before { content: '\eaab'; }
+.codicon-briefcase:before { content: '\eaac'; }
+.codicon-broadcast:before { content: '\eaad'; }
+.codicon-browser:before { content: '\eaae'; }
+.codicon-bug:before { content: '\eaaf'; }
+.codicon-calendar:before { content: '\eab0'; }
+.codicon-case-sensitive:before { content: '\eab1'; }
+.codicon-check:before { content: '\eab2'; }
+.codicon-checklist:before { content: '\eab3'; }
+.codicon-chevron-down:before { content: '\eab4'; }
+.codicon-chevron-left:before { content: '\eab5'; }
+.codicon-chevron-right:before { content: '\eab6'; }
+.codicon-chevron-up:before { content: '\eab7'; }
+.codicon-chrome-close:before { content: '\eab8'; }
+.codicon-chrome-maximize:before { content: '\eab9'; }
+.codicon-chrome-minimize:before { content: '\eaba'; }
+.codicon-chrome-restore:before { content: '\eabb'; }
+.codicon-circle-outline:before { content: '\eabc'; }
+.codicon-debug-breakpoint-unverified:before { content: '\eabc'; }
+.codicon-circle-slash:before { content: '\eabd'; }
+.codicon-circuit-board:before { content: '\eabe'; }
+.codicon-clear-all:before { content: '\eabf'; }
+.codicon-clippy:before { content: '\eac0'; }
+.codicon-close-all:before { content: '\eac1'; }
+.codicon-cloud-download:before { content: '\eac2'; }
+.codicon-cloud-upload:before { content: '\eac3'; }
+.codicon-code:before { content: '\eac4'; }
+.codicon-collapse-all:before { content: '\eac5'; }
+.codicon-color-mode:before { content: '\eac6'; }
+.codicon-comment-discussion:before { content: '\eac7'; }
+.codicon-compare-changes:before { content: '\eafd'; }
+.codicon-credit-card:before { content: '\eac9'; }
+.codicon-dash:before { content: '\eacc'; }
+.codicon-dashboard:before { content: '\eacd'; }
+.codicon-database:before { content: '\eace'; }
+.codicon-debug-continue:before { content: '\eacf'; }
+.codicon-debug-disconnect:before { content: '\ead0'; }
+.codicon-debug-pause:before { content: '\ead1'; }
+.codicon-debug-restart:before { content: '\ead2'; }
+.codicon-debug-start:before { content: '\ead3'; }
+.codicon-debug-step-into:before { content: '\ead4'; }
+.codicon-debug-step-out:before { content: '\ead5'; }
+.codicon-debug-step-over:before { content: '\ead6'; }
+.codicon-debug-stop:before { content: '\ead7'; }
+.codicon-debug:before { content: '\ead8'; }
+.codicon-device-camera-video:before { content: '\ead9'; }
+.codicon-device-camera:before { content: '\eada'; }
+.codicon-device-mobile:before { content: '\eadb'; }
+.codicon-diff-added:before { content: '\eadc'; }
+.codicon-diff-ignored:before { content: '\eadd'; }
+.codicon-diff-modified:before { content: '\eade'; }
+.codicon-diff-removed:before { content: '\eadf'; }
+.codicon-diff-renamed:before { content: '\eae0'; }
+.codicon-diff:before { content: '\eae1'; }
+.codicon-discard:before { content: '\eae2'; }
+.codicon-editor-layout:before { content: '\eae3'; }
+.codicon-empty-window:before { content: '\eae4'; }
+.codicon-exclude:before { content: '\eae5'; }
+.codicon-extensions:before { content: '\eae6'; }
+.codicon-eye-closed:before { content: '\eae7'; }
+.codicon-file-binary:before { content: '\eae8'; }
+.codicon-file-code:before { content: '\eae9'; }
+.codicon-file-media:before { content: '\eaea'; }
+.codicon-file-pdf:before { content: '\eaeb'; }
+.codicon-file-submodule:before { content: '\eaec'; }
+.codicon-file-symlink-directory:before { content: '\eaed'; }
+.codicon-file-symlink-file:before { content: '\eaee'; }
+.codicon-file-zip:before { content: '\eaef'; }
+.codicon-files:before { content: '\eaf0'; }
+.codicon-filter:before { content: '\eaf1'; }
+.codicon-flame:before { content: '\eaf2'; }
+.codicon-fold-down:before { content: '\eaf3'; }
+.codicon-fold-up:before { content: '\eaf4'; }
+.codicon-fold:before { content: '\eaf5'; }
+.codicon-folder-active:before { content: '\eaf6'; }
+.codicon-folder-opened:before { content: '\eaf7'; }
+.codicon-gear:before { content: '\eaf8'; }
+.codicon-gift:before { content: '\eaf9'; }
+.codicon-gist-secret:before { content: '\eafa'; }
+.codicon-gist:before { content: '\eafb'; }
+.codicon-git-commit:before { content: '\eafc'; }
+.codicon-git-compare:before { content: '\eafd'; }
+.codicon-git-merge:before { content: '\eafe'; }
+.codicon-github-action:before { content: '\eaff'; }
+.codicon-github-alt:before { content: '\eb00'; }
+.codicon-globe:before { content: '\eb01'; }
+.codicon-grabber:before { content: '\eb02'; }
+.codicon-graph:before { content: '\eb03'; }
+.codicon-gripper:before { content: '\eb04'; }
+.codicon-heart:before { content: '\eb05'; }
+.codicon-home:before { content: '\eb06'; }
+.codicon-horizontal-rule:before { content: '\eb07'; }
+.codicon-hubot:before { content: '\eb08'; }
+.codicon-inbox:before { content: '\eb09'; }
+.codicon-issue-closed:before { content: '\eb0a'; }
+.codicon-issue-reopened:before { content: '\eb0b'; }
+.codicon-issues:before { content: '\eb0c'; }
+.codicon-italic:before { content: '\eb0d'; }
+.codicon-jersey:before { content: '\eb0e'; }
+.codicon-json:before { content: '\eb0f'; }
+.codicon-kebab-vertical:before { content: '\eb10'; }
+.codicon-key:before { content: '\eb11'; }
+.codicon-law:before { content: '\eb12'; }
+.codicon-lightbulb-autofix:before { content: '\eb13'; }
+.codicon-link-external:before { content: '\eb14'; }
+.codicon-link:before { content: '\eb15'; }
+.codicon-list-ordered:before { content: '\eb16'; }
+.codicon-list-unordered:before { content: '\eb17'; }
+.codicon-live-share:before { content: '\eb18'; }
+.codicon-loading:before { content: '\eb19'; }
+.codicon-location:before { content: '\eb1a'; }
+.codicon-mail-read:before { content: '\eb1b'; }
+.codicon-mail:before { content: '\eb1c'; }
+.codicon-markdown:before { content: '\eb1d'; }
+.codicon-megaphone:before { content: '\eb1e'; }
+.codicon-mention:before { content: '\eb1f'; }
+.codicon-milestone:before { content: '\eb20'; }
+.codicon-mortar-board:before { content: '\eb21'; }
+.codicon-move:before { content: '\eb22'; }
+.codicon-multiple-windows:before { content: '\eb23'; }
+.codicon-mute:before { content: '\eb24'; }
+.codicon-no-newline:before { content: '\eb25'; }
+.codicon-note:before { content: '\eb26'; }
+.codicon-octoface:before { content: '\eb27'; }
+.codicon-open-preview:before { content: '\eb28'; }
+.codicon-package:before { content: '\eb29'; }
+.codicon-paintcan:before { content: '\eb2a'; }
+.codicon-pin:before { content: '\eb2b'; }
+.codicon-play:before { content: '\eb2c'; }
+.codicon-run:before { content: '\eb2c'; }
+.codicon-plug:before { content: '\eb2d'; }
+.codicon-preserve-case:before { content: '\eb2e'; }
+.codicon-preview:before { content: '\eb2f'; }
+.codicon-project:before { content: '\eb30'; }
+.codicon-pulse:before { content: '\eb31'; }
+.codicon-question:before { content: '\eb32'; }
+.codicon-quote:before { content: '\eb33'; }
+.codicon-radio-tower:before { content: '\eb34'; }
+.codicon-reactions:before { content: '\eb35'; }
+.codicon-references:before { content: '\eb36'; }
+.codicon-refresh:before { content: '\eb37'; }
+.codicon-regex:before { content: '\eb38'; }
+.codicon-remote-explorer:before { content: '\eb39'; }
+.codicon-remote:before { content: '\eb3a'; }
+.codicon-remove:before { content: '\eb3b'; }
+.codicon-replace-all:before { content: '\eb3c'; }
+.codicon-replace:before { content: '\eb3d'; }
+.codicon-repo-clone:before { content: '\eb3e'; }
+.codicon-repo-force-push:before { content: '\eb3f'; }
+.codicon-repo-pull:before { content: '\eb40'; }
+.codicon-repo-push:before { content: '\eb41'; }
+.codicon-report:before { content: '\eb42'; }
+.codicon-request-changes:before { content: '\eb43'; }
+.codicon-rocket:before { content: '\eb44'; }
+.codicon-root-folder-opened:before { content: '\eb45'; }
+.codicon-root-folder:before { content: '\eb46'; }
+.codicon-rss:before { content: '\eb47'; }
+.codicon-ruby:before { content: '\eb48'; }
+.codicon-save-all:before { content: '\eb49'; }
+.codicon-save-as:before { content: '\eb4a'; }
+.codicon-save:before { content: '\eb4b'; }
+.codicon-screen-full:before { content: '\eb4c'; }
+.codicon-screen-normal:before { content: '\eb4d'; }
+.codicon-search-stop:before { content: '\eb4e'; }
+.codicon-server:before { content: '\eb50'; }
+.codicon-settings-gear:before { content: '\eb51'; }
+.codicon-settings:before { content: '\eb52'; }
+.codicon-shield:before { content: '\eb53'; }
+.codicon-smiley:before { content: '\eb54'; }
+.codicon-sort-precedence:before { content: '\eb55'; }
+.codicon-split-horizontal:before { content: '\eb56'; }
+.codicon-split-vertical:before { content: '\eb57'; }
+.codicon-squirrel:before { content: '\eb58'; }
+.codicon-star-full:before { content: '\eb59'; }
+.codicon-star-half:before { content: '\eb5a'; }
+.codicon-symbol-class:before { content: '\eb5b'; }
+.codicon-symbol-color:before { content: '\eb5c'; }
+.codicon-symbol-constant:before { content: '\eb5d'; }
+.codicon-symbol-enum-member:before { content: '\eb5e'; }
+.codicon-symbol-field:before { content: '\eb5f'; }
+.codicon-symbol-file:before { content: '\eb60'; }
+.codicon-symbol-interface:before { content: '\eb61'; }
+.codicon-symbol-keyword:before { content: '\eb62'; }
+.codicon-symbol-misc:before { content: '\eb63'; }
+.codicon-symbol-operator:before { content: '\eb64'; }
+.codicon-symbol-property:before { content: '\eb65'; }
+.codicon-wrench:before { content: '\eb65'; }
+.codicon-wrench-subaction:before { content: '\eb65'; }
+.codicon-symbol-snippet:before { content: '\eb66'; }
+.codicon-tasklist:before { content: '\eb67'; }
+.codicon-telescope:before { content: '\eb68'; }
+.codicon-text-size:before { content: '\eb69'; }
+.codicon-three-bars:before { content: '\eb6a'; }
+.codicon-thumbsdown:before { content: '\eb6b'; }
+.codicon-thumbsup:before { content: '\eb6c'; }
+.codicon-tools:before { content: '\eb6d'; }
+.codicon-triangle-down:before { content: '\eb6e'; }
+.codicon-triangle-left:before { content: '\eb6f'; }
+.codicon-triangle-right:before { content: '\eb70'; }
+.codicon-triangle-up:before { content: '\eb71'; }
+.codicon-twitter:before { content: '\eb72'; }
+.codicon-unfold:before { content: '\eb73'; }
+.codicon-unlock:before { content: '\eb74'; }
+.codicon-unmute:before { content: '\eb75'; }
+.codicon-unverified:before { content: '\eb76'; }
+.codicon-verified:before { content: '\eb77'; }
+.codicon-versions:before { content: '\eb78'; }
+.codicon-vm-active:before { content: '\eb79'; }
+.codicon-vm-outline:before { content: '\eb7a'; }
+.codicon-vm-running:before { content: '\eb7b'; }
+.codicon-watch:before { content: '\eb7c'; }
+.codicon-whitespace:before { content: '\eb7d'; }
+.codicon-whole-word:before { content: '\eb7e'; }
+.codicon-window:before { content: '\eb7f'; }
+.codicon-word-wrap:before { content: '\eb80'; }
+.codicon-zoom-in:before { content: '\eb81'; }
+.codicon-zoom-out:before { content: '\eb82'; }
+.codicon-list-filter:before { content: '\eb83'; }
+.codicon-list-flat:before { content: '\eb84'; }
+.codicon-list-selection:before { content: '\eb85'; }
+.codicon-selection:before { content: '\eb85'; }
+.codicon-list-tree:before { content: '\eb86'; }
+.codicon-debug-breakpoint-function-unverified:before { content: '\eb87'; }
+.codicon-debug-breakpoint-function:before { content: '\eb88'; }
+.codicon-debug-breakpoint-function-disabled:before { content: '\eb88'; }
+.codicon-debug-stackframe-active:before { content: '\eb89'; }
+.codicon-debug-stackframe-dot:before { content: '\eb8a'; }
+.codicon-debug-stackframe:before { content: '\eb8b'; }
+.codicon-debug-stackframe-focused:before { content: '\eb8b'; }
+.codicon-debug-breakpoint-unsupported:before { content: '\eb8c'; }
+.codicon-symbol-string:before { content: '\eb8d'; }
+.codicon-debug-reverse-continue:before { content: '\eb8e'; }
+.codicon-debug-step-back:before { content: '\eb8f'; }
+.codicon-debug-restart-frame:before { content: '\eb90'; }
+.codicon-call-incoming:before { content: '\eb92'; }
+.codicon-call-outgoing:before { content: '\eb93'; }
+.codicon-menu:before { content: '\eb94'; }
+.codicon-expand-all:before { content: '\eb95'; }
+.codicon-feedback:before { content: '\eb96'; }
+.codicon-group-by-ref-type:before { content: '\eb97'; }
+.codicon-ungroup-by-ref-type:before { content: '\eb98'; }
+.codicon-account:before { content: '\eb99'; }
+.codicon-bell-dot:before { content: '\eb9a'; }
+.codicon-debug-console:before { content: '\eb9b'; }
+.codicon-library:before { content: '\eb9c'; }
+.codicon-output:before { content: '\eb9d'; }
+.codicon-run-all:before { content: '\eb9e'; }
+.codicon-sync-ignored:before { content: '\eb9f'; }
+.codicon-pinned:before { content: '\eba0'; }
+.codicon-github-inverted:before { content: '\eba1'; }
+.codicon-debug-alt:before { content: '\eb91'; }
+.codicon-server-process:before { content: '\eba2'; }
+.codicon-server-environment:before { content: '\eba3'; }
+.codicon-pass:before { content: '\eba4'; }
+.codicon-stop-circle:before { content: '\eba5'; }
+.codicon-play-circle:before { content: '\eba6'; }
+.codicon-record:before { content: '\eba7'; }
+.codicon-debug-alt-small:before { content: '\eba8'; }
+.codicon-vm-connect:before { content: '\eba9'; }
+.codicon-cloud:before { content: '\ebaa'; }
+.codicon-merge:before { content: '\ebab'; }
+.codicon-export:before { content: '\ebac'; }
+.codicon-graph-left:before { content: '\ebad'; }
+.codicon-magnet:before { content: '\ebae'; }
+.codicon-notebook:before { content: '\ebaf'; }
+.codicon-redo:before { content: '\ebb0'; }
+.codicon-check-all:before { content: '\ebb1'; }
+.codicon-pinned-dirty:before { content: '\ebb2'; }
+.codicon-pass-filled:before { content: '\ebb3'; }
+.codicon-circle-large-filled:before { content: '\ebb4'; }
+.codicon-circle-large-outline:before { content: '\ebb5'; }
+.codicon-combine:before { content: '\ebb6'; }
+.codicon-gather:before { content: '\ebb6'; }
+.codicon-table:before { content: '\ebb7'; }
+.codicon-variable-group:before { content: '\ebb8'; }
+.codicon-type-hierarchy:before { content: '\ebb9'; }
+.codicon-type-hierarchy-sub:before { content: '\ebba'; }
+.codicon-type-hierarchy-super:before { content: '\ebbb'; }
+.codicon-git-pull-request-create:before { content: '\ebbc'; }
+.codicon-run-above:before { content: '\ebbd'; }
+.codicon-run-below:before { content: '\ebbe'; }
+.codicon-notebook-template:before { content: '\ebbf'; }
+.codicon-debug-rerun:before { content: '\ebc0'; }
+.codicon-workspace-trusted:before { content: '\ebc1'; }
+.codicon-workspace-untrusted:before { content: '\ebc2'; }
+.codicon-workspace-unspecified:before { content: '\ebc3'; }
+.codicon-terminal-cmd:before { content: '\ebc4'; }
+.codicon-terminal-debian:before { content: '\ebc5'; }
+.codicon-terminal-linux:before { content: '\ebc6'; }
+.codicon-terminal-powershell:before { content: '\ebc7'; }
+.codicon-terminal-tmux:before { content: '\ebc8'; }
+.codicon-terminal-ubuntu:before { content: '\ebc9'; }
+.codicon-terminal-bash:before { content: '\ebca'; }
+.codicon-arrow-swap:before { content: '\ebcb'; }
+.codicon-copy:before { content: '\ebcc'; }
+.codicon-person-add:before { content: '\ebcd'; }
+.codicon-filter-filled:before { content: '\ebce'; }
+.codicon-wand:before { content: '\ebcf'; }
+.codicon-debug-line-by-line:before { content: '\ebd0'; }
+.codicon-inspect:before { content: '\ebd1'; }
+.codicon-drop-down-button:before { content: '\eab4'; }
+.codicon-tree-item-expanded:before { content: '\eab4'; }
+.codicon-tree-filter-on-type-on:before { content: '\eb83'; }
+.codicon-tree-filter-on-type-off:before { content: '\eb85'; }
+.codicon-tree-filter-clear:before { content: '\ea76'; }
+.codicon-tree-item-loading:before { content: '\eb19'; }
+.codicon-scrollbar-button-left:before { content: '\eb6f'; }
+.codicon-scrollbar-button-right:before { content: '\eb70'; }
+.codicon-scrollbar-button-up:before { content: '\eb71'; }
+.codicon-scrollbar-button-down:before { content: '\eb6e'; }
+.codicon-menu-selection:before { content: '\eab2'; }
+.codicon-menu-submenu:before { content: '\eab6'; }
+.codicon-quick-input-back:before { content: '\ea9b'; }
+.codicon-widget-close:before { content: '\ea76'; }
+.codicon-diff-review-insert:before { content: '\ea60'; }
+.codicon-diff-review-remove:before { content: '\eb3b'; }
+.codicon-diff-review-close:before { content: '\ea76'; }
+.codicon-diff-insert:before { content: '\ea60'; }
+.codicon-diff-remove:before { content: '\eb3b'; }
+.codicon-find-selection:before { content: '\eb85'; }
+.codicon-find-collapsed:before { content: '\eab6'; }
+.codicon-find-expanded:before { content: '\eab4'; }
+.codicon-find-replace:before { content: '\eb3d'; }
+.codicon-find-replace-all:before { content: '\eb3c'; }
+.codicon-find-previous-match:before { content: '\eaa1'; }
+.codicon-find-next-match:before { content: '\ea9a'; }
+.codicon-folding-expanded:before { content: '\eab4'; }
+.codicon-folding-collapsed:before { content: '\eab6'; }
+.codicon-marker-navigation-next:before { content: '\eab4'; }
+.codicon-marker-navigation-previous:before { content: '\eab7'; }
+.codicon-parameter-hints-next:before { content: '\eab4'; }
+.codicon-parameter-hints-previous:before { content: '\eab7'; }
+.codicon-suggest-more-info:before { content: '\eab6'; }
+.monaco-editor .minimap-slider .minimap-slider-horizontal { background: rgba(121, 121, 121, 0.2); }
+.monaco-editor .minimap-slider:hover .minimap-slider-horizontal { background: rgba(100, 100, 100, 0.35); }
+.monaco-editor .minimap-slider.active .minimap-slider-horizontal { background: rgba(191, 191, 191, 0.2); }
+.monaco-editor .minimap-shadow-visible { box-shadow: #000000 -6px 0 6px -6px inset; }
+.monaco-editor .scroll-decoration { box-shadow: #000000 0 6px 6px -6px inset; }
+.monaco-editor .focused .selected-text { background-color: #264f78; }
+.monaco-editor .selected-text { background-color: #3a3d41; }
+.monaco-editor, .monaco-editor-background, .monaco-editor .inputarea.ime-input { background-color: #1e1e1e; }
+.monaco-editor, .monaco-editor .inputarea.ime-input { color: #d4d4d4; }
+.monaco-editor .margin { background-color: #1e1e1e; }
+.monaco-editor .rangeHighlight { background-color: rgba(255, 255, 255, 0.04); }
+.monaco-editor .symbolHighlight { background-color: rgba(234, 92, 0, 0.33); }
+.monaco-editor .mtkw { color: rgba(227, 228, 226, 0.16) !important; }
+.monaco-editor .mtkz { color: rgba(227, 228, 226, 0.16) !important; }
+.monaco-editor .view-overlays .current-line { border: 2px solid #282828; }
+.monaco-editor .margin-view-overlays .current-line-margin { border: 2px solid #282828; }
+.monaco-editor .lines-content .cigr { box-shadow: 1px 0 0 0 #404040 inset; }
+.monaco-editor .lines-content .cigra { box-shadow: 1px 0 0 0 #707070 inset; }
+.monaco-editor .line-numbers { color: #858585; }
+.monaco-editor .line-numbers.active-line-number { color: #c6c6c6; }
+.monaco-editor .view-ruler { box-shadow: 1px 0 0 0 #5a5a5a inset; }
+.monaco-editor .cursors-layer .cursor { background-color: #aeafad; border-color: #aeafad; color: #515052; }
+.monaco-editor .suggest-preview-text .ghost-text { opacity: 0.337; color: #ffffff; }
+.monaco-editor.vs .valueSetReplacement { outline: solid 2px #888888; }
+
+		.monaco-editor .contentWidgets .codicon.codicon-light-bulb {
+			color: #ffcc00;
+			background-color: rgba(30, 30, 30, 0.7);
+		}
+
+		.monaco-editor .contentWidgets .codicon.codicon-lightbulb-autofix {
+			color: #75beff;
+			background-color: rgba(30, 30, 30, 0.7);
+		}
+.monaco-editor .codelens-decoration { color: #999999; }
+.monaco-editor .codelens-decoration .codicon { color: #999999; }
+.monaco-editor .codelens-decoration > a:hover { color: #4e94ce !important; }
+.monaco-editor .codelens-decoration > a:hover .codicon { color: #4e94ce !important; }
+.monaco-editor .findOptionsWidget { background-color: #252526; }
+.monaco-editor .findOptionsWidget { color: #cccccc; }
+.monaco-editor .findOptionsWidget { box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.36); }
+.codicon.codicon-symbol-array { color: #cccccc; }
+.codicon.codicon-symbol-boolean { color: #cccccc; }
+.codicon.codicon-symbol-class { color: #ee9d28; }
+.codicon.codicon-symbol-method { color: #b180d7; }
+.codicon.codicon-symbol-color { color: #cccccc; }
+.codicon.codicon-symbol-constant { color: #cccccc; }
+.codicon.codicon-symbol-constructor { color: #b180d7; }
+
+			.codicon.codicon-symbol-value,.codicon.codicon-symbol-enum { color: #ee9d28; }
+.codicon.codicon-symbol-enum-member { color: #75beff; }
+.codicon.codicon-symbol-event { color: #ee9d28; }
+.codicon.codicon-symbol-field { color: #75beff; }
+.codicon.codicon-symbol-file { color: #cccccc; }
+.codicon.codicon-symbol-folder { color: #cccccc; }
+.codicon.codicon-symbol-function { color: #b180d7; }
+.codicon.codicon-symbol-interface { color: #75beff; }
+.codicon.codicon-symbol-key { color: #cccccc; }
+.codicon.codicon-symbol-keyword { color: #cccccc; }
+.codicon.codicon-symbol-module { color: #cccccc; }
+.codicon.codicon-symbol-namespace { color: #cccccc; }
+.codicon.codicon-symbol-null { color: #cccccc; }
+.codicon.codicon-symbol-number { color: #cccccc; }
+.codicon.codicon-symbol-object { color: #cccccc; }
+.codicon.codicon-symbol-operator { color: #cccccc; }
+.codicon.codicon-symbol-package { color: #cccccc; }
+.codicon.codicon-symbol-property { color: #cccccc; }
+.codicon.codicon-symbol-reference { color: #cccccc; }
+.codicon.codicon-symbol-snippet { color: #cccccc; }
+.codicon.codicon-symbol-string { color: #cccccc; }
+.codicon.codicon-symbol-struct { color: #cccccc; }
+.codicon.codicon-symbol-text { color: #cccccc; }
+.codicon.codicon-symbol-type-parameter { color: #cccccc; }
+.codicon.codicon-symbol-unit { color: #cccccc; }
+.codicon.codicon-symbol-variable { color: #75beff; }
+.monaco-editor .squiggly-error { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%206%203'%20enable-background%3D'new%200%200%206%203'%20height%3D'3'%20width%3D'6'%3E%3Cg%20fill%3D'%23f48771'%3E%3Cpolygon%20points%3D'5.5%2C0%202.5%2C3%201.1%2C3%204.1%2C0'%2F%3E%3Cpolygon%20points%3D'4%2C0%206%2C2%206%2C0.6%205.4%2C0'%2F%3E%3Cpolygon%20points%3D'0%2C2%201%2C3%202.4%2C3%200%2C0.6'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") repeat-x bottom left; }
+.monaco-editor .squiggly-warning { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%206%203'%20enable-background%3D'new%200%200%206%203'%20height%3D'3'%20width%3D'6'%3E%3Cg%20fill%3D'%23cca700'%3E%3Cpolygon%20points%3D'5.5%2C0%202.5%2C3%201.1%2C3%204.1%2C0'%2F%3E%3Cpolygon%20points%3D'4%2C0%206%2C2%206%2C0.6%205.4%2C0'%2F%3E%3Cpolygon%20points%3D'0%2C2%201%2C3%202.4%2C3%200%2C0.6'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") repeat-x bottom left; }
+.monaco-editor .squiggly-info { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%206%203'%20enable-background%3D'new%200%200%206%203'%20height%3D'3'%20width%3D'6'%3E%3Cg%20fill%3D'%2375beff'%3E%3Cpolygon%20points%3D'5.5%2C0%202.5%2C3%201.1%2C3%204.1%2C0'%2F%3E%3Cpolygon%20points%3D'4%2C0%206%2C2%206%2C0.6%205.4%2C0'%2F%3E%3Cpolygon%20points%3D'0%2C2%201%2C3%202.4%2C3%200%2C0.6'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") repeat-x bottom left; }
+.monaco-editor .squiggly-hint { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%223%22%20width%3D%2212%22%3E%3Cg%20fill%3D%22rgba(238%2C%20238%2C%20238%2C%200.7)%22%3E%3Ccircle%20cx%3D%221%22%20cy%3D%221%22%20r%3D%221%22%2F%3E%3Ccircle%20cx%3D%225%22%20cy%3D%221%22%20r%3D%221%22%2F%3E%3Ccircle%20cx%3D%229%22%20cy%3D%221%22%20r%3D%221%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat bottom left; }
+.monaco-editor.showUnused .squiggly-inline-unnecessary { opacity: 0.667; }
+.monaco-editor.showDeprecated .squiggly-inline-deprecated { text-decoration: line-through; text-decoration-color: #d4d4d4}
+.monaco-editor .bracket-match { background-color: rgba(0, 100, 0, 0.1); }
+.monaco-editor .bracket-match { border: 1px solid #888888; }
+.monaco-editor .linked-editing-decoration { background: rgba(255, 0, 0, 0.3); border-left-color: rgba(255, 0, 0, 0.3); }
+.monaco-editor .detected-link-active { color: #4e94ce !important; }
+.monaco-editor .monaco-editor-overlaymessage .anchor.below { border-top-color: #007acc; }
+.monaco-editor .monaco-editor-overlaymessage .anchor.top { border-bottom-color: #007acc; }
+.monaco-editor .monaco-editor-overlaymessage .message { border: 1px solid #007acc; }
+.monaco-editor .monaco-editor-overlaymessage .message { background-color: #063b49; }
+.monaco-editor .focused .selectionHighlight { background-color: rgba(173, 214, 255, 0.15); }
+.monaco-editor .selectionHighlight { background-color: rgba(173, 214, 255, 0.07); }
+.monaco-editor .wordHighlight { background-color: rgba(87, 87, 87, 0.72); }
+.monaco-editor .wordHighlightStrong { background-color: rgba(0, 73, 114, 0.72); }
+.monaco-editor .accessibilityHelpWidget { background-color: #252526; }
+.monaco-editor .accessibilityHelpWidget { color: #cccccc; }
+.monaco-editor .accessibilityHelpWidget { box-shadow: 0 2px 8px rgba(0, 0, 0, 0.36); }
+.monaco-editor .tokens-inspect-widget { border: 1px solid #454545; }
+.monaco-editor .tokens-inspect-widget .tokens-inspect-separator { background-color: #454545; }
+.monaco-editor .tokens-inspect-widget { background-color: #252526; }
+.monaco-editor .tokens-inspect-widget { color: #cccccc; }
+
+			.monaco-editor .zone-widget .codicon.codicon-error,
+			.markers-panel .marker-icon.codicon.codicon-error,
+			.text-search-provider-messages .providerMessage .codicon.codicon-error,
+			.extensions-viewlet > .extensions .codicon.codicon-error {
+				color: #f48771;
+			}
+		
+
+			.monaco-editor .zone-widget .codicon.codicon-warning,
+			.markers-panel .marker-icon.codicon.codicon-warning,
+			.extensions-viewlet > .extensions .codicon.codicon-warning,
+			.extension-editor .codicon.codicon-warning,
+			.text-search-provider-messages .providerMessage .codicon.codicon-warning,
+			.preferences-editor .codicon.codicon-warning {
+				color: #cca700;
+			}
+		
+
+			.monaco-editor .zone-widget .codicon.codicon-info,
+			.markers-panel .marker-icon.codicon.codicon-info,
+			.extensions-viewlet > .extensions .codicon.codicon-info,
+			.text-search-provider-messages .providerMessage .codicon.codicon-info,
+			.extension-editor .codicon.codicon-info {
+				color: #75beff;
+			}
+		
+.monaco-editor .marker-widget a { color: #3794ff; }
+.monaco-editor .marker-widget a.code-link span:hover { color: #3794ff; }
+.monaco-editor .reference-zone-widget .ref-tree .referenceMatch .highlight { background-color: rgba(234, 92, 0, 0.3); }
+.monaco-editor .reference-zone-widget .preview .reference-decoration { background-color: rgba(255, 143, 0, 0.6); }
+.monaco-editor .reference-zone-widget .ref-tree { background-color: #252526; }
+.monaco-editor .reference-zone-widget .ref-tree { color: #bbbbbb; }
+.monaco-editor .reference-zone-widget .ref-tree .reference-file { color: #ffffff; }
+.monaco-editor .reference-zone-widget .ref-tree .monaco-list:focus .monaco-list-rows > .monaco-list-row.selected:not(.highlighted) { background-color: rgba(51, 153, 255, 0.2); }
+.monaco-editor .reference-zone-widget .ref-tree .monaco-list:focus .monaco-list-rows > .monaco-list-row.selected:not(.highlighted) { color: #ffffff !important; }
+.monaco-editor .reference-zone-widget .preview .monaco-editor .monaco-editor-background,.monaco-editor .reference-zone-widget .preview .monaco-editor .inputarea.ime-input {	background-color: #001f33;}
+.monaco-editor .reference-zone-widget .preview .monaco-editor .margin {	background-color: #001f33;}
+.monaco-editor .goto-definition-link { color: #4e94ce !important; }
+.monaco-editor .snippet-placeholder { background-color: rgba(124, 124, 124, 0.3); outline-color: transparent; }
+.monaco-editor .finish-snippet-placeholder { background-color: transparent; outline-color: #525252; }
+.monaco-diff-editor .diff-review-line-number { color: #858585; }
+.monaco-diff-editor .diff-review-shadow { box-shadow: #000000 0 -6px 6px -6px inset; }
+.monaco-editor .line-insert, .monaco-editor .char-insert { background-color: rgba(155, 185, 85, 0.2); }
+.monaco-diff-editor .line-insert, .monaco-diff-editor .char-insert { background-color: rgba(155, 185, 85, 0.2); }
+.monaco-editor .inline-added-margin-view-zone { background-color: rgba(155, 185, 85, 0.2); }
+.monaco-editor .line-delete, .monaco-editor .char-delete { background-color: rgba(255, 0, 0, 0.2); }
+.monaco-diff-editor .line-delete, .monaco-diff-editor .char-delete { background-color: rgba(255, 0, 0, 0.2); }
+.monaco-editor .inline-deleted-margin-view-zone { background-color: rgba(255, 0, 0, 0.2); }
+.monaco-diff-editor.side-by-side .editor.modified { box-shadow: -6px 0 5px -5px #000000; }
+
+			.monaco-diff-editor .diffViewport {
+				background: rgba(121, 121, 121, 0.4);
+			}
+		
+
+			.monaco-diff-editor .diffViewport:hover {
+				background: rgba(100, 100, 100, 0.7);
+			}
+		
+
+			.monaco-diff-editor .diffViewport:active {
+				background: rgba(191, 191, 191, 0.4);
+			}
+		
+
+	.monaco-editor .diagonal-fill {
+		background-image: linear-gradient(
+			-45deg,
+			rgba(204, 204, 204, 0.2) 12.5%,
+			#0000 12.5%, #0000 50%,
+			rgba(204, 204, 204, 0.2) 50%, rgba(204, 204, 204, 0.2) 62.5%,
+			#0000 62.5%, #0000 100%
+		);
+		background-size: 8px 8px;
+	}
+	
+.monaco-editor .findMatch { background-color: rgba(234, 92, 0, 0.33); }
+.monaco-editor .currentFindMatch { background-color: #515c6a; }
+.monaco-editor .findScope { background-color: rgba(58, 61, 65, 0.4); }
+.monaco-editor .find-widget { background-color: #252526; }
+.monaco-editor .find-widget { box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.36); }
+.monaco-editor .find-widget { color: #cccccc; }
+.monaco-editor .find-widget.no-results .matchesCount { color: #f48771; }
+.monaco-editor .find-widget .monaco-sash { background-color: #454545; }
+.monaco-editor .find-widget .monaco-inputbox.synthetic-focus { outline-color: #007fd4; }
+.monaco-editor .folded-background { background-color: rgba(38, 79, 120, 0.3); }
+
+		.monaco-editor .cldr.codicon.codicon-folding-expanded,
+		.monaco-editor .cldr.codicon.codicon-folding-collapsed {
+			color: #c5c5c5 !important;
+		}
+		
+.monaco-editor .parameter-hints-widget { border: 1px solid #454545; }
+.monaco-editor .parameter-hints-widget.multiple .body { border-left: 1px solid rgba(69, 69, 69, 0.5); }
+.monaco-editor .parameter-hints-widget .signature.has-docs { border-bottom: 1px solid rgba(69, 69, 69, 0.5); }
+.monaco-editor .parameter-hints-widget { background-color: #252526; }
+.monaco-editor .parameter-hints-widget a { color: #3794ff; }
+.monaco-editor .parameter-hints-widget { color: #cccccc; }
+.monaco-editor .parameter-hints-widget code { background-color: rgba(10, 10, 10, 0.4); }
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row .monaco-highlighted-label .highlight { color: #18a3ff; }
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row.focused .monaco-highlighted-label .highlight { color: #18a3ff; }
+.monaco-editor .suggest-widget, .monaco-editor .suggest-details { color: #d4d4d4; }
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row.focused { color: #ffffff; }
+.monaco-editor .suggest-details a { color: #3794ff; }
+.monaco-editor .suggest-details code { background-color: rgba(10, 10, 10, 0.4); }
+.monaco-hover .hover-contents a.code-link span:hover { color: #3794ff; }
+.monaco-editor .hoverHighlight { background-color: rgba(38, 79, 120, 0.25); }
+.monaco-editor .monaco-hover { background-color: #252526; }
+.monaco-editor .monaco-hover { border: 1px solid #454545; }
+.monaco-editor .monaco-hover .hover-row:not(:first-child):not(:empty) { border-top: 1px solid rgba(69, 69, 69, 0.5); }
+.monaco-editor .monaco-hover hr { border-top: 1px solid rgba(69, 69, 69, 0.5); }
+.monaco-editor .monaco-hover hr { border-bottom: 0px solid rgba(69, 69, 69, 0.5); }
+.monaco-editor .monaco-hover a { color: #3794ff; }
+.monaco-editor .monaco-hover a:hover { color: #3794ff; }
+.monaco-editor .monaco-hover { color: #cccccc; }
+.monaco-editor .monaco-hover .hover-row .actions { background-color: #2c2c2d; }
+.monaco-editor .monaco-hover code { background-color: rgba(10, 10, 10, 0.4); }
+
+.mtk1 { color: #d4d4d4; }
+.mtk2 { color: #1e1e1e; }
+.mtk3 { color: #cc6666; }
+.mtk4 { color: #9cdcfe; }
+.mtk5 { color: #ce9178; }
+.mtk6 { color: #b5cea8; }
+.mtk7 { color: #608b4e; }
+.mtk8 { color: #569cd6; }
+.mtk9 { color: #dcdcdc; }
+.mtk10 { color: #808080; }
+.mtk11 { color: #f44747; }
+.mtk12 { color: #c586c0; }
+.mtk13 { color: #a79873; }
+.mtk14 { color: #dd6a6f; }
+.mtk15 { color: #5bb498; }
+.mtk16 { color: #909090; }
+.mtk17 { color: #778899; }
+.mtk18 { color: #ff00ff; }
+.mtk19 { color: #b46695; }
+.mtk20 { color: #ff0000; }
+.mtk21 { color: #4f76ac; }
+.mtk22 { color: #3dc9b0; }
+.mtk23 { color: #74b0df; }
+.mtk24 { color: #4864aa; }
+.mtki { font-style: italic; }
+.mtkb { font-weight: bold; }
+.mtku { text-decoration: underline; text-underline-position: under; }</style><style class="blitz-monaco-colors">
+[data-mode-id="javascript"] .mtk1, [data-mode-id="javascriptreact"] .mtk1, [data-mode-id="typescript"] .mtk1, [data-mode-id="typescriptreact"] .mtk1, [data-mode-id="coffeescript"] .mtk1, [data-mode-id="livescript"] .mtk1, [data-mode-id="css"] .mtk1, [data-mode-id="scss"] .mtk1, [data-mode-id="sass"] .mtk1, [data-mode-id="less"] .mtk1, [data-mode-id="postcss"] .mtk1, [data-mode-id="html"] .mtk1, [data-mode-id="jade"] .mtk1, [data-mode-id="slm"] .mtk1, [data-mode-id="markdown"] .mtk1, [data-mode-id="mdx"] .mtk1, [data-mode-id="json"] .mtk1, [data-mode-id="jsonc"] .mtk1, [data-mode-id="vue"] .mtk1, [data-mode-id="svelte"] .mtk1, [data-mode-id="astro"] .mtk1, [data-mode-id="stylus"] .mtk1, [data-mode-id="shellscript"] .mtk1, [data-mode-id="jsx-tags"] .mtk1 { color: #d4d4d4; }
+[data-mode-id="javascript"] .mtk2, [data-mode-id="javascriptreact"] .mtk2, [data-mode-id="typescript"] .mtk2, [data-mode-id="typescriptreact"] .mtk2, [data-mode-id="coffeescript"] .mtk2, [data-mode-id="livescript"] .mtk2, [data-mode-id="css"] .mtk2, [data-mode-id="scss"] .mtk2, [data-mode-id="sass"] .mtk2, [data-mode-id="less"] .mtk2, [data-mode-id="postcss"] .mtk2, [data-mode-id="html"] .mtk2, [data-mode-id="jade"] .mtk2, [data-mode-id="slm"] .mtk2, [data-mode-id="markdown"] .mtk2, [data-mode-id="mdx"] .mtk2, [data-mode-id="json"] .mtk2, [data-mode-id="jsonc"] .mtk2, [data-mode-id="vue"] .mtk2, [data-mode-id="svelte"] .mtk2, [data-mode-id="astro"] .mtk2, [data-mode-id="stylus"] .mtk2, [data-mode-id="shellscript"] .mtk2, [data-mode-id="jsx-tags"] .mtk2 { color: #1e1e1e; }
+[data-mode-id="javascript"] .mtk3, [data-mode-id="javascriptreact"] .mtk3, [data-mode-id="typescript"] .mtk3, [data-mode-id="typescriptreact"] .mtk3, [data-mode-id="coffeescript"] .mtk3, [data-mode-id="livescript"] .mtk3, [data-mode-id="css"] .mtk3, [data-mode-id="scss"] .mtk3, [data-mode-id="sass"] .mtk3, [data-mode-id="less"] .mtk3, [data-mode-id="postcss"] .mtk3, [data-mode-id="html"] .mtk3, [data-mode-id="jade"] .mtk3, [data-mode-id="slm"] .mtk3, [data-mode-id="markdown"] .mtk3, [data-mode-id="mdx"] .mtk3, [data-mode-id="json"] .mtk3, [data-mode-id="jsonc"] .mtk3, [data-mode-id="vue"] .mtk3, [data-mode-id="svelte"] .mtk3, [data-mode-id="astro"] .mtk3, [data-mode-id="stylus"] .mtk3, [data-mode-id="shellscript"] .mtk3, [data-mode-id="jsx-tags"] .mtk3 { color: #6a9955; }
+[data-mode-id="javascript"] .mtk4, [data-mode-id="javascriptreact"] .mtk4, [data-mode-id="typescript"] .mtk4, [data-mode-id="typescriptreact"] .mtk4, [data-mode-id="coffeescript"] .mtk4, [data-mode-id="livescript"] .mtk4, [data-mode-id="css"] .mtk4, [data-mode-id="scss"] .mtk4, [data-mode-id="sass"] .mtk4, [data-mode-id="less"] .mtk4, [data-mode-id="postcss"] .mtk4, [data-mode-id="html"] .mtk4, [data-mode-id="jade"] .mtk4, [data-mode-id="slm"] .mtk4, [data-mode-id="markdown"] .mtk4, [data-mode-id="mdx"] .mtk4, [data-mode-id="json"] .mtk4, [data-mode-id="jsonc"] .mtk4, [data-mode-id="vue"] .mtk4, [data-mode-id="svelte"] .mtk4, [data-mode-id="astro"] .mtk4, [data-mode-id="stylus"] .mtk4, [data-mode-id="shellscript"] .mtk4, [data-mode-id="jsx-tags"] .mtk4 { color: #569cd6; }
+[data-mode-id="javascript"] .mtk5, [data-mode-id="javascriptreact"] .mtk5, [data-mode-id="typescript"] .mtk5, [data-mode-id="typescriptreact"] .mtk5, [data-mode-id="coffeescript"] .mtk5, [data-mode-id="livescript"] .mtk5, [data-mode-id="css"] .mtk5, [data-mode-id="scss"] .mtk5, [data-mode-id="sass"] .mtk5, [data-mode-id="less"] .mtk5, [data-mode-id="postcss"] .mtk5, [data-mode-id="html"] .mtk5, [data-mode-id="jade"] .mtk5, [data-mode-id="slm"] .mtk5, [data-mode-id="markdown"] .mtk5, [data-mode-id="mdx"] .mtk5, [data-mode-id="json"] .mtk5, [data-mode-id="jsonc"] .mtk5, [data-mode-id="vue"] .mtk5, [data-mode-id="svelte"] .mtk5, [data-mode-id="astro"] .mtk5, [data-mode-id="stylus"] .mtk5, [data-mode-id="shellscript"] .mtk5, [data-mode-id="jsx-tags"] .mtk5 { color: #d16969; }
+[data-mode-id="javascript"] .mtk6, [data-mode-id="javascriptreact"] .mtk6, [data-mode-id="typescript"] .mtk6, [data-mode-id="typescriptreact"] .mtk6, [data-mode-id="coffeescript"] .mtk6, [data-mode-id="livescript"] .mtk6, [data-mode-id="css"] .mtk6, [data-mode-id="scss"] .mtk6, [data-mode-id="sass"] .mtk6, [data-mode-id="less"] .mtk6, [data-mode-id="postcss"] .mtk6, [data-mode-id="html"] .mtk6, [data-mode-id="jade"] .mtk6, [data-mode-id="slm"] .mtk6, [data-mode-id="markdown"] .mtk6, [data-mode-id="mdx"] .mtk6, [data-mode-id="json"] .mtk6, [data-mode-id="jsonc"] .mtk6, [data-mode-id="vue"] .mtk6, [data-mode-id="svelte"] .mtk6, [data-mode-id="astro"] .mtk6, [data-mode-id="stylus"] .mtk6, [data-mode-id="shellscript"] .mtk6, [data-mode-id="jsx-tags"] .mtk6 { color: #d7ba7d; }
+[data-mode-id="javascript"] .mtk7, [data-mode-id="javascriptreact"] .mtk7, [data-mode-id="typescript"] .mtk7, [data-mode-id="typescriptreact"] .mtk7, [data-mode-id="coffeescript"] .mtk7, [data-mode-id="livescript"] .mtk7, [data-mode-id="css"] .mtk7, [data-mode-id="scss"] .mtk7, [data-mode-id="sass"] .mtk7, [data-mode-id="less"] .mtk7, [data-mode-id="postcss"] .mtk7, [data-mode-id="html"] .mtk7, [data-mode-id="jade"] .mtk7, [data-mode-id="slm"] .mtk7, [data-mode-id="markdown"] .mtk7, [data-mode-id="mdx"] .mtk7, [data-mode-id="json"] .mtk7, [data-mode-id="jsonc"] .mtk7, [data-mode-id="vue"] .mtk7, [data-mode-id="svelte"] .mtk7, [data-mode-id="astro"] .mtk7, [data-mode-id="stylus"] .mtk7, [data-mode-id="shellscript"] .mtk7, [data-mode-id="jsx-tags"] .mtk7 { color: #b5cea8; }
+[data-mode-id="javascript"] .mtk8, [data-mode-id="javascriptreact"] .mtk8, [data-mode-id="typescript"] .mtk8, [data-mode-id="typescriptreact"] .mtk8, [data-mode-id="coffeescript"] .mtk8, [data-mode-id="livescript"] .mtk8, [data-mode-id="css"] .mtk8, [data-mode-id="scss"] .mtk8, [data-mode-id="sass"] .mtk8, [data-mode-id="less"] .mtk8, [data-mode-id="postcss"] .mtk8, [data-mode-id="html"] .mtk8, [data-mode-id="jade"] .mtk8, [data-mode-id="slm"] .mtk8, [data-mode-id="markdown"] .mtk8, [data-mode-id="mdx"] .mtk8, [data-mode-id="json"] .mtk8, [data-mode-id="jsonc"] .mtk8, [data-mode-id="vue"] .mtk8, [data-mode-id="svelte"] .mtk8, [data-mode-id="astro"] .mtk8, [data-mode-id="stylus"] .mtk8, [data-mode-id="shellscript"] .mtk8, [data-mode-id="jsx-tags"] .mtk8 { color: #ce9178; }
+[data-mode-id="javascript"] .mtk9, [data-mode-id="javascriptreact"] .mtk9, [data-mode-id="typescript"] .mtk9, [data-mode-id="typescriptreact"] .mtk9, [data-mode-id="coffeescript"] .mtk9, [data-mode-id="livescript"] .mtk9, [data-mode-id="css"] .mtk9, [data-mode-id="scss"] .mtk9, [data-mode-id="sass"] .mtk9, [data-mode-id="less"] .mtk9, [data-mode-id="postcss"] .mtk9, [data-mode-id="html"] .mtk9, [data-mode-id="jade"] .mtk9, [data-mode-id="slm"] .mtk9, [data-mode-id="markdown"] .mtk9, [data-mode-id="mdx"] .mtk9, [data-mode-id="json"] .mtk9, [data-mode-id="jsonc"] .mtk9, [data-mode-id="vue"] .mtk9, [data-mode-id="svelte"] .mtk9, [data-mode-id="astro"] .mtk9, [data-mode-id="stylus"] .mtk9, [data-mode-id="shellscript"] .mtk9, [data-mode-id="jsx-tags"] .mtk9 { color: #646695; }
+[data-mode-id="javascript"] .mtk10, [data-mode-id="javascriptreact"] .mtk10, [data-mode-id="typescript"] .mtk10, [data-mode-id="typescriptreact"] .mtk10, [data-mode-id="coffeescript"] .mtk10, [data-mode-id="livescript"] .mtk10, [data-mode-id="css"] .mtk10, [data-mode-id="scss"] .mtk10, [data-mode-id="sass"] .mtk10, [data-mode-id="less"] .mtk10, [data-mode-id="postcss"] .mtk10, [data-mode-id="html"] .mtk10, [data-mode-id="jade"] .mtk10, [data-mode-id="slm"] .mtk10, [data-mode-id="markdown"] .mtk10, [data-mode-id="mdx"] .mtk10, [data-mode-id="json"] .mtk10, [data-mode-id="jsonc"] .mtk10, [data-mode-id="vue"] .mtk10, [data-mode-id="svelte"] .mtk10, [data-mode-id="astro"] .mtk10, [data-mode-id="stylus"] .mtk10, [data-mode-id="shellscript"] .mtk10, [data-mode-id="jsx-tags"] .mtk10 { color: #4ec9b0; }
+[data-mode-id="javascript"] .mtk11, [data-mode-id="javascriptreact"] .mtk11, [data-mode-id="typescript"] .mtk11, [data-mode-id="typescriptreact"] .mtk11, [data-mode-id="coffeescript"] .mtk11, [data-mode-id="livescript"] .mtk11, [data-mode-id="css"] .mtk11, [data-mode-id="scss"] .mtk11, [data-mode-id="sass"] .mtk11, [data-mode-id="less"] .mtk11, [data-mode-id="postcss"] .mtk11, [data-mode-id="html"] .mtk11, [data-mode-id="jade"] .mtk11, [data-mode-id="slm"] .mtk11, [data-mode-id="markdown"] .mtk11, [data-mode-id="mdx"] .mtk11, [data-mode-id="json"] .mtk11, [data-mode-id="jsonc"] .mtk11, [data-mode-id="vue"] .mtk11, [data-mode-id="svelte"] .mtk11, [data-mode-id="astro"] .mtk11, [data-mode-id="stylus"] .mtk11, [data-mode-id="shellscript"] .mtk11, [data-mode-id="jsx-tags"] .mtk11 { color: #dcdcaa; }
+[data-mode-id="javascript"] .mtk12, [data-mode-id="javascriptreact"] .mtk12, [data-mode-id="typescript"] .mtk12, [data-mode-id="typescriptreact"] .mtk12, [data-mode-id="coffeescript"] .mtk12, [data-mode-id="livescript"] .mtk12, [data-mode-id="css"] .mtk12, [data-mode-id="scss"] .mtk12, [data-mode-id="sass"] .mtk12, [data-mode-id="less"] .mtk12, [data-mode-id="postcss"] .mtk12, [data-mode-id="html"] .mtk12, [data-mode-id="jade"] .mtk12, [data-mode-id="slm"] .mtk12, [data-mode-id="markdown"] .mtk12, [data-mode-id="mdx"] .mtk12, [data-mode-id="json"] .mtk12, [data-mode-id="jsonc"] .mtk12, [data-mode-id="vue"] .mtk12, [data-mode-id="svelte"] .mtk12, [data-mode-id="astro"] .mtk12, [data-mode-id="stylus"] .mtk12, [data-mode-id="shellscript"] .mtk12, [data-mode-id="jsx-tags"] .mtk12 { color: #c8c8c8; }
+[data-mode-id="javascript"] .mtk13, [data-mode-id="javascriptreact"] .mtk13, [data-mode-id="typescript"] .mtk13, [data-mode-id="typescriptreact"] .mtk13, [data-mode-id="coffeescript"] .mtk13, [data-mode-id="livescript"] .mtk13, [data-mode-id="css"] .mtk13, [data-mode-id="scss"] .mtk13, [data-mode-id="sass"] .mtk13, [data-mode-id="less"] .mtk13, [data-mode-id="postcss"] .mtk13, [data-mode-id="html"] .mtk13, [data-mode-id="jade"] .mtk13, [data-mode-id="slm"] .mtk13, [data-mode-id="markdown"] .mtk13, [data-mode-id="mdx"] .mtk13, [data-mode-id="json"] .mtk13, [data-mode-id="jsonc"] .mtk13, [data-mode-id="vue"] .mtk13, [data-mode-id="svelte"] .mtk13, [data-mode-id="astro"] .mtk13, [data-mode-id="stylus"] .mtk13, [data-mode-id="shellscript"] .mtk13, [data-mode-id="jsx-tags"] .mtk13 { color: #c586c0; }
+[data-mode-id="javascript"] .mtk14, [data-mode-id="javascriptreact"] .mtk14, [data-mode-id="typescript"] .mtk14, [data-mode-id="typescriptreact"] .mtk14, [data-mode-id="coffeescript"] .mtk14, [data-mode-id="livescript"] .mtk14, [data-mode-id="css"] .mtk14, [data-mode-id="scss"] .mtk14, [data-mode-id="sass"] .mtk14, [data-mode-id="less"] .mtk14, [data-mode-id="postcss"] .mtk14, [data-mode-id="html"] .mtk14, [data-mode-id="jade"] .mtk14, [data-mode-id="slm"] .mtk14, [data-mode-id="markdown"] .mtk14, [data-mode-id="mdx"] .mtk14, [data-mode-id="json"] .mtk14, [data-mode-id="jsonc"] .mtk14, [data-mode-id="vue"] .mtk14, [data-mode-id="svelte"] .mtk14, [data-mode-id="astro"] .mtk14, [data-mode-id="stylus"] .mtk14, [data-mode-id="shellscript"] .mtk14, [data-mode-id="jsx-tags"] .mtk14 { color: #9cdcfe; }
+[data-mode-id="javascript"] .mtk15, [data-mode-id="javascriptreact"] .mtk15, [data-mode-id="typescript"] .mtk15, [data-mode-id="typescriptreact"] .mtk15, [data-mode-id="coffeescript"] .mtk15, [data-mode-id="livescript"] .mtk15, [data-mode-id="css"] .mtk15, [data-mode-id="scss"] .mtk15, [data-mode-id="sass"] .mtk15, [data-mode-id="less"] .mtk15, [data-mode-id="postcss"] .mtk15, [data-mode-id="html"] .mtk15, [data-mode-id="jade"] .mtk15, [data-mode-id="slm"] .mtk15, [data-mode-id="markdown"] .mtk15, [data-mode-id="mdx"] .mtk15, [data-mode-id="json"] .mtk15, [data-mode-id="jsonc"] .mtk15, [data-mode-id="vue"] .mtk15, [data-mode-id="svelte"] .mtk15, [data-mode-id="astro"] .mtk15, [data-mode-id="stylus"] .mtk15, [data-mode-id="shellscript"] .mtk15, [data-mode-id="jsx-tags"] .mtk15 { color: #000080; }
+[data-mode-id="javascript"] .mtk16, [data-mode-id="javascriptreact"] .mtk16, [data-mode-id="typescript"] .mtk16, [data-mode-id="typescriptreact"] .mtk16, [data-mode-id="coffeescript"] .mtk16, [data-mode-id="livescript"] .mtk16, [data-mode-id="css"] .mtk16, [data-mode-id="scss"] .mtk16, [data-mode-id="sass"] .mtk16, [data-mode-id="less"] .mtk16, [data-mode-id="postcss"] .mtk16, [data-mode-id="html"] .mtk16, [data-mode-id="jade"] .mtk16, [data-mode-id="slm"] .mtk16, [data-mode-id="markdown"] .mtk16, [data-mode-id="mdx"] .mtk16, [data-mode-id="json"] .mtk16, [data-mode-id="jsonc"] .mtk16, [data-mode-id="vue"] .mtk16, [data-mode-id="svelte"] .mtk16, [data-mode-id="astro"] .mtk16, [data-mode-id="stylus"] .mtk16, [data-mode-id="shellscript"] .mtk16, [data-mode-id="jsx-tags"] .mtk16 { color: #f44747; }
+[data-mode-id="javascript"] .mtk17, [data-mode-id="javascriptreact"] .mtk17, [data-mode-id="typescript"] .mtk17, [data-mode-id="typescriptreact"] .mtk17, [data-mode-id="coffeescript"] .mtk17, [data-mode-id="livescript"] .mtk17, [data-mode-id="css"] .mtk17, [data-mode-id="scss"] .mtk17, [data-mode-id="sass"] .mtk17, [data-mode-id="less"] .mtk17, [data-mode-id="postcss"] .mtk17, [data-mode-id="html"] .mtk17, [data-mode-id="jade"] .mtk17, [data-mode-id="slm"] .mtk17, [data-mode-id="markdown"] .mtk17, [data-mode-id="mdx"] .mtk17, [data-mode-id="json"] .mtk17, [data-mode-id="jsonc"] .mtk17, [data-mode-id="vue"] .mtk17, [data-mode-id="svelte"] .mtk17, [data-mode-id="astro"] .mtk17, [data-mode-id="stylus"] .mtk17, [data-mode-id="shellscript"] .mtk17, [data-mode-id="jsx-tags"] .mtk17 { color: #6796e6; }
+[data-mode-id="javascript"] .mtk18, [data-mode-id="javascriptreact"] .mtk18, [data-mode-id="typescript"] .mtk18, [data-mode-id="typescriptreact"] .mtk18, [data-mode-id="coffeescript"] .mtk18, [data-mode-id="livescript"] .mtk18, [data-mode-id="css"] .mtk18, [data-mode-id="scss"] .mtk18, [data-mode-id="sass"] .mtk18, [data-mode-id="less"] .mtk18, [data-mode-id="postcss"] .mtk18, [data-mode-id="html"] .mtk18, [data-mode-id="jade"] .mtk18, [data-mode-id="slm"] .mtk18, [data-mode-id="markdown"] .mtk18, [data-mode-id="mdx"] .mtk18, [data-mode-id="json"] .mtk18, [data-mode-id="jsonc"] .mtk18, [data-mode-id="vue"] .mtk18, [data-mode-id="svelte"] .mtk18, [data-mode-id="astro"] .mtk18, [data-mode-id="stylus"] .mtk18, [data-mode-id="shellscript"] .mtk18, [data-mode-id="jsx-tags"] .mtk18 { color: #808080; }
+[data-mode-id="javascript"] .mtk19, [data-mode-id="javascriptreact"] .mtk19, [data-mode-id="typescript"] .mtk19, [data-mode-id="typescriptreact"] .mtk19, [data-mode-id="coffeescript"] .mtk19, [data-mode-id="livescript"] .mtk19, [data-mode-id="css"] .mtk19, [data-mode-id="scss"] .mtk19, [data-mode-id="sass"] .mtk19, [data-mode-id="less"] .mtk19, [data-mode-id="postcss"] .mtk19, [data-mode-id="html"] .mtk19, [data-mode-id="jade"] .mtk19, [data-mode-id="slm"] .mtk19, [data-mode-id="markdown"] .mtk19, [data-mode-id="mdx"] .mtk19, [data-mode-id="json"] .mtk19, [data-mode-id="jsonc"] .mtk19, [data-mode-id="vue"] .mtk19, [data-mode-id="svelte"] .mtk19, [data-mode-id="astro"] .mtk19, [data-mode-id="stylus"] .mtk19, [data-mode-id="shellscript"] .mtk19, [data-mode-id="jsx-tags"] .mtk19 { color: #4fc1ff; }
+[data-mode-id="javascript"] .mtki, [data-mode-id="javascriptreact"] .mtki, [data-mode-id="typescript"] .mtki, [data-mode-id="typescriptreact"] .mtki, [data-mode-id="coffeescript"] .mtki, [data-mode-id="livescript"] .mtki, [data-mode-id="css"] .mtki, [data-mode-id="scss"] .mtki, [data-mode-id="sass"] .mtki, [data-mode-id="less"] .mtki, [data-mode-id="postcss"] .mtki, [data-mode-id="html"] .mtki, [data-mode-id="jade"] .mtki, [data-mode-id="slm"] .mtki, [data-mode-id="markdown"] .mtki, [data-mode-id="mdx"] .mtki, [data-mode-id="json"] .mtki, [data-mode-id="jsonc"] .mtki, [data-mode-id="vue"] .mtki, [data-mode-id="svelte"] .mtki, [data-mode-id="astro"] .mtki, [data-mode-id="stylus"] .mtki, [data-mode-id="shellscript"] .mtki, [data-mode-id="jsx-tags"] .mtki { font-style: italic; }
+[data-mode-id="javascript"] .mtkb, [data-mode-id="javascriptreact"] .mtkb, [data-mode-id="typescript"] .mtkb, [data-mode-id="typescriptreact"] .mtkb, [data-mode-id="coffeescript"] .mtkb, [data-mode-id="livescript"] .mtkb, [data-mode-id="css"] .mtkb, [data-mode-id="scss"] .mtkb, [data-mode-id="sass"] .mtkb, [data-mode-id="less"] .mtkb, [data-mode-id="postcss"] .mtkb, [data-mode-id="html"] .mtkb, [data-mode-id="jade"] .mtkb, [data-mode-id="slm"] .mtkb, [data-mode-id="markdown"] .mtkb, [data-mode-id="mdx"] .mtkb, [data-mode-id="json"] .mtkb, [data-mode-id="jsonc"] .mtkb, [data-mode-id="vue"] .mtkb, [data-mode-id="svelte"] .mtkb, [data-mode-id="astro"] .mtkb, [data-mode-id="stylus"] .mtkb, [data-mode-id="shellscript"] .mtkb, [data-mode-id="jsx-tags"] .mtkb { font-weight: bold; }
+[data-mode-id="javascript"] .mtku, [data-mode-id="javascriptreact"] .mtku, [data-mode-id="typescript"] .mtku, [data-mode-id="typescriptreact"] .mtku, [data-mode-id="coffeescript"] .mtku, [data-mode-id="livescript"] .mtku, [data-mode-id="css"] .mtku, [data-mode-id="scss"] .mtku, [data-mode-id="sass"] .mtku, [data-mode-id="less"] .mtku, [data-mode-id="postcss"] .mtku, [data-mode-id="html"] .mtku, [data-mode-id="jade"] .mtku, [data-mode-id="slm"] .mtku, [data-mode-id="markdown"] .mtku, [data-mode-id="mdx"] .mtku, [data-mode-id="json"] .mtku, [data-mode-id="jsonc"] .mtku, [data-mode-id="vue"] .mtku, [data-mode-id="svelte"] .mtku, [data-mode-id="astro"] .mtku, [data-mode-id="stylus"] .mtku, [data-mode-id="shellscript"] .mtku, [data-mode-id="jsx-tags"] .mtku { text-decoration: underline; text-underline-position: under; }</style><style type="text/css" media="screen">
+		.monaco-editor .codelens-decoration._ee1f61 { line-height: 15px; font-size: 9px; padding-right: 5px; font-feature-settings: var(--codelens-font-features_ee1f61) }
+		.monaco-editor .codelens-decoration._ee1f61 span.codicon { line-height: 15px; font-size: 9px; }
+		</style><script async="async" type="text/javascript" src="./tsMode.js"></script><script async="async" type="text/javascript" src="./javascript.js"></script><script async="async" type="text/javascript" src="./cssMode.js"></script><script async="async" type="text/javascript" src="./css.js"></script><script async="async" type="text/javascript" src="./htmlMode.js"></script><script async="async" type="text/javascript" src="./html.js"></script><script async="async" type="text/javascript" src="./jsonMode.js"></script><style type="text/css" media="screen">
+		.monaco-editor .codelens-decoration._ee1f62 { line-height: 18px; font-size: 10px; padding-right: 5px; font-feature-settings: var(--codelens-font-features_ee1f62) }
+		.monaco-editor .codelens-decoration._ee1f62 span.codicon { line-height: 18px; font-size: 10px; }
+		</style></head>
+<body tabindex="-1">
+<script type="application/json" data-redux-store="">{"auth":{"loggedIn":false,"user":{},"guest":{"id":"470953f3-2c34-4abc-bd6a-80ca11363f68"}},"settings":{},"features":{"projects_rbac":true,"projects_webcontainer":true},"config":{"staticAssetHost":"v-corp.staticblitz.com","iframeUrl":"https://js-lzxqri.stackblitz.io","relayOrigin":"https://js-lzxqri.stackblitz.io","exportGithubUrl":"","editorUrl":"https://stackblitz.com/edit/js-lzxqri","editorOrigin":"https://stackblitz.com","servicesUrl":"https://services.stackblitz.com","tswUrl":"https://c.staticblitz.com/assets/pack/mtsw-f7b76239506aa.js","prettierwUrl":"https://c.staticblitz.com/assets/pack/prettierw-88b7449672a0a.js","appInitialized":false,"env":{},"db":true},"webcontainer":{"version":"c8358679","serverVersion":"c8358679","baseUrl":"https://w.staticblitz.com","serverUrl":"https://local.webcontainer.io","isolationPolicy":null,"exportName":null},"starters":{"projects":[]},"project":{"appFiles":{"index.js":{"name":"index.js","type":"file","contents":"","fullPath":"index.js","lastModified":1630713707764},"style.css":{"name":"style.css","type":"file","contents":"h1, h2 {\n  font-family: Lato;\n}","fullPath":"style.css","lastModified":1498681778894},"index.html":{"name":"index.html","type":"file","contents":"\u003c!doctype html\u003e\r\n\u003chtml lang=\"en\"\u003e\r\n\u003chead\u003e\r\n  \u003cmeta charset=\"utf-8\"\u003e\r\n  \u003ctitle\u003eMi primer App\u003c/title\u003e\r\n\u003c/head\u003e\r\n\u003cbody\u003e\r\n  \u003cheader\u003e\r\n  \u003ch1\u003eMi Primer App con HTML\u003c/h1\u003e      \r\n\u003c/header\u003e\r\n\u003cnav\u003e\r\n  \u003ca href=\"#\"\u003eIr a Sección 2\u003c/a\u003e\r\n  \u003ca href=\"#\"\u003eIr a Sección 3\u003c/a\u003e\r\n\u003c/nav\u003e\r\n\u003cSection\u003e\r\n  \u003carticle\u003e\r\n  \u003cimg src=\"https://www.w3.org/html/logo/badge/html5-badge-h-connectivity-css3-semantics-storage.png\" alt=\"Logo HTML5\" width=\"50%\" height=\"50%\"\u003e\r\n\u003c/article\u003e\r\n\u003carticle\u003e\r\n \u003ch1\u003eEjemplo de listas ordenadas y desordenadas\u003c/h1\u003e\r\n \u003ch3\u003eLista ordenada con números:\u003c/h3\u003e\r\n \u003col\u003e\r\n   \u003cli\u003eEdificio\u003c/li\u003e\r\n   \u003cli\u003eCasa\u003c/li\u003e\r\n   \u003cli\u003eEstadio\u003c/li\u003e\r\n \u003c/ol\u003e\r\n \u003ch3\u003eLista ordenada con letras:\u003c/h3\u003e\r\n \u003col type=\"a\"\u003e\r\n   \u003cli\u003eEdificio\u003c/li\u003e\r\n   \u003cli\u003eCasa\u003c/li\u003e\r\n   \u003cli\u003eEstadio\u003c/li\u003e\r\n \u003c/ol\u003e\r\n \u003ch3\u003eLista desordenada\u003c/h3\u003e\r\n \u003cul\u003e\r\n   \u003cli\u003eEdificio\u003c/li\u003e\r\n   \u003cli\u003eCasa\u003c/li\u003e\r\n   \u003cli\u003eEstadio\u003c/li\u003e\r\n \u003c/ul\u003e\r\n\u003c/article\u003e\r\n\u003carticle\u003e\r\n\u003ca href=\"https://developer.mozilla.org/es/docs/Web/HTML/Element/ol\"\u003eEnlace a la \u003cstrong\u003edescripción\u003c/strong\u003e \r\n  de \u003cem\u003eMDN\u003c/em\u003e para listas ordenadas\u003c/a\u003e\r\n\u003c/article\u003e\r\n\u003c/Section\u003e\r\n\u003caside\u003e\r\n  \u003ch3\u003eTestimonios\u003c/h3\u003e\r\n  \u003cp\u003eMe gusta mucho esta pagina.\u003c/p\u003e\r\n\u003c/aside\u003e\r\n\u003cfooter\u003e\r\n  \u003ch4\u003eRedes sociales\u003c/h4\u003e\r\n  \u003ca href=\"#\"\u003eFacebook\u003c/a\u003e\r\n  \u003ca href=\"#\"\u003eTiwtter\u003c/a\u003e\r\n\u003c/footer\u003e\r\n\u003c/body\u003e\r\n\u003c/html\u003e\r\n","fullPath":"index.html","lastModified":1630742552193},"package.json":{"name":"package.json","type":"file","contents":"{\n  \"name\": \"js\",\n  \"version\": \"0.0.0\",\n  \"private\": true,\n  \"dependencies\": {}\n}","fullPath":"package.json","lastModified":1600293866343},"tsconfig.json":{"name":"tsconfig.json","type":"file","contents":"{\n  \"compilerOptions\": {\n    \"target\": \"esnext\"\n  }\n}","fullPath":"tsconfig.json","lastModified":1600293875958}},"canAdministrate":false,"canChangeVisibility":false,"canFork":true,"canMakePrivate":false,"canManage":false,"canUploadFiles":false,"canUsePaidFeatures":false,"canView":true,"currentUserIsOwner":false,"dependencies":{"jpack":{"appDependencies":{},"resDependencies":{}},"externalDeps":[],"externalResources":[]},"description":"Mi Primer App con HTML","editedAt":null,"forks":1400,"framework":null,"frozen":null,"guestId":"b9dd488f-e8d0-4cb2-808c-19e138b1e9f8","id":9080867,"invitees":null,"lastEditor":null,"organization":null,"owner":{"avatar":"https://ghavatars.staticblitz.com/claujavperezMX.png","name":"claujavperezMX","username":"claujavperezMX"},"preset":"esm","settings":{"compile":{"action":"hmr","trigger":"auto","clearConsole":false}},"slug":"js-lzxqri","title":"Js (forked)","userIsParticipant":false,"views":95476,"visibility":"public","editorLivePresence":false}}</script>
+
+<script>
+if (typeof Analytics !== 'undefined') {
+  Analytics.page();
+}
+</script>
+
+
+
+
+
+
+<div data-react-component="App"><main class="App-root-PMxFs"><nav class="MenuBar-MenuBar-G4MDY"><div class="MenuBar-LogoGroup-NRYyQ"><a class="MenuBar-LogoLink-vf5qv MenuBar-LogoLink_header-zr_m6" href="https://stackblitz.com/"><span class="MenuBar-LogoContent-zHT24"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="#1389FD" width="1em" height="1em"><path d="M5.853 18.647h8.735L9.45 31l16.697-17.647h-8.735L22.55 1 5.853 18.647z"></path></svg><span class="MenuBar-LogoName-xuXlo">StackBlitz</span></span></a></div><div class="MenuBar-StartGroup-dTDIl"><button class="MenuBarButton-root-VTAGy" style="--iconSize:16px;"><span class="MenuBarButton-icon-LKEHj"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" width="1em" height="1em"><path d="M80 128a48 48 0 100-96 48 48 0 100 96zm80-48c0 38.7-27.5 71-64 78.4V192c0 26.5 21.5 48 48 48h160c26.5 0 48-21.5 48-48v-33.6c-36.5-7.4-64-39.7-64-78.4 0-44.2 35.8-80 80-80s80 35.8 80 80c0 38.7-27.5 71-64 78.4V192c0 44.2-35.8 80-80 80h-64v81.6c36.5 7.4 64 39.7 64 78.4 0 44.2-35.8 80-80 80s-80-35.8-80-80c0-38.7 27.5-71 64-78.4V272h-64c-44.2 0-80-35.8-80-80v-33.6C27.5 151 0 118.7 0 80 0 35.8 35.8 0 80 0s80 35.8 80 80zm64 304a48 48 0 100 96 48 48 0 100-96zM416 80a48 48 0 10-96 0 48 48 0 1096 0z"></path></svg></span><span class="MenuBarButton-text-_py8_">Fork</span></button><div class="ShareButton-container-JzV5D"><button class="MenuBarButton-root-VTAGy MenuBarButton-root_text-BYKyD" style="--iconSize:16px;"><span class="MenuBarButton-icon-LKEHj"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" width="1em" height="1em"><path d="M296 160c13.3 0 24-10.7 24-24V64l160 144-160 144v-72c0-13.3-10.7-24-24-24H192c-70.7 0-128 57.3-128 128 0 8.3.7 16.1 2 23.2-18.1-23.5-34-57.1-34-103.2 0-79.5 64.5-144 144-144h120zm-8 144v48c0 12.6 7.4 24.1 19 29.2s25 3 34.4-5.4l160-144c6.7-6.1 10.6-14.7 10.6-23.8s-3.8-17.7-10.6-23.8l-160-144c-9.4-8.5-22.9-10.6-34.4-5.4S288 51.4 288 64v64H176C78.8 128 0 206.8 0 304c0 113.3 81.5 163.9 100.2 174.1 2.5 1.4 5.3 1.9 8.1 1.9 10.9 0 19.7-8.9 19.7-19.7 0-7.5-4.3-14.4-9.8-19.5-9.4-8.9-22.2-26.4-22.2-56.8 0-53 43-96 96-96h96v16z"></path></svg></span><span class="MenuBarButton-text-_py8_">Share</span></button></div></div><div class="MenuBar-CenterGroup-Jea_2"><div class="Title-wrapper-JzRQZ"><a class="Title-owner-ZJWs9" href="https://stackblitz.com/@claujavperezMX" data-tip="Created by @claujavperezMX" aria-label="Created by @claujavperezMX" currentitem="false"><img class="Avatar-image-Hn789" alt="" crossorigin="anonymous" src="./claujavperezMX.png" style="--avatar-radius:50%; --avatar-size:20px;"><div class="__react_component_tooltip place-bottom type-dark " data-id="tooltip"></div></a><div class="Title-title-YcdNT"><span class="Title-titleDisplay-N201X">Js (forked)</span></div></div></div><div class="MenuBar-EndGroup-VAYSw"><a class="MenuBarButton-root-VTAGy MenuBarButton-root_text-BYKyD" href="https://js-lzxqri.stackblitz.io/" target="_blank" style="--iconSize:16px;"><span class="MenuBarButton-icon-LKEHj"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" width="1em" height="1em"><path d="M16 1H3v3H0v11h13v-3h3V1zm-4 13H1V7h2v5h9v2zm3-3H4V4h11v7z"></path></svg></span><span class="MenuBarButton-text-_py8_"><span style="font-size: 12px;">Open in New Tab</span></span></a><button class="MenuBarButton-root-VTAGy MenuBarButton-root_text-BYKyD" style="--iconSize:16px;"><span class="MenuBarButton-icon-LKEHj"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" width="1em" height="1em"><path d="M1 3v10h14V3H1zm1 1h9v8H2V4z"></path><path d="M6.44 6.36l.72-.72L9.5 8l-2.34 2.36-.72-.72L7.58 8.5H4v-1h3.58L6.44 6.36z"></path></svg></span><span class="MenuBarButton-text-_py8_"><span style="font-size: 12px;">Close</span></span></button><div class="MenuBar-SignInWrapper-HuMCx"><button class="SignInButton-button-B7iLM MenuBarButton-root-VTAGy MenuBarButton-root_text-BYKyD" style="--iconSize:18px;"><span class="MenuBarButton-text-_py8_">Sign in<svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="SignInButton-indicator-aiHfV"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.976 10.072l4.357-4.357.62.618L8.284 11h-.618L3 6.333l.619-.618 4.357 4.357z"></path></svg></span></button></div></div></nav><div tabindex="-1" class="WorkSpace-root-PFh_S"><div class="ActivityBar-root-QT2eA"><div class="ActivityBar-mainActions-zvoKT"><button aria-label="Project" aria-pressed="true" class="Action-root-IsOYp ActivityBarAction-button-Be57B ActivityBarAction-button_active-lDawW" type="button" data-tip="true" data-for="404810095568513" currentitem="false" style="--size:48px; --iconSize:24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="1em" height="1em"><path fill-rule="evenodd" d="M8.5 0h9L22 4.5v12.068L20.705 18H16v4.568L14.568 24H2.5L1 22.568V7.5L2.5 6H7V1.5L8.5 0zM16 1.5V6h4.5v10.5h-12v-15H16zm3.879 3L17.5 2.121V4.5h2.379zM7 7.5v9.068L8.5 18h6v4.5h-12v-15H7z"></path></svg></button><div class="__react_component_tooltip place-right type-dark " id="404810095568513" data-id="tooltip">Project</div><button aria-label="Search" class="Action-root-IsOYp ActivityBarAction-button-Be57B" type="button" data-tip="true" data-for="942924697603670" currentitem="false" style="--size:48px; --iconSize:24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="1em" height="1em"><path fill-rule="evenodd" d="M14.75 16a6.75 6.75 0 100-13.5 6.75 6.75 0 000 13.5zm0 1.5a8.25 8.25 0 100-16.5 8.25 8.25 0 000 16.5zM1.694 22.496l1.112 1.008 6.96-7.68a8.37 8.37 0 01-1.109-1.011l-6.963 7.683z"></path></svg></button><div class="__react_component_tooltip place-right type-dark " id="942924697603670" data-id="tooltip">Search</div><button aria-label="Settings" class="Action-root-IsOYp ActivityBarAction-button-Be57B" type="button" data-tip="true" data-for="900312953032898" currentitem="false" style="--size:48px; --iconSize:24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="1em" height="1em"><path d="M14.346 0l.854 4.274 3.627-2.418 3.317 3.317L19.726 8.8 24 9.654v4.692l-4.274.854 2.418 3.627-3.317 3.317-3.627-2.418L14.346 24H9.654L8.8 19.726l-3.627 2.418-3.317-3.317L4.274 15.2 0 14.346V9.654L4.274 8.8 1.856 5.173l3.317-3.317L8.8 4.274 9.654 0h4.692zm-3.462 1.5l-.823 4.117-1.204.498-3.493-2.329-1.578 1.578 2.329 3.494-.498 1.203-4.117.823v2.232l4.117.823.498 1.204-2.329 3.493 1.578 1.578 3.494-2.329 1.203.498.823 4.117h2.232l.823-4.117 1.204-.498 3.492 2.329 1.579-1.578-2.329-3.493.498-1.204 4.117-.823v-2.232l-4.117-.823-.498-1.203 2.329-3.494-1.578-1.578-3.493 2.329-1.204-.498-.823-4.117h-2.232zM12 8.423a3.577 3.577 0 100 7.154 3.577 3.577 0 000-7.154zM6.923 12a5.077 5.077 0 1110.154 0 5.077 5.077 0 01-10.154 0z"></path></svg></button><div class="__react_component_tooltip place-right type-dark " id="900312953032898" data-id="tooltip">Settings</div></div><div class="ActivityBar-endButtons-sRINJ"><button aria-label="Switch to Light Theme" class="Action-root-IsOYp ActivityBarAction-button-Be57B" type="button" data-tip="true" data-for="825386854044932" currentitem="false" style="--size:32px; --iconSize:22px;"><svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm0 13V2a6 6 0 110 12z"></path></svg></button><div class="__react_component_tooltip place-right type-dark Tooltip-root-nf37i" id="825386854044932" data-id="tooltip">Switch to Light Theme</div><button aria-label="Enter Zen Mode" class="Action-root-IsOYp ActivityBarAction-button-Be57B" type="button" data-tip="true" data-for="300158557426237" currentitem="false" style="--size:32px; --iconSize:20px;"><svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 1h13l.5.5v12l-.5.5h-13l-.5-.5v-12l.5-.5zM2 5v8h12V5H2zm0-1h12V2H2v2z"></path></svg></button><div class="__react_component_tooltip place-right type-dark " id="300158557426237" data-id="tooltip">Enter Zen Mode</div></div></div><div class="WorkSpace-appMosaic-VgL9W mosaic mosaic-drop-target"><div class="mosaic-root"><div class="mosaic-tile" style="inset: 0% 80% 0% 0%;"><aside class="Sidebar-root-pqtUm"><header class="SidebarView-header-UQiXx"><h2 class="SidebarView-title-Uyb63 SidebarView-title_default-FEpQy">Project</h2><div class="SidebarView-actions-PMCfG"><button aria-label="Download Project" class="Action-root-IsOYp" type="button" data-tip="true" data-for="168580973848163" currentitem="false" style="--size:24px; --iconSize:16px;"><svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.957 6h.05a2.99 2.99 0 012.116.879 3.003 3.003 0 010 4.242 2.99 2.99 0 01-2.117.879v-1a2.002 2.002 0 000-4h-.914l-.123-.857a2.49 2.49 0 00-2.126-2.122A2.478 2.478 0 006.231 5.5l-.333.762-.809-.189A2.49 2.49 0 004.523 6c-.662 0-1.297.263-1.764.732A2.503 2.503 0 004.523 11h.498v1h-.498a3.486 3.486 0 01-2.628-1.16 3.502 3.502 0 011.958-5.78 3.462 3.462 0 011.468.04 3.486 3.486 0 013.657-2.06A3.479 3.479 0 0111.957 6zm-5.25 5.121l1.314 1.314V7h.994v5.4l1.278-1.279.707.707-2.146 2.147h-.708L6 11.829l.707-.708z"></path></svg></button><div class="__react_component_tooltip place-top type-dark " id="168580973848163" data-id="tooltip">Download Project</div></div></header><div class="SidebarView-main-cMib5"><section class="TreeItem-Item-Z9p_2"><header class="TreeItem-Header-y9zsU TreeItem-Header_emphasis-R0MUQ"><button class="Arrow Arrow-Arrow-DD4Na"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M7.976 10.072l4.357-4.357.619.618L8.285 11h-.618L3 6.333l.619-.618 4.357 4.357z"></path></svg></button><h4 class="TreeItem-Title-UH6Yh">Info</h4></header><div class="TreeItem-Content-n0Aor"><div class="CompactProjectInfo-container-eoQUG"><div class="CompactProjectInfo-owner-Vf6Ve"><p class="CompactProjectInfo-author-tscd4"><a href="https://stackblitz.com/@claujavperezMX" target="_blank" rel="noopener"><img class="Avatar-image-Hn789" alt="" crossorigin="anonymous" src="./claujavperezMX.png" style="--avatar-radius:50%; --avatar-size:24px;">claujavperezMX</a></p></div><h3 class="CompactProjectInfo-title-Jg37V">Js (forked)</h3><div class="CompactProjectInfo-description-NFHWw"><p>Mi Primer App con HTML</p></div><div class="CompactProjectInfo-metadata-QKsPT"><p class="CompactProjectInfo-metrics-bYH2i"><span title="95476 views"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" width="1em" height="1em"><path d="M506.1 236.3a304.9 304.9 0 00-107.5-105A277.1 277.1 0 00256 91.5a277 277 0 00-142.6 39.6A305 305 0 005.9 236.3 39.5 39.5 0 00.2 256c0 6.5 1.9 13 5.7 19.7a304.7 304.7 0 00107.5 105c45 26.5 92.5 39.7 142.6 39.7 50 0 97.6-13.1 142.6-39.5a303 303 0 00107.5-105.2 39.5 39.5 0 005.7-19.7c0-6.5-1.9-13-5.7-19.7zm-311.3-78c17-17.1 37.4-25.6 61.2-25.6 3.8 0 7 1.3 9.7 4 2.7 2.6 4 5.9 4 9.7 0 3.8-1.3 7-4 9.7-2.6 2.6-5.9 4-9.7 4a57.2 57.2 0 00-42 17.4 57.2 57.2 0 00-17.4 42c0 3.8-1.3 7-4 9.7-2.6 2.6-5.9 4-9.7 4-3.8 0-7-1.4-9.7-4-2.7-2.7-4-6-4-9.7 0-23.8 8.5-44.2 25.6-61.3zm185.3 191a235.1 235.1 0 01-124 34.6A235 235 0 01132 349.2 294.7 294.7 0 0136.7 256c29-45 65.2-78.5 108.8-100.8a124.8 124.8 0 00-17.4 64.3c0 35.2 12.5 65.3 37.6 90.3 25 25 55.1 37.6 90.3 37.6 35.2 0 65.3-12.6 90.4-37.6 25-25 37.5-55.1 37.5-90.3 0-23-5.8-44.5-17.4-64.3A280.7 280.7 0 01475.3 256c-25.3 39-57 70.1-95.2 93.2z"></path></svg>95.5k views</span><span title="1400 forks"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="1em" height="1em"><path d="M16.37 3.62a2.12 2.12 0 00-2.12-2.12 2.12 2.12 0 00-2.13 2.12c0 .78.43 1.48 1.06 1.84v1.76L10 10.74 6.82 7.22V5.46a2.12 2.12 0 001.06-1.84A2.12 2.12 0 005.75 1.5a2.12 2.12 0 00-2.12 2.12c0 .78.43 1.48 1.06 1.84v2.6l4.25 4.67v1.8a2.12 2.12 0 00-1.06 1.85c0 1.17.94 2.12 2.12 2.12a2.12 2.12 0 002.12-2.12 2.14 2.14 0 00-1.06-1.84v-1.81l4.25-4.68V5.46a2.12 2.12 0 001.06-1.84zM5.75 2.58c.57 0 1.03.46 1.03 1.03 0 .56-.46 1.02-1.03 1.02a1.03 1.03 0 01-1.02-1.02c0-.57.46-1.03 1.02-1.03zM10 17.36a1.03 1.03 0 01-1.03-1.03c0-.57.47-1.03 1.03-1.03s1.03.46 1.03 1.03c0 .56-.47 1.03-1.03 1.03zm4.25-14.78c.56 0 1.02.46 1.02 1.03 0 .56-.46 1.03-1.02 1.03a1.03 1.03 0 01-1.03-1.03c0-.57.46-1.03 1.03-1.03z"></path></svg>1.4k forks</span></p></div></div></div></section><section class="TreeItem-Item-Z9p_2"><header class="TreeItem-Header-y9zsU TreeItem-Header_emphasis-R0MUQ"><button class="Arrow Arrow-Arrow-DD4Na"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M7.976 10.072l4.357-4.357.619.618L8.285 11h-.618L3 6.333l.619-.618 4.357 4.357z"></path></svg></button><h4 class="TreeItem-Title-UH6Yh">Files</h4><span class="TreeItem-Actions-KDPA2"><button class="FileTree-SectionAction-bHItX" aria-label="Add file" data-cy="add-file"><svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.5 1.1l3.4 3.5.1.4v2h-1V6H8V2H3v11h4v1H2.5l-.5-.5v-12l.5-.5h6.7l.3.1zM9 2v3h2.9L9 2zm4 14h-1v-3H9v-1h3V9h1v3h3v1h-3v3z"></path></svg></button><button class="FileTree-SectionAction-bHItX" aria-label="Add folder" data-cy="add-folder"><svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 2H7.71l-.85-.85L6.51 1h-5l-.5.5v11l.5.5H7v-1H1.99V6h4.49l.35-.15.86-.86H14v1.5l-.001.51h1.011V2.5L14.5 2zm-.51 2h-6.5l-.35.15-.86.86H2v-3h4.29l.85.85.36.15H14l-.01.99zM13 16h-1v-3H9v-1h3V9h1v3h3v1h-3v3z"></path></svg></button></span></header><div class="TreeItem-Content-n0Aor"><div tabindex="0" data-cy="filetree" class="FileTree FileTree-FileTree-AITTG"><div><div class="react-contextmenu-wrapper"><div class="FileItem-FileItem-K_RSo FileItem-Selected-J2vGW FileItem-Focused-VF2LR FileItem-IsFile-_zkSP" tabindex="0" data-cy="index.html" style="--itemDepth:1;"><button class="Arrow Arrow-Arrow-DD4Na FileItem-Arrow-gsFKC"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M5.7 13.7L5 13l4.6-4.6L5 3.7l.7-.7 5 5v.7l-5 5z"></path></svg></button><span class="FileItem-Marker-n6Zw3"></span><div class="FileName-root-fYtum" draggable="true"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" class="FileName-icon-SEpzz"><path class="html_svg__i-color" fill="#F4BF75" d="M11.631 5.1l.136-1.531H4.233l.4 4.672h5.216l-.187 2-1.679.459-1.67-.464L6.2 9.015H4.71l.19 2.433 3.085.875h.032v-.009l3.06-.866.423-4.76H6.014L5.886 5.1h5.744zM2 1h12l-1.091 12.583L7.983 15l-4.892-1.417z"></path></svg><span class="FileName-name-aJJGC">index.html</span></div><span class="FileItem-Actions-B4gD0"><button class="FileItem-ActionButton-bFuFm" aria-label="Rename"><svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M13.23 1h-1.46L3.52 9.25l-.16.22L1 13.59 2.41 15l4.12-2.36.22-.16L15 4.23V2.77L13.23 1zM2.41 13.59l1.51-3 1.45 1.45-2.96 1.55zm3.83-2.06L4.47 9.76l8-8 1.77 1.77-8 8z"></path></svg></button><button class="FileItem-ActionButton-bFuFm" aria-label="Remove"><svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 3h3v1h-1v9l-1 1H4l-1-1V4H2V3h3V2a1 1 0 011-1h3a1 1 0 011 1v1zM9 2H6v1h3V2zM4 13h7V4H4v9zm2-8H5v7h1V5zm1 0h1v7H7V5zm2 0h1v7H9V5z"></path></svg></button></span></div></div><nav role="menu" tabindex="-1" class="react-contextmenu" style="position: fixed; opacity: 0; pointer-events: none;"><div class="react-contextmenu-item" role="menuitem" tabindex="-1" aria-disabled="false"><span class="react-contextmenu-icon"><svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M13.23 1h-1.46L3.52 9.25l-.16.22L1 13.59 2.41 15l4.12-2.36.22-.16L15 4.23V2.77L13.23 1zM2.41 13.59l1.51-3 1.45 1.45-2.96 1.55zm3.83-2.06L4.47 9.76l8-8 1.77 1.77-8 8z"></path></svg></span><span class="react-contextmenu-label">Rename</span></div><div class="react-contextmenu-item" role="menuitem" tabindex="-1" aria-disabled="false"><span class="react-contextmenu-icon"><svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 3h3v1h-1v9l-1 1H4l-1-1V4H2V3h3V2a1 1 0 011-1h3a1 1 0 011 1v1zM9 2H6v1h3V2zM4 13h7V4H4v9zm2-8H5v7h1V5zm1 0h1v7H7V5zm2 0h1v7H9V5z"></path></svg></span><span class="react-contextmenu-label">Delete</span></div></nav></div><div><div class="react-contextmenu-wrapper"><div class="FileItem-FileItem-K_RSo FileItem-IsFile-_zkSP" tabindex="0" data-cy="index.js" style="--itemDepth:1;"><button class="Arrow Arrow-Arrow-DD4Na FileItem-Arrow-gsFKC"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M5.7 13.7L5 13l4.6-4.6L5 3.7l.7-.7 5 5v.7l-5 5z"></path></svg></button><span class="FileItem-Marker-n6Zw3"></span><div class="FileName-root-fYtum" draggable="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-40 -40 586 586" width="1em" height="1em" fill="#E79627" class="FileName-icon-SEpzz"><path d="M412.226 385.563c28.065 37.511-46.893 64.77-77.11 10.559l-41.05 23.822 2.516 4.167c15.464 26.04 39.62 41.294 72.27 45.673 71.481 8.55 118.148-37.034 92.817-101.767C443.667 331 396.5 324 369 305.75c-16.172-9.422-12.806-29.364.183-37.365 10.102-6.222 33.317-7.01 45.274 17.786l39.28-25.317C422.75 205 349.5 216.25 327.544 241.627 297.688 276.702 306.228 315.85 332.5 341c20.434 19.561 52.501 26.202 79.726 44.563zm-185.588 79.069c22.63-9.153 35.904-28.074 39.416-56.202.305-2.848.508-184.599.508-184.599h-49.788l-.36 179.779c-1.164 11.64-8.122 19.983-18.289 21.619-17.347 2.791-28.911-2.26-40.963-24.826l-40.535 24.508c17.373 40.839 69.745 55.838 110.011 39.72zM44.873 0h422.254C491.987 0 512 20.013 512 44.873v422.254c0 24.86-20.013 44.873-44.873 44.873H44.873C20.013 512 0 491.987 0 467.127V44.873C0 20.013 20.013 0 44.873 0z"></path></svg><span class="FileName-name-aJJGC">index.js</span></div><span class="FileItem-Actions-B4gD0"><button class="FileItem-ActionButton-bFuFm" aria-label="Rename"><svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M13.23 1h-1.46L3.52 9.25l-.16.22L1 13.59 2.41 15l4.12-2.36.22-.16L15 4.23V2.77L13.23 1zM2.41 13.59l1.51-3 1.45 1.45-2.96 1.55zm3.83-2.06L4.47 9.76l8-8 1.77 1.77-8 8z"></path></svg></button><button class="FileItem-ActionButton-bFuFm" aria-label="Remove"><svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 3h3v1h-1v9l-1 1H4l-1-1V4H2V3h3V2a1 1 0 011-1h3a1 1 0 011 1v1zM9 2H6v1h3V2zM4 13h7V4H4v9zm2-8H5v7h1V5zm1 0h1v7H7V5zm2 0h1v7H9V5z"></path></svg></button></span></div></div><nav role="menu" tabindex="-1" class="react-contextmenu" style="position: fixed; opacity: 0; pointer-events: none;"><div class="react-contextmenu-item" role="menuitem" tabindex="-1" aria-disabled="false"><span class="react-contextmenu-icon"><svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M13.23 1h-1.46L3.52 9.25l-.16.22L1 13.59 2.41 15l4.12-2.36.22-.16L15 4.23V2.77L13.23 1zM2.41 13.59l1.51-3 1.45 1.45-2.96 1.55zm3.83-2.06L4.47 9.76l8-8 1.77 1.77-8 8z"></path></svg></span><span class="react-contextmenu-label">Rename</span></div><div class="react-contextmenu-item" role="menuitem" tabindex="-1" aria-disabled="false"><span class="react-contextmenu-icon"><svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 3h3v1h-1v9l-1 1H4l-1-1V4H2V3h3V2a1 1 0 011-1h3a1 1 0 011 1v1zM9 2H6v1h3V2zM4 13h7V4H4v9zm2-8H5v7h1V5zm1 0h1v7H7V5zm2 0h1v7H9V5z"></path></svg></span><span class="react-contextmenu-label">Delete</span></div></nav></div><div><div class="react-contextmenu-wrapper"><div class="FileItem-FileItem-K_RSo FileItem-IsFile-_zkSP" tabindex="0" data-cy="package.json" style="--itemDepth:1;"><button class="Arrow Arrow-Arrow-DD4Na FileItem-Arrow-gsFKC"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M5.7 13.7L5 13l4.6-4.6L5 3.7l.7-.7 5 5v.7l-5 5z"></path></svg></button><span class="FileItem-Marker-n6Zw3"></span><div class="FileName-root-fYtum" draggable="true"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" class="FileName-icon-SEpzz"><path fill="#92AA5D" d="M5 3h2v2H5v5a2 2 0 01-2 2 2 2 0 012 2v5h2v2H5c-1.07-.27-2-.9-2-2v-4a2 2 0 00-2-2H0v-2h1a2 2 0 002-2V5a2 2 0 012-2m14 0a2 2 0 012 2v4a2 2 0 002 2h1v2h-1a2 2 0 00-2 2v4a2 2 0 01-2 2h-2v-2h2v-5a2 2 0 012-2 2 2 0 01-2-2V5h-2V3h2m-7 12a1 1 0 011 1 1 1 0 01-1 1 1 1 0 01-1-1 1 1 0 011-1m-4 0a1 1 0 011 1 1 1 0 01-1 1 1 1 0 01-1-1 1 1 0 011-1m8 0a1 1 0 011 1 1 1 0 01-1 1 1 1 0 01-1-1 1 1 0 011-1z"></path></svg><span class="FileName-name-aJJGC">package.json</span></div><span class="FileItem-Actions-B4gD0"><button class="FileItem-ActionButton-bFuFm" aria-label="Rename"><svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M13.23 1h-1.46L3.52 9.25l-.16.22L1 13.59 2.41 15l4.12-2.36.22-.16L15 4.23V2.77L13.23 1zM2.41 13.59l1.51-3 1.45 1.45-2.96 1.55zm3.83-2.06L4.47 9.76l8-8 1.77 1.77-8 8z"></path></svg></button><button class="FileItem-ActionButton-bFuFm" aria-label="Remove"><svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 3h3v1h-1v9l-1 1H4l-1-1V4H2V3h3V2a1 1 0 011-1h3a1 1 0 011 1v1zM9 2H6v1h3V2zM4 13h7V4H4v9zm2-8H5v7h1V5zm1 0h1v7H7V5zm2 0h1v7H9V5z"></path></svg></button></span></div></div><nav role="menu" tabindex="-1" class="react-contextmenu" style="position: fixed; opacity: 0; pointer-events: none;"><div class="react-contextmenu-item" role="menuitem" tabindex="-1" aria-disabled="false"><span class="react-contextmenu-icon"><svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M13.23 1h-1.46L3.52 9.25l-.16.22L1 13.59 2.41 15l4.12-2.36.22-.16L15 4.23V2.77L13.23 1zM2.41 13.59l1.51-3 1.45 1.45-2.96 1.55zm3.83-2.06L4.47 9.76l8-8 1.77 1.77-8 8z"></path></svg></span><span class="react-contextmenu-label">Rename</span></div><div class="react-contextmenu-item" role="menuitem" tabindex="-1" aria-disabled="false"><span class="react-contextmenu-icon"><svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 3h3v1h-1v9l-1 1H4l-1-1V4H2V3h3V2a1 1 0 011-1h3a1 1 0 011 1v1zM9 2H6v1h3V2zM4 13h7V4H4v9zm2-8H5v7h1V5zm1 0h1v7H7V5zm2 0h1v7H9V5z"></path></svg></span><span class="react-contextmenu-label">Delete</span></div></nav></div><div><div class="react-contextmenu-wrapper"><div class="FileItem-FileItem-K_RSo FileItem-IsFile-_zkSP" tabindex="0" data-cy="style.css" style="--itemDepth:1;"><button class="Arrow Arrow-Arrow-DD4Na FileItem-Arrow-gsFKC"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M5.7 13.7L5 13l4.6-4.6L5 3.7l.7-.7 5 5v.7l-5 5z"></path></svg></button><span class="FileItem-Marker-n6Zw3"></span><div class="FileName-root-fYtum" draggable="true"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 -1 16 16" class="FileName-icon-SEpzz"><path class="css_svg__i-color" fill="#1E9CEF" d="M3.785 2H14l-1.805 9.164L6.738 13 2 11.164l.482-2.447H4.5l-.2 1.011 2.864 1.107 3.3-1.107.461-2.328h-8.2l.395-2.045h8.206l.258-1.313h-8.2z"></path></svg><span class="FileName-name-aJJGC">style.css</span></div><span class="FileItem-Actions-B4gD0"><button class="FileItem-ActionButton-bFuFm" aria-label="Rename"><svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M13.23 1h-1.46L3.52 9.25l-.16.22L1 13.59 2.41 15l4.12-2.36.22-.16L15 4.23V2.77L13.23 1zM2.41 13.59l1.51-3 1.45 1.45-2.96 1.55zm3.83-2.06L4.47 9.76l8-8 1.77 1.77-8 8z"></path></svg></button><button class="FileItem-ActionButton-bFuFm" aria-label="Remove"><svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 3h3v1h-1v9l-1 1H4l-1-1V4H2V3h3V2a1 1 0 011-1h3a1 1 0 011 1v1zM9 2H6v1h3V2zM4 13h7V4H4v9zm2-8H5v7h1V5zm1 0h1v7H7V5zm2 0h1v7H9V5z"></path></svg></button></span></div></div><nav role="menu" tabindex="-1" class="react-contextmenu" style="position: fixed; opacity: 0; pointer-events: none;"><div class="react-contextmenu-item" role="menuitem" tabindex="-1" aria-disabled="false"><span class="react-contextmenu-icon"><svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M13.23 1h-1.46L3.52 9.25l-.16.22L1 13.59 2.41 15l4.12-2.36.22-.16L15 4.23V2.77L13.23 1zM2.41 13.59l1.51-3 1.45 1.45-2.96 1.55zm3.83-2.06L4.47 9.76l8-8 1.77 1.77-8 8z"></path></svg></span><span class="react-contextmenu-label">Rename</span></div><div class="react-contextmenu-item" role="menuitem" tabindex="-1" aria-disabled="false"><span class="react-contextmenu-icon"><svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 3h3v1h-1v9l-1 1H4l-1-1V4H2V3h3V2a1 1 0 011-1h3a1 1 0 011 1v1zM9 2H6v1h3V2zM4 13h7V4H4v9zm2-8H5v7h1V5zm1 0h1v7H7V5zm2 0h1v7H9V5z"></path></svg></span><span class="react-contextmenu-label">Delete</span></div></nav></div><div><div class="react-contextmenu-wrapper"><div class="FileItem-FileItem-K_RSo FileItem-IsFile-_zkSP" tabindex="0" data-cy="tsconfig.json" style="--itemDepth:1;"><button class="Arrow Arrow-Arrow-DD4Na FileItem-Arrow-gsFKC"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M5.7 13.7L5 13l4.6-4.6L5 3.7l.7-.7 5 5v.7l-5 5z"></path></svg></button><span class="FileItem-Marker-n6Zw3"></span><div class="FileName-root-fYtum" draggable="true"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" class="FileName-icon-SEpzz"><path fill="#92AA5D" d="M5 3h2v2H5v5a2 2 0 01-2 2 2 2 0 012 2v5h2v2H5c-1.07-.27-2-.9-2-2v-4a2 2 0 00-2-2H0v-2h1a2 2 0 002-2V5a2 2 0 012-2m14 0a2 2 0 012 2v4a2 2 0 002 2h1v2h-1a2 2 0 00-2 2v4a2 2 0 01-2 2h-2v-2h2v-5a2 2 0 012-2 2 2 0 01-2-2V5h-2V3h2m-7 12a1 1 0 011 1 1 1 0 01-1 1 1 1 0 01-1-1 1 1 0 011-1m-4 0a1 1 0 011 1 1 1 0 01-1 1 1 1 0 01-1-1 1 1 0 011-1m8 0a1 1 0 011 1 1 1 0 01-1 1 1 1 0 01-1-1 1 1 0 011-1z"></path></svg><span class="FileName-name-aJJGC">tsconfig.json</span></div><span class="FileItem-Actions-B4gD0"><button class="FileItem-ActionButton-bFuFm" aria-label="Rename"><svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M13.23 1h-1.46L3.52 9.25l-.16.22L1 13.59 2.41 15l4.12-2.36.22-.16L15 4.23V2.77L13.23 1zM2.41 13.59l1.51-3 1.45 1.45-2.96 1.55zm3.83-2.06L4.47 9.76l8-8 1.77 1.77-8 8z"></path></svg></button><button class="FileItem-ActionButton-bFuFm" aria-label="Remove"><svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 3h3v1h-1v9l-1 1H4l-1-1V4H2V3h3V2a1 1 0 011-1h3a1 1 0 011 1v1zM9 2H6v1h3V2zM4 13h7V4H4v9zm2-8H5v7h1V5zm1 0h1v7H7V5zm2 0h1v7H9V5z"></path></svg></button></span></div></div><nav role="menu" tabindex="-1" class="react-contextmenu" style="position: fixed; opacity: 0; pointer-events: none;"><div class="react-contextmenu-item" role="menuitem" tabindex="-1" aria-disabled="false"><span class="react-contextmenu-icon"><svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M13.23 1h-1.46L3.52 9.25l-.16.22L1 13.59 2.41 15l4.12-2.36.22-.16L15 4.23V2.77L13.23 1zM2.41 13.59l1.51-3 1.45 1.45-2.96 1.55zm3.83-2.06L4.47 9.76l8-8 1.77 1.77-8 8z"></path></svg></span><span class="react-contextmenu-label">Rename</span></div><div class="react-contextmenu-item" role="menuitem" tabindex="-1" aria-disabled="false"><span class="react-contextmenu-icon"><svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 3h3v1h-1v9l-1 1H4l-1-1V4H2V3h3V2a1 1 0 011-1h3a1 1 0 011 1v1zM9 2H6v1h3V2zM4 13h7V4H4v9zm2-8H5v7h1V5zm1 0h1v7H7V5zm2 0h1v7H9V5z"></path></svg></span><span class="react-contextmenu-label">Delete</span></div></nav></div></div></div></section><section class="TreeItem-Item-Z9p_2"><header class="TreeItem-Header-y9zsU TreeItem-Header_emphasis-R0MUQ"><button class="Arrow Arrow-Arrow-DD4Na"><svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M7.976 10.072l4.357-4.357.619.618L8.285 11h-.618L3 6.333l.619-.618 4.357 4.357z"></path></svg></button><h4 class="TreeItem-Title-UH6Yh">Dependencies</h4><span class="TreeItem-Actions-KDPA2"><button aria-label="Update All to Latest" class="Action-root-IsOYp" type="button" data-tip="true" data-for="149111182347460" currentitem="false" style="--size:32px; --iconSize:16px;"><svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.681 3H2V2h3.5l.5.5V6H5V4a5 5 0 104.53-.761l.302-.954A6 6 0 114.681 3z"></path></svg></button><div class="__react_component_tooltip place-top type-dark " id="149111182347460" data-id="tooltip">Update All to Latest</div></span></header><div class="TreeItem-Content-n0Aor"><div class="PackageManager PackageManager-Root-volVI"><ul></ul><form class="PackageManager-AddDependency-am148"><span class="TextInput-wrapper-J9_i6 TextInput-wrapper_small-keWWV"><input name="package" placeholder="Enter package name" aria-label="Add package" class="TextInput-field-aR8cM TextInput-field_input-D5yjw" type="text"></span></form></div></div></section></div><footer class="Sidebar-footer-dqOYM"><div class="SidebarFooter-root-jF52R"><div class="SidebarFooter-banners-i8wDj"><div class="SidebarBanner-bannerRoot-e1b4y SidebarBanner-teams-FjJKU SidebarBanner-dark-IiZd9"><button class="SidebarBanner-closeBannerButton-aK1gU SidebarBanner-closeBannerButton__desktop-cDtVw" aria-label="Close banner"><svg width="18" height="18" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 8.707l3.646 3.647.708-.707L8.707 8l3.647-3.646-.707-.708L8 7.293 4.354 3.646l-.707.708L7.293 8l-3.646 3.646.707.708L8 8.707z"></path></svg></button><a href="https://stackblitz.com/beta-teams-signup" class="SidebarBanner-bannerLink-ySTAy" target="_blank" rel="nofollow"><span class="SidebarBanner-logoWrapper-Vp2gO SidebarBanner-logoWrapper_medium-sIeeS SidebarBanner-teams-FjJKU"><svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.111 4.663A2 2 0 116.89 1.337a2 2 0 012.222 3.326zm-.555-2.494A1 1 0 107.444 3.83a1 1 0 001.112-1.66zm2.61.03a1.494 1.494 0 011.895.188 1.513 1.513 0 01-.487 2.46 1.492 1.492 0 01-1.635-.326 1.512 1.512 0 01.228-2.321zm.48 1.61a.499.499 0 10.705-.708.509.509 0 00-.351-.15.499.499 0 00-.5.503.51.51 0 00.146.356zM3.19 12.487H5v1.005H3.19a1.197 1.197 0 01-.842-.357 1.21 1.21 0 01-.348-.85v-1.81a.997.997 0 01-.71-.332A1.007 1.007 0 011 9.408V7.226c.003-.472.19-.923.52-1.258.329-.331.774-.52 1.24-.523H4.6a2.912 2.912 0 00-.55 1.006H2.76a.798.798 0 00-.54.232.777.777 0 00-.22.543v2.232h1v2.826a.202.202 0 00.05.151.24.24 0 00.14.05zm7.3-6.518a1.765 1.765 0 00-1.25-.523H6.76a1.765 1.765 0 00-1.24.523c-.33.335-.517.786-.52 1.258v3.178a1.06 1.06 0 00.29.734 1 1 0 00.71.332v2.323a1.202 1.202 0 00.35.855c.18.168.407.277.65.312h2a1.15 1.15 0 001-1.167V11.47a.997.997 0 00.71-.332 1.006 1.006 0 00.29-.734V7.226a1.8 1.8 0 00-.51-1.258zM10 10.454H9v3.34a.202.202 0 01-.06.14.17.17 0 01-.14.06H7.19a.21.21 0 01-.2-.2v-3.34H6V7.226c0-.203.079-.398.22-.543a.798.798 0 01.54-.232h2.48a.778.778 0 01.705.48.748.748 0 01.055.295v3.228zm2.81 3.037H11v-1.005h1.8a.24.24 0 00.14-.05.2.2 0 00.06-.152V9.458h1V7.226a.777.777 0 00-.22-.543.798.798 0 00-.54-.232h-1.29a2.91 2.91 0 00-.55-1.006h1.84a1.77 1.77 0 011.24.523c.33.335.517.786.52 1.258v2.182c0 .273-.103.535-.289.733-.186.199-.44.318-.711.333v1.81c0 .319-.125.624-.348.85a1.197 1.197 0 01-.842.357zM4 1.945a1.494 1.494 0 00-1.386.932A1.517 1.517 0 002.94 4.52 1.497 1.497 0 005.5 3.454c0-.4-.158-.784-.44-1.067A1.496 1.496 0 004 1.945zm0 2.012a.499.499 0 01-.5-.503.504.504 0 01.5-.503.509.509 0 01.5.503.504.504 0 01-.5.503z"></path></svg></span><p class="SidebarBanner-bannerLink__text-NfD5j">Using StackBlitz at work?</p><div class="SidebarBanner-bannerButton-wCHnR SidebarBanner-teams-FjJKU"><p>Try Teams</p></div></a></div></div><div class="SidebarFooter-links-kihX7"><a aria-label="StackBlitz on Twitter" class="SidebarFooter-iconLink-I9N_i" href="https://twitter.com/stackblitz" target="_blank" rel="noopener"><svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M15 3.784a5.63 5.63 0 01-.65.803 6.058 6.058 0 01-.786.68 5.442 5.442 0 01.014.377c0 .574-.061 1.141-.184 1.702a8.467 8.467 0 01-.534 1.627 8.444 8.444 0 01-1.264 2.04 7.768 7.768 0 01-1.72 1.521 7.835 7.835 0 01-2.095.95 8.524 8.524 0 01-2.379.329 8.178 8.178 0 01-2.293-.325A7.921 7.921 0 011 12.52a5.762 5.762 0 004.252-1.19 2.842 2.842 0 01-2.273-1.19 2.878 2.878 0 01-.407-.8c.091.014.181.026.27.035a2.797 2.797 0 001.022-.089 2.808 2.808 0 01-.926-.362 2.942 2.942 0 01-.728-.633 2.839 2.839 0 01-.65-1.822v-.033c.402.227.837.348 1.306.362a2.943 2.943 0 01-.936-1.04 2.955 2.955 0 01-.253-.649 2.945 2.945 0 01.007-1.453c.063-.243.161-.474.294-.693.364.451.77.856 1.216 1.213a8.215 8.215 0 003.008 1.525 7.965 7.965 0 001.695.263 2.15 2.15 0 01-.058-.325 3.265 3.265 0 01-.017-.331c0-.397.075-.77.226-1.118a2.892 2.892 0 011.528-1.528 2.79 2.79 0 011.117-.225 2.846 2.846 0 012.099.909 5.7 5.7 0 001.818-.698 2.815 2.815 0 01-1.258 1.586A5.704 5.704 0 0015 3.785z"></path></svg></a><a aria-label="StackBlitz on GitHub" class="SidebarFooter-iconLink-I9N_i" href="https://github.com/stackblitz/core" target="_blank" rel="noopener"><svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.976 0A7.977 7.977 0 000 7.976c0 3.522 2.3 6.507 5.431 7.584.392.049.538-.196.538-.392v-1.37c-2.201.49-2.69-1.076-2.69-1.076-.343-.93-.881-1.175-.881-1.175-.734-.489.048-.489.048-.489.783.049 1.224.832 1.224.832.734 1.223 1.859.88 2.3.685.048-.538.293-.88.489-1.076-1.762-.196-3.621-.881-3.621-3.964 0-.88.293-1.566.832-2.153-.05-.147-.343-.978.098-2.055 0 0 .685-.196 2.201.832.636-.196 1.322-.245 2.007-.245s1.37.098 2.006.245c1.517-1.027 2.202-.832 2.202-.832.44 1.077.146 1.908.097 2.104a3.16 3.16 0 01.832 2.153c0 3.083-1.86 3.719-3.62 3.915.293.244.538.733.538 1.467v2.202c0 .196.146.44.538.392A7.984 7.984 0 0016 7.976C15.951 3.572 12.38 0 7.976 0z"></path></svg></a><a aria-label="StackBlitz on Discord" class="SidebarFooter-iconLink-I9N_i" href="https://discord.gg/stackblitz" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" width="1em" height="1em"><path d="M26.67 6.33a25.3 25.3 0 00-6.34-1.95c-.28.48-.6 1.13-.8 1.64-2.37-.34-4.7-.34-7.03 0-.22-.51-.54-1.16-.8-1.64a24.94 24.94 0 00-6.35 1.95A25.53 25.53 0 00.8 23.73a25.84 25.84 0 007.76 3.9 18.9 18.9 0 001.66-2.69c-.91-.34-1.78-.76-2.62-1.25l.64-.5a18.24 18.24 0 0015.51 0l.64.5c-.84.5-1.7.91-2.62 1.25a18.9 18.9 0 001.66 2.68 25.7 25.7 0 007.76-3.89 25.37 25.37 0 00-4.52-17.4zM10.92 20.22c-1.52 0-2.76-1.38-2.76-3.07 0-1.7 1.2-3.07 2.76-3.07 1.53 0 2.79 1.38 2.76 3.07 0 1.69-1.23 3.07-2.76 3.07zm10.18 0c-1.52 0-2.76-1.38-2.76-3.07 0-1.7 1.21-3.07 2.76-3.07 1.54 0 2.8 1.38 2.76 3.07 0 1.69-1.2 3.07-2.76 3.07z"></path></svg></a><a class="SidebarFooter-textLink-PmFsm" href="https://github.com/stackblitz/core/issues/new"><b>Something&nbsp;broken? File&nbsp;a&nbsp;bug!</b></a></div></div></footer></aside></div><div class="mosaic-split -row" style="inset: 0% 0% 0% 20%;"><div class="mosaic-split-line"></div></div><div class="mosaic-tile" style="inset: 0% 32% 0% 20%;"><div class="flex flex-grow Editor-panel-zw5m_" style="min-width: 215px; flex-direction: row;"><div class="PanelGroup-panel-IRupZ" style="width: 518.906px; min-width: 0px; flex-grow: 1; flex-shrink: 1; pointer-events: initial;"><object class="PanelGroup-resizeObject-YIZLI" type="text/html" data="./saved_resource.html"></object><div class="Editor-pane-IRK4q"><div class="EditorTabBar-root-gbU5x"><div id="editor-tabbar-0" class="EditorTabBar-tabs-tAETl"><div class="EditorTab-tab-zVg0Z EditorTab-tab_focused-YHwxj" id="editor-tab-EEMBdL1XX5iVx19rmq5Xcp3T" draggable="true"><div class="FileName-root-fYtum EditorTab-fileName_preview-sp9p8"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" class="FileName-icon-SEpzz"><path class="html_svg__i-color" fill="#F4BF75" d="M11.631 5.1l.136-1.531H4.233l.4 4.672h5.216l-.187 2-1.679.459-1.67-.464L6.2 9.015H4.71l.19 2.433 3.085.875h.032v-.009l3.06-.866.423-4.76H6.014L5.886 5.1h5.744zM2 1h12l-1.091 12.583L7.983 15l-4.892-1.417z"></path></svg><span class="FileName-name-aJJGC">index.html</span></div><button type="button" aria-label="Close file" class="EditorTab-closeButton-me9yC"><svg width="16" height="16" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 12L4 4"></path><circle cx="8" cy="8" r="4"></circle></svg></button></div></div><div class="EditorTabBar-actions-_OlTq"><button aria-label="Format Document" class="Action-root-IsOYp text-icon-foreground hover:text-icon-prettier" type="button" data-tip="true" data-for="623431986783536" currentitem="false" style="--size:32px; --iconSize:14px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" width="1em" height="1em"><path d="M10.33 1.67h-8c-.45-.02-.43-.67 0-.67h8c.44 0 .46.64 0 .67zm-8 2.66c-.45-.02-.43-.66 0-.66H7c.44 0 .45.64 0 .66H2.33zM5.67 3c-.46-.02-.44-.66 0-.67h6.66c.44.01.46.65 0 .67H5.67zm5.33.67c.44 0 .45.64 0 .66H8.33c-.45-.02-.43-.66 0-.66H11zm1.33.66c-.45-.02-.43-.66 0-.66H13c.44 0 .45.64 0 .66h-.67zm-10 1.34c-.45-.02-.43-.67 0-.67h1.34c.43 0 .45.64 0 .67H2.33zm8 0c-.45-.02-.43-.67 0-.67h3.34c.43 0 .45.64 0 .67h-3.34zM5 5.67C4.55 5.65 4.57 5 5 5h.67c.43 0 .45.64 0 .67H5zm-2.67 8c-.45-.02-.43-.67 0-.67h1.34c.43 0 .45.64 0 .67H2.33zm2.67 0c-.45-.02-.43-.67 0-.67h.67c.43 0 .45.64 0 .67H5zM10.33 7c-.45-.02-.43-.66 0-.67h3.34c.43.01.45.65 0 .67h-3.34zm-8 0c-.45-.02-.43-.66 0-.67h3.34c.43.01.45.65 0 .67H2.33zm0 5.33c-.45-.02-.43-.66 0-.66h3.34c.43 0 .45.64 0 .66H2.33zm0 2.67c-.45-.02-.43-.66 0-.67h3.34c.43.01.45.65 0 .67H2.33zm0-6.67c-.45-.02-.43-.66 0-.66H3c.44 0 .45.64 0 .66h-.67zm2 0c-.45-.02-.43-.66 0-.66h2c.44 0 .46.64 0 .66h-2zm3.34 0c-.46-.02-.44-.66 0-.66H13c.44 0 .45.64 0 .66H7.67zm2.66 1.34c-.45-.02-.43-.67 0-.67h2c.44 0 .46.64 0 .67h-2zm-4 0c-.45-.02-.43-.67 0-.67H9c.44 0 .45.64 0 .67H6.33zm-4 0c-.45-.02-.43-.67 0-.67H5c.44 0 .45.64 0 .67H2.33zm0 1.33c-.45-.02-.43-.66 0-.67H3c.44.01.45.65 0 .67h-.67zm2 0c-.45-.02-.43-.66 0-.67h6c.44.01.46.65 0 .67h-6zm-2-8c-.45-.02-.43-.66 0-.67h2c.44.01.46.65 0 .67h-2z"></path></svg></button><div class="__react_component_tooltip place-top type-dark " id="623431986783536" data-id="tooltip">Format Document</div><button aria-label="Split Editor" class="Action-root-IsOYp" type="button" data-tip="true" data-for="310037745118958" currentitem="false" style="--size:32px; --iconSize:16px;"><svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M14 1H3L2 2v11l1 1h11l1-1V2l-1-1zM8 13H3V2h5v11zm6 0H9V2h5v11z"></path></svg></button><div class="__react_component_tooltip place-top type-dark " id="310037745118958" data-id="tooltip">Split Editor</div><div class="react-contextmenu-wrapper"><button aria-label="More Actions…" class="Action-root-IsOYp" type="button" data-tip="true" data-for="747876457730196" currentitem="false" style="--size:32px; --iconSize:16px;"><svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M4 8a1 1 0 11-2 0 1 1 0 012 0zm5 0a1 1 0 11-2 0 1 1 0 012 0zm5 0a1 1 0 11-2 0 1 1 0 012 0z"></path></svg></button><div class="__react_component_tooltip place-top type-dark " id="747876457730196" data-id="tooltip">More Actions…</div></div><nav role="menu" tabindex="-1" class="react-contextmenu" style="position: fixed; opacity: 0; pointer-events: none;"><div class="react-contextmenu-item" role="menuitem" tabindex="-1" aria-disabled="false"><span class="react-contextmenu-label">Close all</span></div><div class="react-contextmenu-item" role="menuitem" tabindex="-1" aria-disabled="false"><span class="react-contextmenu-label">Close saved</span></div></nav></div></div><div class="Editor-paneContent-_k1N6"><div class="CodeEditor-root-AdPjz" style="flex-grow: 1; height: 518px; width: 518.906px; --codelens-font-features_ee1f62:&quot;liga&quot; off, &quot;calt&quot; off;" data-keybinding-context="2" data-mode-id="html"><div class="monaco-editor no-user-select  showUnused showDeprecated vs-dark" role="code" data-uri="stackblitz:/index.html" style="width: 518px; height: 518px;"><div data-mprt="3" class="overflow-guard" style="width: 518px; height: 518px;"><div class="margin" role="presentation" aria-hidden="true" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; height: 1562px; width: 62px;"><div class="glyph-margin" style="left: 0px; width: 0px; height: 1562px;"></div><div class="margin-view-zones" role="presentation" aria-hidden="true" style="position: absolute;"></div><div class="margin-view-overlays" role="presentation" aria-hidden="true" style="position: absolute; width: 62px; font-family: Menlo, &quot;Cascadia Code&quot;, Consolas, &quot;Liberation Mono&quot;, monospace; font-weight: normal; font-size: 12px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; line-height: 18px; letter-spacing: 0px; height: 1562px;"><div style="position:absolute;top:0px;width:100%;height:18px;"><div class="current-line current-line-margin-both" style="width:62px; height:18px;"></div><div class="active-line-number line-numbers lh-even" style="left:0px;width:36px;">1</div></div><div style="position:absolute;top:18px;width:100%;height:18px;"><div class="cldr codicon codicon-folding-expanded" style="left:36px;width:26px;"></div><div class="line-numbers lh-even" style="left:0px;width:36px;">2</div></div><div style="position:absolute;top:36px;width:100%;height:18px;"><div class="cldr codicon codicon-folding-expanded" style="left:36px;width:26px;"></div><div class="line-numbers lh-even" style="left:0px;width:36px;">3</div></div><div style="position:absolute;top:54px;width:100%;height:18px;"><div class="line-numbers lh-even" style="left:0px;width:36px;">4</div></div><div style="position:absolute;top:72px;width:100%;height:18px;"><div class="line-numbers lh-even" style="left:0px;width:36px;">5</div></div><div style="position:absolute;top:90px;width:100%;height:18px;"><div class="line-numbers lh-even" style="left:0px;width:36px;">6</div></div><div style="position:absolute;top:108px;width:100%;height:18px;"><div class="cldr codicon codicon-folding-expanded" style="left:36px;width:26px;"></div><div class="line-numbers lh-even" style="left:0px;width:36px;">7</div></div><div style="position:absolute;top:126px;width:100%;height:18px;"><div class="cldr codicon codicon-folding-expanded" style="left:36px;width:26px;"></div><div class="line-numbers lh-even" style="left:0px;width:36px;">8</div></div><div style="position:absolute;top:144px;width:100%;height:18px;"><div class="line-numbers lh-even" style="left:0px;width:36px;">9</div></div><div style="position:absolute;top:162px;width:100%;height:18px;"><div class="line-numbers lh-even" style="left:0px;width:36px;">10</div></div><div style="position:absolute;top:180px;width:100%;height:18px;"><div class="cldr codicon codicon-folding-expanded" style="left:36px;width:26px;"></div><div class="line-numbers lh-even" style="left:0px;width:36px;">11</div></div><div style="position:absolute;top:198px;width:100%;height:18px;"><div class="line-numbers lh-even" style="left:0px;width:36px;">12</div></div><div style="position:absolute;top:216px;width:100%;height:18px;"><div class="line-numbers lh-even" style="left:0px;width:36px;">13</div></div><div style="position:absolute;top:234px;width:100%;height:18px;"><div class="line-numbers lh-even" style="left:0px;width:36px;">14</div></div><div style="position:absolute;top:252px;width:100%;height:18px;"><div class="cldr codicon codicon-folding-expanded" style="left:36px;width:26px;"></div><div class="line-numbers lh-even" style="left:0px;width:36px;">15</div></div><div style="position:absolute;top:270px;width:100%;height:18px;"><div class="cldr codicon codicon-folding-expanded" style="left:36px;width:26px;"></div><div class="line-numbers lh-even" style="left:0px;width:36px;">16</div></div><div style="position:absolute;top:288px;width:100%;height:18px;"><div class="line-numbers lh-even" style="left:0px;width:36px;">17</div></div><div style="position:absolute;top:306px;width:100%;height:18px;"></div><div style="position:absolute;top:324px;width:100%;height:18px;"></div><div style="position:absolute;top:342px;width:100%;height:18px;"><div class="line-numbers lh-even" style="left:0px;width:36px;">18</div></div><div style="position:absolute;top:360px;width:100%;height:18px;"><div class="cldr codicon codicon-folding-expanded" style="left:36px;width:26px;"></div><div class="line-numbers lh-even" style="left:0px;width:36px;">19</div></div><div style="position:absolute;top:378px;width:100%;height:18px;"><div class="line-numbers lh-even" style="left:0px;width:36px;">20</div></div><div style="position:absolute;top:396px;width:100%;height:18px;"><div class="line-numbers lh-even" style="left:0px;width:36px;">21</div></div><div style="position:absolute;top:414px;width:100%;height:18px;"><div class="cldr codicon codicon-folding-expanded" style="left:36px;width:26px;"></div><div class="line-numbers lh-even" style="left:0px;width:36px;">22</div></div><div style="position:absolute;top:432px;width:100%;height:18px;"><div class="line-numbers lh-even" style="left:0px;width:36px;">23</div></div><div style="position:absolute;top:450px;width:100%;height:18px;"><div class="line-numbers lh-even" style="left:0px;width:36px;">24</div></div><div style="position:absolute;top:468px;width:100%;height:18px;"><div class="line-numbers lh-even" style="left:0px;width:36px;">25</div></div><div style="position:absolute;top:486px;width:100%;height:18px;"><div class="line-numbers lh-even" style="left:0px;width:36px;">26</div></div><div style="position:absolute;top:504px;width:100%;height:18px;"><div class="line-numbers lh-even" style="left:0px;width:36px;">27</div></div></div></div><div class="monaco-scrollable-element editor-scrollable vs-dark" role="presentation" data-mprt="5" style="position: absolute; overflow: hidden; left: 62px; width: 456px; height: 518px;"><div class="lines-content monaco-editor-background" style="position: absolute; overflow: hidden; width: 1e+06px; height: 1e+06px; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; left: 0px;"><div class="view-overlays" role="presentation" aria-hidden="true" style="position: absolute; height: 0px; width: 456px;"><div style="position:absolute;top:0px;width:100%;height:18px;"><div class="current-line" style="width:456px; height:18px;"></div><div class="cdr bracket-match" style="left:0px;width:7px;height:18px;"></div><div class="cdr bracket-match" style="left:101px;width:7px;height:18px;"></div></div><div style="position:absolute;top:18px;width:100%;height:18px;"></div><div style="position:absolute;top:36px;width:100%;height:18px;"></div><div style="position:absolute;top:54px;width:100%;height:18px;"><div class="cigr" style="left:0px;height:18px;width:14.40625px"></div></div><div style="position:absolute;top:72px;width:100%;height:18px;"><div class="cigr" style="left:0px;height:18px;width:14.40625px"></div></div><div style="position:absolute;top:90px;width:100%;height:18px;"></div><div style="position:absolute;top:108px;width:100%;height:18px;"></div><div style="position:absolute;top:126px;width:100%;height:18px;"><div class="cigr" style="left:0px;height:18px;width:14.40625px"></div></div><div style="position:absolute;top:144px;width:100%;height:18px;"><div class="cigr" style="left:0px;height:18px;width:14.40625px"></div></div><div style="position:absolute;top:162px;width:100%;height:18px;"></div><div style="position:absolute;top:180px;width:100%;height:18px;"></div><div style="position:absolute;top:198px;width:100%;height:18px;"><div class="cigr" style="left:0px;height:18px;width:14.40625px"></div></div><div style="position:absolute;top:216px;width:100%;height:18px;"><div class="cigr" style="left:0px;height:18px;width:14.40625px"></div></div><div style="position:absolute;top:234px;width:100%;height:18px;"></div><div style="position:absolute;top:252px;width:100%;height:18px;"></div><div style="position:absolute;top:270px;width:100%;height:18px;"><div class="cigr" style="left:0px;height:18px;width:14.40625px"></div></div><div style="position:absolute;top:288px;width:100%;height:18px;"><div class="cigr" style="left:0px;height:18px;width:14.40625px"></div></div><div style="position:absolute;top:306px;width:100%;height:18px;"><div class="cigr" style="left:0px;height:18px;width:14.40625px"></div></div><div style="position:absolute;top:324px;width:100%;height:18px;"><div class="cigr" style="left:0px;height:18px;width:14.40625px"></div></div><div style="position:absolute;top:342px;width:100%;height:18px;"></div><div style="position:absolute;top:360px;width:100%;height:18px;"></div><div style="position:absolute;top:378px;width:100%;height:18px;"><div class="cigr" style="left:0px;height:18px;width:14.40625px"></div></div><div style="position:absolute;top:396px;width:100%;height:18px;"><div class="cigr" style="left:0px;height:18px;width:14.40625px"></div></div><div style="position:absolute;top:414px;width:100%;height:18px;"><div class="cigr" style="left:0px;height:18px;width:14.40625px"></div></div><div style="position:absolute;top:432px;width:100%;height:18px;"><div class="cigr" style="left:0px;height:18px;width:14.40625px"></div><div class="cigr" style="left:14.40625px;height:18px;width:14.40625px"></div></div><div style="position:absolute;top:450px;width:100%;height:18px;"><div class="cigr" style="left:0px;height:18px;width:14.40625px"></div><div class="cigr" style="left:14.40625px;height:18px;width:14.40625px"></div></div><div style="position:absolute;top:468px;width:100%;height:18px;"><div class="cigr" style="left:0px;height:18px;width:14.40625px"></div><div class="cigr" style="left:14.40625px;height:18px;width:14.40625px"></div></div><div style="position:absolute;top:486px;width:100%;height:18px;"><div class="cigr" style="left:0px;height:18px;width:14.40625px"></div></div><div style="position:absolute;top:504px;width:100%;height:18px;"><div class="cigr" style="left:0px;height:18px;width:14.40625px"></div></div></div><div role="presentation" aria-hidden="true" class="view-rulers"></div><div class="view-zones" role="presentation" aria-hidden="true" style="position: absolute;"></div><div class="view-lines monaco-mouse-cursor-text" role="presentation" aria-hidden="true" data-mprt="7" style="position: absolute; font-family: Menlo, &quot;Cascadia Code&quot;, Consolas, &quot;Liberation Mono&quot;, monospace; font-weight: normal; font-size: 12px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; line-height: 18px; letter-spacing: 0px; width: 456px; height: 1562px;"><div style="top:0px;height:18px;" class="view-line"><span><span class="mtk18">&lt;!</span><span class="mtk4">doctype</span><span class="mtk1">&nbsp;</span><span class="mtk14">html</span><span class="mtk18">&gt;</span></span></div><div style="top:18px;height:18px;" class="view-line"><span><span class="mtk18">&lt;</span><span class="mtk4">html</span><span class="mtk1">&nbsp;</span><span class="mtk14">lang</span><span class="mtk1">=</span><span class="mtk8">"en"</span><span class="mtk18">&gt;</span></span></div><div style="top:36px;height:18px;" class="view-line"><span><span class="mtk18">&lt;</span><span class="mtk4">head</span><span class="mtk18">&gt;</span></span></div><div style="top:54px;height:18px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;</span><span class="mtk18">&lt;</span><span class="mtk4">meta</span><span class="mtk1">&nbsp;</span><span class="mtk14">charset</span><span class="mtk1">=</span><span class="mtk8">"utf-8"</span><span class="mtk18">&gt;</span></span></div><div style="top:72px;height:18px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;</span><span class="mtk18">&lt;</span><span class="mtk4">title</span><span class="mtk18">&gt;</span><span class="mtk1">Mi&nbsp;primer&nbsp;App</span><span class="mtk18">&lt;/</span><span class="mtk4">title</span><span class="mtk18">&gt;</span></span></div><div style="top:90px;height:18px;" class="view-line"><span><span class="mtk18">&lt;/</span><span class="mtk4">head</span><span class="mtk18">&gt;</span></span></div><div style="top:108px;height:18px;" class="view-line"><span><span class="mtk18">&lt;</span><span class="mtk4">body</span><span class="mtk18">&gt;</span></span></div><div style="top:126px;height:18px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;</span><span class="mtk18">&lt;</span><span class="mtk4">header</span><span class="mtk18">&gt;</span></span></div><div style="top:144px;height:18px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;</span><span class="mtk18">&lt;</span><span class="mtk4">h1</span><span class="mtk18">&gt;</span><span class="mtk1">Mi&nbsp;Primer&nbsp;App&nbsp;con&nbsp;HTML</span><span class="mtk18">&lt;/</span><span class="mtk4">h1</span><span class="mtk18">&gt;</span><span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></div><div style="top:162px;height:18px;" class="view-line"><span><span class="mtk18">&lt;/</span><span class="mtk4">header</span><span class="mtk18">&gt;</span></span></div><div style="top:180px;height:18px;" class="view-line"><span><span class="mtk18">&lt;</span><span class="mtk4">nav</span><span class="mtk18">&gt;</span></span></div><div style="top:198px;height:18px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;</span><span class="mtk18">&lt;</span><span class="mtk4">a</span><span class="mtk1">&nbsp;</span><span class="mtk14">href</span><span class="mtk1">=</span><span class="mtk8">"#"</span><span class="mtk18">&gt;</span><span class="mtk1">Ir&nbsp;a&nbsp;Sección&nbsp;2</span><span class="mtk18">&lt;/</span><span class="mtk4">a</span><span class="mtk18">&gt;</span></span></div><div style="top:216px;height:18px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;</span><span class="mtk18">&lt;</span><span class="mtk4">a</span><span class="mtk1">&nbsp;</span><span class="mtk14">href</span><span class="mtk1">=</span><span class="mtk8">"#"</span><span class="mtk18">&gt;</span><span class="mtk1">Ir&nbsp;a&nbsp;Sección&nbsp;3</span><span class="mtk18">&lt;/</span><span class="mtk4">a</span><span class="mtk18">&gt;</span></span></div><div style="top:234px;height:18px;" class="view-line"><span><span class="mtk18">&lt;/</span><span class="mtk4">nav</span><span class="mtk18">&gt;</span></span></div><div style="top:252px;height:18px;" class="view-line"><span><span class="mtk18">&lt;</span><span class="mtk4">Section</span><span class="mtk18">&gt;</span></span></div><div style="top:270px;height:18px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;</span><span class="mtk18">&lt;</span><span class="mtk4">article</span><span class="mtk18">&gt;</span></span></div><div style="top:288px;height:18px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;</span><span class="mtk18">&lt;</span><span class="mtk4">img</span><span class="mtk1">&nbsp;</span><span class="mtk14">src</span><span class="mtk1">=</span><span class="mtk8">"</span><span class="mtk8 detected-link">https://www.w3.org/html/logo/badge/</span></span></div><div style="top:306px;height:18px;" class="view-line"><span><span class="">&nbsp;&nbsp;</span><span class="mtk8 detected-link">html5-badge-h-connectivity-css3-semantics-storage.</span><span class="mtk8 detected-link">png</span><span class="mtk8">"</span><span class="mtk1">&nbsp;</span></span></div><div style="top:324px;height:18px;" class="view-line"><span><span class="">&nbsp;&nbsp;</span><span class="mtk14">alt</span><span class="mtk1">=</span><span class="mtk8">"Logo&nbsp;HTML5"</span><span class="mtk1">&nbsp;</span><span class="mtk14">width</span><span class="mtk1">=</span><span class="mtk8">"50%"</span><span class="mtk1">&nbsp;</span><span class="mtk14">height</span><span class="mtk1">=</span><span class="mtk8">"50%"</span><span class="mtk18">&gt;</span></span></div><div style="top:342px;height:18px;" class="view-line"><span><span class="mtk18">&lt;/</span><span class="mtk4">article</span><span class="mtk18">&gt;</span></span></div><div style="top:360px;height:18px;" class="view-line"><span><span class="mtk18">&lt;</span><span class="mtk4">article</span><span class="mtk18">&gt;</span></span></div><div style="top:378px;height:18px;" class="view-line"><span><span class="mtk1">&nbsp;</span><span class="mtk18">&lt;</span><span class="mtk4">h1</span><span class="mtk18">&gt;</span><span class="mtk1">Ejemplo&nbsp;de&nbsp;listas&nbsp;ordenadas&nbsp;y&nbsp;desordenadas</span><span class="mtk18">&lt;/</span><span class="mtk4">h1</span><span class="mtk18">&gt;</span></span></div><div style="top:396px;height:18px;" class="view-line"><span><span class="mtk1">&nbsp;</span><span class="mtk18">&lt;</span><span class="mtk4">h3</span><span class="mtk18">&gt;</span><span class="mtk1">Lista&nbsp;ordenada&nbsp;con&nbsp;números:</span><span class="mtk18">&lt;/</span><span class="mtk4">h3</span><span class="mtk18">&gt;</span></span></div><div style="top:414px;height:18px;" class="view-line"><span><span class="mtk1">&nbsp;</span><span class="mtk18">&lt;</span><span class="mtk4">ol</span><span class="mtk18">&gt;</span></span></div><div style="top:432px;height:18px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;&nbsp;</span><span class="mtk18">&lt;</span><span class="mtk4">li</span><span class="mtk18">&gt;</span><span class="mtk1">Edificio</span><span class="mtk18">&lt;/</span><span class="mtk4">li</span><span class="mtk18">&gt;</span></span></div><div style="top:450px;height:18px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;&nbsp;</span><span class="mtk18">&lt;</span><span class="mtk4">li</span><span class="mtk18">&gt;</span><span class="mtk1">Casa</span><span class="mtk18">&lt;/</span><span class="mtk4">li</span><span class="mtk18">&gt;</span></span></div><div style="top:468px;height:18px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;&nbsp;</span><span class="mtk18">&lt;</span><span class="mtk4">li</span><span class="mtk18">&gt;</span><span class="mtk1">Estadio</span><span class="mtk18">&lt;/</span><span class="mtk4">li</span><span class="mtk18">&gt;</span></span></div><div style="top:486px;height:18px;" class="view-line"><span><span class="mtk1">&nbsp;</span><span class="mtk18">&lt;/</span><span class="mtk4">ol</span><span class="mtk18">&gt;</span></span></div><div style="top:504px;height:18px;" class="view-line"><span><span class="mtk1">&nbsp;</span><span class="mtk18">&lt;</span><span class="mtk4">h3</span><span class="mtk18">&gt;</span><span class="mtk1">Lista&nbsp;ordenada&nbsp;con&nbsp;letras:</span><span class="mtk18">&lt;/</span><span class="mtk4">h3</span><span class="mtk18">&gt;</span></span></div></div><div data-mprt="1" class="contentWidgets" style="position: absolute; top: 0px;"></div><div role="presentation" aria-hidden="true" class="cursors-layer cursor-line-style cursor-solid"><div class="cursor monaco-mouse-cursor-text " style="height: 18px; top: 0px; left: 0px; font-family: Menlo, &quot;Cascadia Code&quot;, Consolas, &quot;Liberation Mono&quot;, monospace; font-weight: normal; font-size: 12px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; line-height: 18px; letter-spacing: 0px; display: block; visibility: hidden; width: 2px;"></div></div></div><div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal" style="position: absolute; width: 442px; height: 12px; left: 0px; bottom: 0px;"><div class="slider" style="position: absolute; top: 0px; left: 0px; height: 12px; transform: translate3d(0px, 0px, 0px); contain: strict; width: 442px;"></div></div><canvas class="decorationsOverviewRuler" aria-hidden="true" width="14" height="518" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; right: 0px; width: 14px; height: 518px;"></canvas><div role="presentation" aria-hidden="true" class="invisible scrollbar vertical fade" style="position: absolute; width: 14px; height: 518px; right: 0px; top: 0px;"><div class="slider" style="position: absolute; top: 0px; left: 0px; width: 14px; transform: translate3d(0px, 0px, 0px); contain: strict; height: 171px;"></div></div></div><div role="presentation" aria-hidden="true" style="width: 518px;"></div><textarea data-mprt="6" class="inputarea monaco-mouse-cursor-text" wrap="off" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" aria-label="Editor content;Press Alt+F1 for Accessibility Options." tabindex="0" role="textbox" aria-roledescription="editor" aria-multiline="true" aria-haspopup="false" aria-autocomplete="both" style="font-family: Menlo, &quot;Cascadia Code&quot;, Consolas, &quot;Liberation Mono&quot;, monospace; font-weight: normal; font-size: 12px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; line-height: 18px; letter-spacing: 0px; top: 0px; left: 62px; width: 1px; height: 1px;"></textarea><div style="position: absolute; top: 0px; left: 0px; width: 0px; height: 0px;"></div><div data-mprt="4" class="overlayWidgets" style="width: 518px;"><div class="accessibilityHelpWidget" role="dialog" aria-hidden="true" widgetid="editor.contrib.accessibilityHelpWidget" style="display: none; position: absolute;"><div role="document"></div></div><div widgetid="editor.contrib.quickInputWidget" style="position: absolute; top: 0px; right: 50%;"></div></div><div data-mprt="8" class="minimap slider-mouseover" role="presentation" aria-hidden="true" style="position: absolute; left: 0px; width: 0px; height: 518px;"><div class="minimap-shadow-hidden" style="height: 518px;"></div><canvas width="0" height="518" style="position: absolute; left: 0px; width: 0px; height: 518px;"></canvas><canvas class="minimap-decorations-layer" width="0" height="518" style="position: absolute; left: 0px; width: 0px; height: 518px;"></canvas><div class="minimap-slider" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; width: 0px;"><div class="minimap-slider-horizontal" style="position: absolute; width: 0px; height: 0px;"></div></div></div></div><div data-mprt="2" class="overflowingContentWidgets"><div class="monaco-editor rename-box" widgetid="__renameInputWidget" style="background-color: rgb(37, 37, 38); box-shadow: rgba(0, 0, 0, 0.36) 0px 0px 8px 2px; color: rgb(204, 204, 204); position: absolute; visibility: hidden; max-width: 1129px;"><input class="rename-input" type="text" aria-label="Rename input. Type new name and press Enter to commit." style="font-family: Menlo, &quot;Cascadia Code&quot;, Consolas, &quot;Liberation Mono&quot;, monospace; font-weight: normal; font-size: 12px; background-color: rgb(60, 60, 60); border-width: 0px; border-style: none;"><div class="rename-label" style="font-size: 9.6px;">Enter to Rename, Shift+Enter to Preview</div></div><div class="monaco-hover" tabindex="0" role="tooltip" widgetid="editor.contrib.modesContentHoverWidget" style="position: absolute; visibility: hidden; max-width: 1129px;"><div class="monaco-scrollable-element " role="presentation" style="position: relative; overflow: hidden;"><div class="monaco-hover-content" style="overflow: hidden; font-size: 12px; line-height: 18px; max-height: 250px; max-width: 500px;"></div><div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal" style="position: absolute;"><div class="slider" style="position: absolute; top: 0px; left: 0px; height: 10px; transform: translate3d(0px, 0px, 0px); contain: strict;"></div></div><div role="presentation" aria-hidden="true" class="invisible scrollbar vertical" style="position: absolute;"><div class="slider" style="position: absolute; top: 0px; left: 0px; width: 10px; transform: translate3d(0px, 0px, 0px); contain: strict;"></div></div><div class="shadow"></div><div class="shadow"></div><div class="shadow"></div></div></div></div><div class="context-view" aria-hidden="true" style="display: none;"></div></div></div></div></div></div></div></div><div class="mosaic-split -row" style="inset: 0% 0% 0% 68%;"><div class="mosaic-split-line"></div></div><div class="mosaic-tile" style="inset: 0% 0% 0% 68%;"><div class="PreviewFrame"><form class="UrlBar-root-vpV3h PreviewUrlBar"><button type="button" aria-label="Go back in preview" class="UrlBar-controlButton-_KYBn" disabled=""><svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M7 3.093l-5 5V8.8l5 5 .707-.707-4.146-4.147H14v-1H3.56L7.708 3.8 7 3.093z"></path></svg></button><button type="button" aria-label="Go forward in preview" class="UrlBar-controlButton-_KYBn" disabled=""><svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M9 13.887l5-5V8.18l-5-5-.707.707 4.146 4.147H2v1h10.44L8.292 13.18l.707.707z"></path></svg></button><button type="button" aria-label="Reload preview" class="UrlBar-controlButton-_KYBn"><svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.681 3H2V2h3.5l.5.5V6H5V4a5 5 0 104.53-.761l.302-.954A6 6 0 114.681 3z"></path></svg></button><div class="UrlBar-holster-qflUZ UrlBar-holster_withLock-vnvab"><label class="UrlBar-inputWrapper-ROxLl"><span class="UrlBar-lockIcon-Agn_Z"><svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M3 8l1-1h8l1 1v5l-1 1H4l-1-1V8zm1 0v5h8V8H4zM11 7V5a3 3 0 00-6 0v2h1V5a2 2 0 114 0v2h1z"></path></svg></span><input type="text" aria-label="Preview URL" class="UrlBar-textInput-mNxYg" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" value="https://js-lzxqri.stackblitz.io"><div class="UrlBar-inputRender-jscIr"><span class="UrlBar-urlHighlight-f3uJm">js-lzxqri.stackblitz.io</span><span class="UrlBar-urlSecondary-w668w"></span></div></label></div></form><div id="PreviewContentWrapper" style="height: 518px;"><div class="PreviewFrame-iframeWrapper"><iframe title="Preview page" name="previewFrame" class="PreviewFrame-iFrame" allow="geolocation; microphone; camera; payment; autoplay; serial; cross-origin-isolated" src="./saved_resource(1).html" style="background: rgb(255, 255, 255); height: 490px;"></iframe></div><div class="Console-root-_qXCG" style="height: 28px;"><div class="ConsoleToolbar-toolbar-mozcg"><div class="ConsoleToolbar-toolbarTab-TKO1y">Console</div><div class="ConsoleToolbar-messageCounts-lUEhb"></div><div class="ConsoleToolbar-toggleButton-kLVcz"><svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.024 5.928l-4.357 4.357-.62-.618L7.716 5h.618L13 9.667l-.619.618-4.357-4.357z"></path></svg></div></div><div class="ConsoleToolbar-subtoolbar-Tszf8"><div class="ConsoleToolbar-clearButton-u11iG" title="Clear console"><svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M8 1a7 7 0 11-7 7 7.008 7.008 0 017-7zM2 8c0 1.418.504 2.79 1.423 3.87l8.447-8.447A5.993 5.993 0 002 8zm12 0c0-1.418-.504-2.79-1.423-3.87L4.13 12.577A5.993 5.993 0 0014 8z"></path></svg></div><div class="ConsoleToolbar-divider-j0kAc"></div><div class="ConsoleToolbar-toolbarOptions-wX9GP"><label class="Choice-label-h4jib"><input type="checkbox" class="Choice-input-BGvnx"><span class="Choice-labelText-sQVG4">Clear on reload</span></label></div></div><div class="Console-content-BxV4k Console-content_hidden-KiRBC"><div class="Console-inputWrapper-_zSCn"><svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="Console-inputIcon-Q8UmT"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.072 8.024L5.715 3.667l.618-.62L11 7.716v.618L6.333 13l-.618-.619 4.357-4.357z"></path></svg><div class="Console-inputEditor-trqDm" style="height: 19px; --codelens-font-features_ee1f61:&quot;liga&quot; off, &quot;calt&quot; off;" data-keybinding-context="1" data-mode-id="javascript"><div class="monaco-editor no-user-select  showUnused showDeprecated vs-dark" role="code" data-uri="inmemory://model/1" style="width: 309px; height: 19px;"><div data-mprt="3" class="overflow-guard" style="width: 309px; height: 19px;"><div class="margin" role="presentation" aria-hidden="true" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; height: 19px; width: 0px;"><div class="glyph-margin" style="left: 0px; width: 0px; height: 19px;"></div><div class="margin-view-zones" role="presentation" aria-hidden="true" style="position: absolute;"></div><div class="margin-view-overlays" role="presentation" aria-hidden="true" style="position: absolute; width: 0px; font-family: Menlo, &quot;Cascadia Code&quot;, Consolas, &quot;Liberation Mono&quot;, monospace; font-weight: normal; font-size: 11px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; line-height: 15px; letter-spacing: 0px; height: 19px;"><div style="position:absolute;top:0px;width:100%;height:15px;"><div class="current-line" style="width:0px; height:15px;"></div></div></div></div><div class="monaco-scrollable-element editor-scrollable vs-dark" role="presentation" data-mprt="5" style="position: absolute; overflow: hidden; left: 0px; width: 309px; height: 19px;"><div class="lines-content monaco-editor-background" style="position: absolute; overflow: hidden; width: 1e+06px; height: 1e+06px; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; left: 0px;"><div class="view-overlays" role="presentation" aria-hidden="true" style="position: absolute; height: 0px; width: 309px;"><div style="position:absolute;top:0px;width:100%;height:15px;"></div></div><div role="presentation" aria-hidden="true" class="view-rulers"></div><div class="view-zones" role="presentation" aria-hidden="true" style="position: absolute;"></div><div class="view-lines monaco-mouse-cursor-text" role="presentation" aria-hidden="true" data-mprt="7" style="position: absolute; font-family: Menlo, &quot;Cascadia Code&quot;, Consolas, &quot;Liberation Mono&quot;, monospace; font-weight: normal; font-size: 11px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; line-height: 15px; letter-spacing: 0px; width: 309px; height: 19px;"><div style="top:0px;height:15px;" class="view-line"><span><span></span></span></div></div><div data-mprt="1" class="contentWidgets" style="position: absolute; top: 0px;"></div><div role="presentation" aria-hidden="true" class="cursors-layer cursor-line-thin-style cursor-solid"><div class="cursor monaco-mouse-cursor-text " style="height: 15px; top: 0px; left: 0px; font-family: Menlo, &quot;Cascadia Code&quot;, Consolas, &quot;Liberation Mono&quot;, monospace; font-weight: normal; font-size: 11px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; line-height: 15px; letter-spacing: 0px; display: block; visibility: hidden; width: 1px;"></div></div></div><div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal" style="position: absolute; width: 300px; height: 0px; left: 0px; bottom: 0px;"><div class="slider" style="position: absolute; top: 0px; left: 0px; height: 12px; transform: translate3d(0px, 0px, 0px); contain: strict; width: 300px;"></div></div><canvas class="decorationsOverviewRuler" aria-hidden="true" width="0" height="0" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; right: 0px; width: 9px; height: 19px;"></canvas><div role="presentation" aria-hidden="true" class="invisible scrollbar vertical" style="position: absolute; width: 9px; height: 19px; right: 0px; top: 0px;"><div class="slider" style="position: absolute; top: 0px; left: 0px; width: 9px; transform: translate3d(0px, 0px, 0px); contain: strict; height: 19px;"></div></div></div><div role="presentation" aria-hidden="true" style="width: 309px;"></div><textarea data-mprt="6" class="inputarea monaco-mouse-cursor-text" wrap="off" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" aria-label="ConsoleInput;Press Alt+F1 for Accessibility Options." tabindex="0" role="textbox" aria-roledescription="editor" aria-multiline="true" aria-haspopup="false" aria-autocomplete="both" style="font-family: Menlo, &quot;Cascadia Code&quot;, Consolas, &quot;Liberation Mono&quot;, monospace; font-weight: normal; font-size: 11px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; line-height: 15px; letter-spacing: 0px; top: 0px; left: 0px; width: 1px; height: 1px;"></textarea><div style="position: absolute; top: 0px; left: 0px; width: 0px; height: 0px;"></div><div data-mprt="4" class="overlayWidgets" style="width: 309px;"><div class="accessibilityHelpWidget" role="dialog" aria-hidden="true" widgetid="editor.contrib.accessibilityHelpWidget" style="display: none; position: absolute;"><div role="document"></div></div><div widgetid="editor.contrib.quickInputWidget" style="position: absolute; top: 0px; right: 50%;"></div></div><div data-mprt="8" class="minimap slider-mouseover" role="presentation" aria-hidden="true" style="position: absolute; left: 0px; width: 0px; height: 19px;"><div class="minimap-shadow-hidden" style="height: 19px;"></div><canvas width="0" height="19" style="position: absolute; left: 0px; width: 0px; height: 19px;"></canvas><canvas class="minimap-decorations-layer" width="0" height="19" style="position: absolute; left: 0px; width: 0px; height: 19px;"></canvas><div class="minimap-slider" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; width: 0px;"><div class="minimap-slider-horizontal" style="position: absolute; width: 0px; height: 0px;"></div></div></div></div><div data-mprt="2" class="overflowingContentWidgets"><div class="monaco-editor rename-box" widgetid="__renameInputWidget" style="background-color: rgb(37, 37, 38); box-shadow: rgba(0, 0, 0, 0.36) 0px 0px 8px 2px; color: rgb(204, 204, 204); position: absolute; visibility: hidden; max-width: 1129px;"><input class="rename-input" type="text" aria-label="Rename input. Type new name and press Enter to commit." style="font-family: Menlo, &quot;Cascadia Code&quot;, Consolas, &quot;Liberation Mono&quot;, monospace; font-weight: normal; font-size: 11px; background-color: rgb(60, 60, 60); border-width: 0px; border-style: none;"><div class="rename-label" style="font-size: 8.8px;">Enter to Rename, Shift+Enter to Preview</div></div></div><div class="context-view" aria-hidden="true" style="display: none;"></div></div></div></div></div></div></div><div style="position: fixed; inset: 0px; z-index: 90; background-color: transparent; display: none;"></div></div></div></div><div class="drop-target-container"><div class="drop-target top"></div><div class="drop-target bottom"></div><div class="drop-target left"></div><div class="drop-target right"></div></div></div><div style="position: fixed; inset: 0px; z-index: 90; background-color: transparent; display: none;"></div></div><div class="Toastify"></div></main></div>
+
+
+
+
+
+<dialog id="pro-account-dialog" aria-labelledby="pro-account-dialog-title" class="ModalDialog-dialogReset-zxnhL ModalDialog-modal-lw5MP ModalDialog-modal_centered-IMlSm"><div class="ModalDialog-overlayClickFix-WkqzK"></div><div class="ProAccountDialog-content-NPYst"><div class="ProAccountDialog-Sky-oEuuE"><span class="ProAccountDialog-StarField-Co9Kw"><svg viewBox="0 0 100 44" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMinYMid slice"><circle fill="#FFF" cx="43.53745442068346" cy="33.28562540261517" r="0.07998500507422429" style="animation: 2.71397s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="5.872827231527555" cy="14.27240858854761" r="0.11919947791587604" style="animation: 4.81889s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="79.5574000360332" cy="15.20230277852368" r="0.05892717946505448" style="animation: 3.49592s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="47.4516089078993" cy="14.86154891731324" r="0.058542870661828894" style="animation: 3.93026s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="25.327675145693163" cy="28.20115771057089" r="0.05671992602551567" style="animation: 4.42147s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="9.356322982809573" cy="4.26571457474321" r="0.0713980469559831" style="animation: 9.85953s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="4.717513631431158" cy="41.44358505621736" r="0.10814391390863298" style="animation: 9.51771s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="24.610508754677983" cy="4.216402169528388" r="0.08323435851404357" style="animation: 8.03647s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="44.83763922047077" cy="36.98537460907833" r="0.0853074014295192" style="animation: 7.15167s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="96.55034332219029" cy="34.88889197170316" r="0.07429286570777902" style="animation: 4.73678s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="89.14880657040322" cy="26.312595766190686" r="0.07798182457851105" style="animation: 3.17359s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="4.546097315338882" cy="3.9969498955489584" r="0.0992532105618851" style="animation: 8.64412s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="28.690483132642086" cy="43.869265196986944" r="0.0737631179606491" style="animation: 9.05116s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="49.80764131853827" cy="22.142575898406278" r="0.07113127216000939" style="animation: 9.3009s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="38.55792015425046" cy="43.08618730872176" r="0.06047014737608357" style="animation: 8.63608s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="1.706635500657483" cy="23.047129010477605" r="0.05105924909517688" style="animation: 5.03084s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="50.59615236925232" cy="42.77370219338607" r="0.09473564384171465" style="animation: 4.07931s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="23.619340238700648" cy="36.89851533517328" r="0.06953356355418921" style="animation: 2.35126s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="0.4908597598748399" cy="41.56510582618179" r="0.09137921313884154" style="animation: 8.42172s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="95.28660372698845" cy="24.137478681156175" r="0.057564578937218565" style="animation: 8.47306s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="69.24875256660155" cy="8.477984226624773" r="0.07852700815126809" style="animation: 7.65181s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="15.059911926359293" cy="26.056660294120917" r="0.08580032041227087" style="animation: 2.91496s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="10.168415572410549" cy="14.29248219820598" r="0.09262614937303336" style="animation: 9.52347s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="12.760225475566433" cy="30.90129961055996" r="0.10936583880971976" style="animation: 2.13586s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="65.63073942682252" cy="20.513790326290987" r="0.07782825482207038" style="animation: 8.67579s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="18.01849148565804" cy="4.180184263849296" r="0.11863339497765156" style="animation: 6.59708s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="98.80209662751473" cy="11.615200952075936" r="0.07341880967894235" style="animation: 4.72576s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="40.523641050412174" cy="2.711569651675247" r="0.05436524847930001" style="animation: 9.00075s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="39.64381863124362" cy="15.274629365765055" r="0.11725286421532528" style="animation: 4.73109s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="68.46313540977684" cy="30.90043891042682" r="0.0706146853015086" style="animation: 3.80689s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="64.57879356538557" cy="27.14692929368433" r="0.09884976240893162" style="animation: 6.5704s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="29.843621538093767" cy="17.920637053172914" r="0.07488671359625731" style="animation: 6.1338s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="57.40865830968185" cy="3.6756745176768915" r="0.06841922805413844" style="animation: 7.97041s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="35.47706187296673" cy="33.812808721064286" r="0.05564465975197462" style="animation: 4.83236s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="8.161727845962918" cy="34.37003560960088" r="0.07575180394742752" style="animation: 2.99704s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="41.2655014737159" cy="13.921094257416307" r="0.09689308404445444" style="animation: 4.00122s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="23.553929814191797" cy="2.453884672106753" r="0.08537985150128412" style="animation: 7.9947s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="41.37770344286409" cy="4.8714707842973946" r="0.08243721614457364" style="animation: 3.53315s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="4.171231994902724" cy="16.049674709132347" r="0.058424068684957885" style="animation: 8.60772s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="24.321793950958238" cy="25.01565139740459" r="0.11089148414454011" style="animation: 5.37258s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="79.65958708400711" cy="43.010293902059175" r="0.11431885240777546" style="animation: 3.8437s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="6.018219826871052" cy="34.18469832454725" r="0.11726222235274503" style="animation: 8.00612s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="34.5019868396474" cy="35.66625679790026" r="0.11817134860143214" style="animation: 9.59168s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="18.87257378269622" cy="16.50978040254674" r="0.11442816631073491" style="animation: 5.35804s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="46.94645371144415" cy="2.2788077799916353" r="0.08062689441247202" style="animation: 4.96383s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="26.496868441357368" cy="34.725730533513" r="0.057700848699346885" style="animation: 9.97112s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="80.7708284816048" cy="13.97274501390543" r="0.05300696621694305" style="animation: 4.255s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="2.174833755751826" cy="12.952660225108648" r="0.08248716060102698" style="animation: 3.48786s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="27.574707556887844" cy="9.624105014909278" r="0.10843851746092767" style="animation: 5.57417s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="30.66842450840732" cy="41.79196545437008" r="0.09014941846990046" style="animation: 2.26703s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="48.374889862459995" cy="30.259025760872145" r="0.06624510595988459" style="animation: 7.85257s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="47.440826582159644" cy="14.760880720662978" r="0.06656280450548198" style="animation: 3.84059s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="18.86871113552633" cy="19.16678450000805" r="0.09863345381507671" style="animation: 8.8672s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="77.93652627595762" cy="8.903685113280119" r="0.10481568413487204" style="animation: 9.48926s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="95.9311702424416" cy="22.888394754576872" r="0.10707664534484375" style="animation: 7.21395s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="34.36951793705274" cy="40.173909214505095" r="0.05060162204841166" style="animation: 9.56144s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="40.14162519147513" cy="22.14400245011562" r="0.07469263571513801" style="animation: 6.85411s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="14.961563392079281" cy="0.4232345704074181" r="0.11802885060483273" style="animation: 8.35708s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="3.5375980037772203" cy="15.10641404393608" r="0.0954170355882238" style="animation: 3.38883s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="68.9437416424461" cy="6.981932524996746" r="0.06804203383496654" style="animation: 3.4932s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="88.7996858627511" cy="32.03228764697244" r="0.06185692563759787" style="animation: 5.79973s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="47.97170348556683" cy="3.6303615365835933" r="0.09427513556367473" style="animation: 4.45935s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="43.092590618473146" cy="0.41324972302360496" r="0.0569734361394316" style="animation: 8.8777s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="86.51341315992458" cy="4.169726410829223" r="0.06402209131700431" style="animation: 3.7899s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="36.53768708616412" cy="4.259610333172645" r="0.10750873104411787" style="animation: 7.09035s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="18.889382524898956" cy="20.08595461810707" r="0.09044470774027524" style="animation: 5.72675s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="25.71606214583648" cy="17.18524106496976" r="0.11578380556394115" style="animation: 6.70835s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="0.02135514290866336" cy="13.821076651817435" r="0.11319010378980054" style="animation: 4.58962s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="82.6345848991825" cy="16.04279713864332" r="0.11406391008618283" style="animation: 8.77104s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="33.82372131755733" cy="30.2303678771436" r="0.10433100193003032" style="animation: 8.93939s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="40.38848280210878" cy="12.707357089421897" r="0.11974068013339925" style="animation: 4.49884s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="99.91037022531275" cy="16.16373454860952" r="0.07960006668647956" style="animation: 3.57686s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="31.755245453490886" cy="2.7211326027680824" r="0.05050175023766488" style="animation: 5.00148s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="43.471337042965196" cy="5.564029228172114" r="0.09310317130263006" style="animation: 5.23016s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="41.73658565397482" cy="10.802356341815248" r="0.0578617560737586" style="animation: 8.60912s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="82.08673138173354" cy="1.562888792474281" r="0.0741878993386826" style="animation: 3.08435s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="91.90825901738695" cy="30.063697542488104" r="0.06032916979276967" style="animation: 2.83885s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="76.17961150038295" cy="4.991454819754803" r="0.11710323117600792" style="animation: 7.217s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="45.40926402717061" cy="30.927814091959974" r="0.09298054276105572" style="animation: 8.29973s ease-in-out 0s infinite normal none running twinkle;"></circle><circle fill="#FFF" cx="42.06813867370543" cy="20.131828899183965" r="0.10960150415006291" style="animation: 8.34771s ease-in-out 0s infinite normal none running twinkle;"></circle></svg></span><img class="ProAccountDialog-AstronautImg-HNIsw" alt="" src="./astronaut-7e12abe3977fa.svg"><div class="ProAccountDialog-Info-sT3M9"><h1 id="pro-account-dialog-title">This feature requires a pro account</h1><h2>With a Pro Account you get:</h2><ul><li>unlimited public and <b style="text-decoration: underline;">private</b> projects</li><li>cross-device hot reloading &amp; debugging</li><li>binary files upload</li><li>enhanced GitHub integrations (and more!)</li></ul><a href="https://stackblitz.com/membership" target="_blank" rel="noopener" color="primary" class="ProAccountDialog-MembershipButton-MFzIS Button-root-pMTAT" style="--buttonSize:38px; --iconSize:22px; --fontSize:14.5px;"><span class="Button-text-fyWMo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="#1389FD" width="1em" height="1em"><path d="M5.853 18.647h8.735L9.45 31l16.697-17.647h-8.735L22.55 1 5.853 18.647z"></path></svg>Become a ProBlitzer</span></a></div></div><div class="ProAccountDialog-CloseButtonWrapper-TVfep"><button aria-label="Close" class="Action-root-IsOYp ProAccountDialog-CloseButton-LSz5m" type="button" style="--size:44px; --iconSize:20px;"><svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.116 8l-4.558 4.558.884.884L8 8.884l4.558 4.558.884-.884L8.884 8l4.558-4.558-.884-.884L8 7.116 3.442 2.558l-.884.884L7.116 8z"></path></svg></button></div></div></dialog><iframe src="./_relay_.html" name="commRelay" style="display: none; height: 1px; width: 1px;"></iframe><span><img src="./c.gif" alt="" style="width:1px;height:1px;position:absolute;bottom:100%;right:100%;visibility:hidden;"></span><div class="monaco-aria-container"><div class="monaco-alert" role="alert" aria-atomic="true"></div><div class="monaco-alert" role="alert" aria-atomic="true"></div><div class="monaco-status" role="complementary" aria-live="polite" aria-atomic="true"></div><div class="monaco-status" role="complementary" aria-live="polite" aria-atomic="true"></div></div></body></html>
